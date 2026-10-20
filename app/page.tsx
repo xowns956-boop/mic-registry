@@ -4,6 +4,7 @@ import { useTheme } from "next-themes"
 import { MoonIcon, SunIcon } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { BatchAdded } from "./_preview/batch-added"
 import { BatchDisplay } from "./_preview/batch-display"
 import { BatchForms } from "./_preview/batch-forms"
 import { BatchRest } from "./_preview/batch-rest"
@@ -26,6 +27,7 @@ export default function Home() {
       <BatchForms />
       <BatchDisplay />
       <BatchRest />
+      <BatchAdded />
     </main>
   )
 }

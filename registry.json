@@ -983,13 +983,20 @@
             "@apply font-sans": {}
           }
         }
-      }
+      },
+      "files": [
+        {
+          "path": "docs/mic.md",
+          "type": "registry:file",
+          "target": "~/docs/mic.md"
+        }
+      ]
     },
     {
       "name": "mic",
       "type": "registry:block",
       "title": "Mic Design System",
-      "description": "Mic Design System v0.1.0 전체 — 토큰 + 부품 59개 + AI 규칙 문서(docs/mic.md)",
+      "description": "Mic Design System v0.1.0 전체 — 토큰 + 부품 63개 + AI 규칙 문서(docs/mic.md)",
       "registryDependencies": [
         "http://localhost:3200/r/0.1.0/mic-foundations.json",
         "http://localhost:3200/r/0.1.0/accordion.json",
@@ -1010,17 +1017,21 @@
         "http://localhost:3200/r/0.1.0/command.json",
         "http://localhost:3200/r/0.1.0/data-table.json",
         "http://localhost:3200/r/0.1.0/date-picker.json",
+        "http://localhost:3200/r/0.1.0/dialog-body.json",
         "http://localhost:3200/r/0.1.0/dialog.json",
         "http://localhost:3200/r/0.1.0/dropdown-menu.json",
         "http://localhost:3200/r/0.1.0/field.json",
         "http://localhost:3200/r/0.1.0/filter-chip.json",
+        "http://localhost:3200/r/0.1.0/form-table.json",
         "http://localhost:3200/r/0.1.0/input-group.json",
         "http://localhost:3200/r/0.1.0/input.json",
         "http://localhost:3200/r/0.1.0/kbd.json",
         "http://localhost:3200/r/0.1.0/label.json",
+        "http://localhost:3200/r/0.1.0/menu-tile.json",
         "http://localhost:3200/r/0.1.0/multi-select.json",
         "http://localhost:3200/r/0.1.0/nav-user.json",
         "http://localhost:3200/r/0.1.0/number-input.json",
+        "http://localhost:3200/r/0.1.0/number-stepper.json",
         "http://localhost:3200/r/0.1.0/page-tabs.json",
         "http://localhost:3200/r/0.1.0/pagination.json",
         "http://localhost:3200/r/0.1.0/popover.json",
@@ -1425,6 +1436,30 @@
       ]
     },
     {
+      "name": "dialog-body",
+      "type": "registry:ui",
+      "title": "dialog-body",
+      "description": "Mic v0.1 · Figma \"- Dialogs › DialogBody\" (4047:18) — DialogContent 안에 넣는 내용 부품 6종.",
+      "dependencies": [
+        "cn@0.5.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/button.json",
+        "http://localhost:3200/r/0.1.0/input.json",
+        "http://localhost:3200/r/0.1.0/label.json",
+        "http://localhost:3200/r/0.1.0/radio-group.json",
+        "http://localhost:3200/r/0.1.0/table.json",
+        "http://localhost:3200/r/0.1.0/textarea.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/dialog-body.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "dialog",
       "type": "registry:ui",
       "title": "dialog",
@@ -1501,6 +1536,24 @@
       "files": [
         {
           "path": "components/ui/filter-chip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "form-table",
+      "type": "registry:ui",
+      "title": "form-table",
+      "description": "Mic v0.1 · Figma \"03_Patterns › FormTable\" (4046:181 · Row 4046:166 · Field 4046:165)",
+      "dependencies": [
+        "cn@0.5.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/form-table.tsx",
           "type": "registry:ui"
         }
       ]
@@ -1583,6 +1636,24 @@
       ]
     },
     {
+      "name": "menu-tile",
+      "type": "registry:ui",
+      "title": "menu-tile",
+      "description": "Mic v0.1 · Figma \"- Buttons › MenuTile\" (4045:6191) — state: default·pressed(:active) / Show Icon",
+      "dependencies": [
+        "cn@0.5.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/menu-tile.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "multi-select",
       "type": "registry:ui",
       "title": "multi-select",
@@ -1639,6 +1710,27 @@
       "files": [
         {
           "path": "components/ui/number-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "number-stepper",
+      "type": "registry:ui",
+      "title": "number-stepper",
+      "description": "Mic v0.1 · Figma \"- Inputs › NumberInput / Stepper\" (4045:6163)",
+      "dependencies": [
+        "cn@0.5.0",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/button.json",
+        "http://localhost:3200/r/0.1.0/input.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/number-stepper.tsx",
           "type": "registry:ui"
         }
       ]
@@ -1907,7 +1999,7 @@
       "name": "stat-card",
       "type": "registry:ui",
       "title": "stat-card",
-      "description": "Mic v0.1 · Figma \"- Cards › StatCard\" (38:344) — trend: up·down / Show Badge · Show Footer",
+      "description": "Mic v0.1 · Figma \"- Cards › StatCard\" (38:344) — trend: up·down / tone: default·emphasis / Show Badge · Show Footer",
       "dependencies": [
         "cn@0.5.0",
         "lucide-react@1.59.0"

@@ -5,7 +5,8 @@ import { TrendingDownIcon, TrendingUpIcon } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardAction, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
-// Mic v0.1 · Figma "- Cards › StatCard" (38:344) — trend: up·down / Show Badge · Show Footer
+// Mic v0.1 · Figma "- Cards › StatCard" (38:344) — trend: up·down / tone: default·emphasis / Show Badge · Show Footer
+// tone="emphasis"는 진한 바탕(dark) + 흰 글자.
 // badge를 주면 오른쪽 위 배지가 보이고, summary·detail을 주면 아래 설명이 보인다.
 function StatCard({
   label,
@@ -14,6 +15,7 @@ function StatCard({
   summary,
   detail,
   trend = "up",
+  tone = "default",
   className,
   ...props
 }: Omit<React.ComponentProps<typeof Card>, "children"> & {
@@ -23,17 +25,25 @@ function StatCard({
   summary?: React.ReactNode
   detail?: React.ReactNode
   trend?: "up" | "down"
+  tone?: "default" | "emphasis"
 }) {
   const TrendIcon = trend === "up" ? TrendingUpIcon : TrendingDownIcon
+  const emphasis = tone === "emphasis"
 
   return (
-    <Card data-slot="stat-card" data-trend={trend} className={cn("shadow-xs", className)} {...props}>
+    <Card
+      data-slot="stat-card"
+      data-trend={trend}
+      data-tone={tone}
+      className={cn("shadow-xs", emphasis && "border-dark bg-dark text-dark-foreground", className)}
+      {...props}
+    >
       <CardHeader>
-        <CardDescription>{label}</CardDescription>
-        <CardTitle className="text-3xl font-semibold tabular-nums">{value}</CardTitle>
+        <CardDescription className={cn(emphasis && "text-dark-foreground")}>{label}</CardDescription>
+        <CardTitle className={cn("text-3xl font-semibold tabular-nums", emphasis && "text-dark-foreground")}>{value}</CardTitle>
         {badge && (
           <CardAction>
-            <Badge variant="outline">
+            <Badge variant="outline" className={cn(emphasis && "border-dark-foreground text-dark-foreground")}>
               <TrendIcon className="size-3" aria-hidden="true" />
               {badge}
             </Badge>
@@ -43,12 +53,12 @@ function StatCard({
       {(summary || detail) && (
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
           {summary && (
-            <div className="flex items-center gap-2 font-medium text-card-foreground">
+            <div className={cn("flex items-center gap-2 font-medium text-card-foreground", emphasis && "text-dark-foreground")}>
               {summary}
               <TrendIcon className="size-4" aria-hidden="true" />
             </div>
           )}
-          {detail && <div className="text-muted-foreground">{detail}</div>}
+          {detail && <div className={cn("text-muted-foreground", emphasis && "text-dark-foreground")}>{detail}</div>}
         </CardFooter>
       )}
     </Card>
