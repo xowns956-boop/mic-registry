@@ -18,7 +18,7 @@ function MenuTile({
       type={type}
       data-slot="menu-tile"
       className={cn(
-        "flex min-h-37 w-full flex-col items-center justify-center gap-3 rounded-xl bg-dark p-4 text-dark-foreground shadow-xs transition-colors outline-none select-none focus-visible:ring-3 focus-visible:ring-alpha-ring-50 active:bg-dark-active disabled:pointer-events-none disabled:opacity-50",
+        "flex min-h-37 w-full flex-col items-center justify-center gap-3 rounded-xl bg-card-emphasis p-4 text-card-emphasis-foreground shadow-xs transition-colors outline-none select-none focus-visible:ring-3 focus-visible:ring-alpha-ring-50 active:bg-card-emphasis-active disabled:pointer-events-none disabled:opacity-50",
         className
       )}
       {...props}

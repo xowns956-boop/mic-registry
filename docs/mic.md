@@ -11,7 +11,7 @@
 
 1. 화면을 만들 때 **설치된 부품(`components/ui`, `components/blocks`)을 먼저 쓴다.** 비슷한 모양을 새로 만들지 않는다. 없는 부품은 같은 버전(0.1.0) 레지스트리에서 추가한다.
 2. 색·간격·둥글기·글자·그림자는 **토큰 클래스만** 쓴다 (`bg-primary`, `text-muted-foreground`, `rounded-md`, `shadow-xs`). hex·px 값을 직접 쓰지 않는다.
-3. 라이트·다크 두 모드를 항상 함께 지원한다. 다크는 `<html class="dark">`, `ThemeProvider`(next-themes, 기본값 system)가 처리한다.
+3. 라이트·다크 두 모드를 항상 함께 지원한다. 다크는 `<html class="dark">`, `ThemeProvider`(next-themes, 기본값 system)가 처리한다. 다크 색은 COMPASS 다크 기준(파란 기운 없는 회색 · 주 버튼 #3390FF)이다.
 4. 부품의 크기·둥글기·상태 클래스를 화면에서 덮어쓰지 않는다. 바꿔야 하면 디자이너에게 확인하고 Figma와 함께 고친다.
 5. 레지스트리 버전을 임의로 올리지 않는다. 프로젝트에서 고친 부품 파일을 덮어쓰지 않는다 (`--overwrite` 금지, 먼저 비교).
 
@@ -23,9 +23,11 @@ Figma 변수 이름에서 `/`를 `-`로 바꾼 이름이다. 의미 색은 그�
 
 | 역할 | 토큰 | 쓰는 곳 |
 |---|---|---|
-| 페이지 바탕 | `page-background` | 앱 전체 바탕 (라이트 slate-100) |
+| 페이지 바탕 | `page-background` | 앱 전체 바탕 (라이트 흰색 · 다크 #121212) |
 | 기본 면 | `background` / `foreground` | 팝업·시트·입력 바탕, 기본 글자 |
 | 카드 | `card` / `card-foreground` | 카드·표 바탕 |
+| 강조 카드 | `card-emphasis`, `card-emphasis-active`, `card-emphasis-foreground` | StatCard `tone="emphasis"`·MenuTile — 옆 카드와 살짝만 구분되는 면 |
+| 표 머리글 | `table-header` | 표 머리글·FormTable 제목 칸·팝업 표 머리글 (라이트에서 흰 바탕과 구분) |
 | 주 동작 | `primary`, `primary-hover`, `primary-active`, `primary-text`, `primary-foreground` | 주요 버튼(화면당 1개), 선택 상태, 링크 글자 |
 | 보조 | `secondary`, `secondary-hover`, `secondary-foreground` | 보조 버튼 |
 | 강조 면 | `accent`, `accent-hover`, `accent-foreground` | hover·선택된 목록 항목, 오늘 날짜 |

@@ -37,7 +37,7 @@ function FormTableField({
 }) {
   return (
     <div data-slot="form-table-field" data-type={type} className={cn("flex min-w-0 flex-1 bg-card", className)} {...props}>
-      <dt className="flex w-32 shrink-0 items-center bg-muted px-2 font-medium text-foreground">{label}</dt>
+      <dt className="flex w-32 shrink-0 items-center bg-table-header px-2 font-medium text-foreground">{label}</dt>
       <dd
         className={cn(
           "flex min-w-0 flex-1 text-foreground",

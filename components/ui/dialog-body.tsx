@@ -68,7 +68,7 @@ function DialogBodyInfo({
     <dl data-slot="dialog-body-info" className={cn(frame, "flex flex-col divide-y divide-border", className)}>
       {items.map((it, i) => (
         <div key={typeof it.label === "string" ? it.label : i} className="flex">
-          <dt className="flex w-30 shrink-0 items-center bg-muted px-2 font-medium text-foreground">{it.label}</dt>
+          <dt className="flex w-30 shrink-0 items-center bg-table-header px-2 font-medium text-foreground">{it.label}</dt>
           <dd className="flex h-9 min-w-0 flex-1 items-center p-2 text-foreground">{it.value}</dd>
         </div>
       ))}
@@ -87,7 +87,7 @@ function DialogBodyLotInput({
   const inputId = id ?? autoId
   return (
     <div data-slot="dialog-body-lot-input" className={cn(frame, "flex", className)}>
-      <Label htmlFor={inputId} className="flex w-30 shrink-0 items-center rounded-none bg-muted px-2">
+      <Label htmlFor={inputId} className="flex w-30 shrink-0 items-center rounded-none bg-table-header px-2">
         {label}
       </Label>
       <div className="flex min-w-0 flex-1 items-center px-2 py-1">
