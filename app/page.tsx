@@ -6,6 +6,7 @@ import { MoonIcon, SunIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { BatchDisplay } from "./_preview/batch-display"
 import { BatchForms } from "./_preview/batch-forms"
+import { BatchRest } from "./_preview/batch-rest"
 
 export default function Home() {
   const { resolvedTheme, setTheme } = useTheme()
@@ -24,6 +25,7 @@ export default function Home() {
       </header>
       <BatchForms />
       <BatchDisplay />
+      <BatchRest />
     </main>
   )
 }

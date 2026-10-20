@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "mic",
-  "homepage": "https://example.invalid",
+  "homepage": "http://localhost:3200",
   "items": [
     {
       "name": "mic-foundations",
@@ -9,8 +9,9 @@
       "title": "Mic Foundations",
       "description": "Mic Design System v0.1 토큰 — 색(라이트·다크), 간격, 글자, 둥글기, 그림자",
       "dependencies": [
-        "pretendard",
-        "tw-animate-css"
+        "pretendard@1.3.9",
+        "tw-animate-css@1.4.0",
+        "shadcn@4.22.1"
       ],
       "cssVars": {
         "theme": {
@@ -508,466 +509,469 @@
           "metric-production": "#46c074",
           "metric-quality": "#37b400",
           "radius": "10px",
-          "background": "var(--white)",
-          "foreground": "var(--slate-950)",
-          "card": "var(--white)",
-          "card-foreground": "var(--slate-950)",
-          "popover": "var(--white)",
-          "popover-foreground": "var(--slate-950)",
-          "primary": "var(--brand-700)",
-          "primary-foreground": "var(--white)",
-          "secondary": "var(--slate-100)",
-          "secondary-foreground": "var(--slate-900)",
-          "muted": "var(--slate-100)",
-          "muted-foreground": "var(--slate-600)",
-          "accent": "var(--brand-50)",
-          "accent-foreground": "var(--brand-700)",
-          "destructive": "var(--red-600)",
-          "border": "var(--slate-200)",
-          "input": "var(--slate-200)",
-          "ring": "var(--brand-600)",
-          "sidebar": "var(--white)",
-          "sidebar-foreground": "var(--slate-700)",
-          "sidebar-primary": "var(--brand-700)",
-          "sidebar-primary-foreground": "var(--white)",
-          "sidebar-accent": "var(--brand-100)",
-          "sidebar-accent-foreground": "var(--brand-700)",
-          "sidebar-border": "var(--slate-200)",
-          "sidebar-ring": "var(--brand-600)",
-          "success": "var(--green-700)",
-          "success-subtle": "var(--green-100)",
-          "success-subtle-foreground": "var(--green-800)",
-          "warning": "var(--amber-500)",
-          "warning-subtle": "var(--amber-100)",
-          "warning-subtle-foreground": "var(--amber-800)",
-          "destructive-emphasis": "var(--red-400)",
-          "destructive-subtle": "var(--red-100)",
-          "destructive-subtle-foreground": "var(--red-800)",
-          "dark": "var(--slate-500)",
-          "dark-subtle": "var(--slate-100)",
-          "dark-subtle-foreground": "var(--slate-700)",
-          "chart-4": "var(--cyan-600)",
-          "chart-4-subtle": "var(--cyan-100)",
-          "chart-4-bolder": "var(--cyan-800)",
-          "chart-5": "var(--orange-600)",
-          "chart-5-subtle": "var(--orange-100)",
-          "chart-5-bolder": "var(--orange-800)",
-          "chart-6": "var(--teal-600)",
-          "chart-6-subtle": "var(--teal-100)",
-          "chart-6-bolder": "var(--teal-800)",
-          "success-emphasis": "var(--green-400)",
-          "success-subtle-hover": "var(--green-200)",
-          "success-text": "var(--green-700)",
-          "warning-emphasis": "var(--amber-300)",
-          "warning-subtle-hover": "var(--amber-200)",
-          "warning-text": "var(--amber-700)",
-          "destructive-active": "var(--red-800)",
-          "destructive-subtle-hover": "var(--red-200)",
-          "destructive-text": "var(--red-600)",
-          "chart-1": "var(--brand-500)",
-          "chart-2": "var(--brand-300)",
-          "chart-3": "var(--violet-600)",
-          "chart-1-bold": "var(--brand-500)",
-          "chart-1-subtler": "var(--brand-200)",
-          "alpha-primary-90": "var(--alpha-brand-700-90)",
-          "alpha-primary-20": "var(--alpha-brand-700-20)",
-          "alpha-secondary-80": "var(--alpha-slate-100-80)",
-          "alpha-destructive-90": "var(--alpha-red-600-90)",
-          "alpha-destructive-10": "var(--alpha-red-600-10)",
-          "alpha-muted-50": "var(--alpha-slate-100-50)",
-          "alpha-border-50": "var(--alpha-slate-200-50)",
-          "alpha-sidebar-foreground-70": "var(--alpha-slate-700-70)",
-          "alpha-overlay": "var(--alpha-black-50)",
-          "alpha-ring-50": "var(--alpha-brand-600-50)",
-          "alpha-field": "var(--alpha-transparent)",
-          "alpha-outline": "var(--white)",
-          "alpha-outline-hover": "var(--brand-50)",
-          "alpha-destructive-solid": "var(--red-600)",
-          "alpha-switch-off": "var(--slate-200)",
-          "alpha-tab-active": "var(--white)",
-          "alpha-destructive-20": "var(--alpha-red-600-20)",
-          "alpha-primary-30": "var(--alpha-brand-700-30)",
-          "muted-active": "var(--slate-300)",
-          "muted-emphasis": "var(--slate-400)",
-          "muted-hover": "var(--slate-200)",
-          "secondary-active": "var(--slate-300)",
-          "secondary-hover": "var(--slate-200)",
-          "dark-active": "var(--slate-700)",
-          "dark-emphasis": "var(--slate-300)",
-          "dark-hover": "var(--slate-600)",
-          "dark-foreground": "var(--white)",
-          "dark-text": "var(--slate-500)",
-          "alpha-dark-active": "var(--alpha-slate-400-16)",
-          "alpha-dark-focus": "var(--alpha-slate-400-12)",
-          "alpha-dark-hover": "var(--alpha-slate-400-8)",
-          "dark-subtle-active": "var(--slate-300)",
-          "dark-subtle-hover": "var(--slate-200)",
-          "destructive-foreground": "var(--white)",
-          "destructive-subtle-active": "var(--red-300)",
-          "info-active": "var(--cobalt-650)",
-          "info-emphasis": "var(--cobalt-450)",
-          "info-hover": "var(--cobalt-600)",
-          "info-foreground": "var(--white)",
-          "info-text": "var(--cobalt-650)",
-          "alpha-info-active": "var(--alpha-cobalt-550-16)",
-          "alpha-info-focus": "var(--alpha-cobalt-550-12)",
-          "alpha-info-hover": "var(--alpha-cobalt-550-8)",
-          "info-subtle-active": "var(--cobalt-400)",
-          "info-subtle-hover": "var(--cobalt-300)",
-          "inverse-active": "var(--mono-850)",
-          "inverse-emphasis": "var(--mono-450)",
-          "inverse-hover": "var(--mono-800)",
-          "inverse": "var(--mono-700)",
-          "inverse-foreground": "var(--white)",
-          "inverse-subtle-foreground": "var(--white)",
-          "inverse-text": "var(--mono-900)",
-          "alpha-inverse-active": "var(--alpha-mono-900-16)",
-          "alpha-inverse-focus": "var(--alpha-mono-900-12)",
-          "alpha-inverse-hover": "var(--alpha-mono-900-8)",
-          "inverse-subtle": "var(--mono-550)",
-          "inverse-subtle-active": "var(--mono-700)",
-          "inverse-subtle-hover": "var(--mono-650)",
-          "light-hover": "var(--mono-250)",
-          "alpha-light-active": "var(--alpha-mono-250-16)",
-          "alpha-light-focus": "var(--alpha-mono-250-12)",
-          "light-subtle-hover": "var(--mono-100)",
-          "primary-active": "var(--brand-900)",
-          "primary-hover": "var(--brand-800)",
-          "primary-text": "var(--brand-700)",
-          "accent-active": "var(--brand-200)",
-          "accent-hover": "var(--brand-100)",
-          "neutral-active": "var(--slate-300)",
-          "neutral-emphasis": "var(--slate-400)",
-          "neutral-hover": "var(--slate-200)",
-          "neutral-foreground": "var(--slate-900)",
-          "neutral-subtle-foreground": "var(--slate-900)",
-          "neutral-text": "var(--slate-600)",
-          "alpha-neutral-active": "var(--alpha-slate-900-16)",
-          "alpha-neutral-focus": "var(--alpha-slate-900-12)",
-          "alpha-neutral-hover": "var(--alpha-slate-900-8)",
-          "neutral": "var(--slate-100)",
-          "neutral-subtle": "var(--slate-50)",
-          "neutral-subtle-active": "var(--slate-200)",
-          "neutral-subtle-hover": "var(--slate-100)",
-          "chart-1-bolder": "var(--brand-800)",
-          "chart-1-subtle": "var(--brand-400)",
-          "chart-2-bold": "var(--brand-500)",
-          "chart-2-bolder": "var(--brand-700)",
-          "chart-2-subtle": "var(--brand-200)",
-          "chart-2-subtler": "var(--brand-100)",
-          "chart-3-bold": "var(--violet-700)",
-          "chart-3-bolder": "var(--violet-800)",
-          "chart-3-subtle": "var(--violet-400)",
-          "chart-3-subtler": "var(--violet-200)",
-          "chart-4-bold": "var(--cyan-700)",
-          "chart-4-subtler": "var(--cyan-200)",
-          "chart-5-bold": "var(--orange-700)",
-          "chart-5-subtler": "var(--orange-200)",
-          "chart-6-bold": "var(--teal-700)",
-          "chart-6-subtler": "var(--teal-200)",
-          "success-active": "var(--green-900)",
-          "success-hover": "var(--green-800)",
-          "success-foreground": "var(--white)",
-          "alpha-success-active": "var(--alpha-green-700-16)",
-          "alpha-success-focus": "var(--alpha-green-700-12)",
-          "alpha-success-hover": "var(--alpha-green-700-8)",
-          "success-subtle-active": "var(--green-300)",
-          "tertiary-active": "var(--azure-700)",
-          "tertiary-emphasis": "var(--azure-350)",
-          "tertiary-hover": "var(--azure-600)",
-          "tertiary-subtle-foreground": "var(--azure-750)",
-          "tertiary-text": "var(--azure-500)",
-          "tertiary-foreground": "var(--white)",
-          "alpha-tertiary-active": "var(--alpha-azure-500-16)",
-          "alpha-tertiary-focus": "var(--alpha-azure-500-12)",
-          "alpha-tertiary-hover": "var(--alpha-azure-500-8)",
-          "tertiary-subtle": "var(--azure-150)",
-          "tertiary-subtle-active": "var(--azure-300)",
-          "tertiary-subtle-hover": "var(--azure-200)",
-          "tertiary": "var(--azure-500)",
-          "warning-active": "var(--amber-300)",
-          "warning-hover": "var(--amber-400)",
-          "warning-foreground": "var(--slate-900)",
-          "alpha-warning-active": "var(--alpha-amber-500-16)",
-          "alpha-warning-focus": "var(--alpha-amber-500-12)",
-          "alpha-warning-hover": "var(--alpha-amber-500-8)",
-          "warning-subtle-active": "var(--amber-300)",
-          "alpha-row-hover": "var(--alpha-slate-900-11)",
-          "alpha-row-sorted": "var(--alpha-slate-900-3)",
-          "alpha-link-hover": "var(--alpha-slate-900-20)",
-          "info": "var(--cobalt-550)",
-          "info-subtle": "var(--cobalt-250)",
-          "info-subtle-foreground": "var(--cobalt-850)",
-          "light": "var(--mono-150)",
-          "light-foreground": "var(--black)",
-          "light-subtle": "var(--mono-50)",
-          "light-subtle-foreground": "var(--mono-900)",
-          "light-emphasis": "var(--mono-300)",
-          "light-text": "var(--mono-250)",
-          "light-subtle-active": "var(--mono-150)",
-          "light-active": "var(--mono-300)",
-          "primary-emphasis": "var(--brand-400)",
-          "muted-fill-foreground": "var(--slate-900)",
-          "alpha-primary-hover": "var(--alpha-brand-700-8)",
-          "alpha-primary-active": "var(--alpha-brand-700-16)",
-          "alpha-primary-selected": "var(--alpha-brand-700-25)",
-          "alpha-destructive-hover": "var(--alpha-red-600-8)",
-          "alpha-destructive-active": "var(--alpha-red-600-16)",
-          "alpha-destructive-focus": "var(--alpha-red-600-12)",
-          "destructive-hover": "var(--red-700)",
-          "alpha-muted-hover": "var(--alpha-slate-900-8)",
-          "alpha-muted-active": "var(--alpha-slate-900-16)",
-          "alpha-muted-focus": "var(--alpha-slate-900-12)",
-          "alpha-row-alt": "var(--alpha-slate-900-5)",
-          "alpha-light-hover": "var(--alpha-mono-250-8)",
-          "alpha-transparent-white": "var(--alpha-white-0)",
-          "alpha-outline-border": "var(--alpha-slate-900-50)",
-          "alpha-outline-border-hover": "var(--alpha-slate-900-80)",
-          "alpha-list-hover": "var(--alpha-slate-900-8)",
-          "page-background": "var(--slate-100)",
-          "ees-maintenance": "var(--violet-600)",
-          "ees-maintenance-text": "var(--violet-600)",
-          "ees-maintenance-subtle": "var(--violet-100)",
-          "ees-maintenance-subtle-foreground": "var(--violet-800)",
-          "chart-electricity": "var(--metric-electricity)",
-          "chart-gas": "var(--metric-gas)",
-          "chart-operation": "var(--metric-operation)",
-          "chart-performance": "var(--brand-600)",
-          "chart-production": "var(--metric-production)",
-          "chart-quality": "var(--metric-quality)"
+          "background": "#ffffff",
+          "foreground": "#020617",
+          "card": "#ffffff",
+          "card-foreground": "#020617",
+          "popover": "#ffffff",
+          "popover-foreground": "#020617",
+          "primary": "#0161d2",
+          "primary-foreground": "#ffffff",
+          "secondary": "#f1f5f9",
+          "secondary-foreground": "#0f172a",
+          "muted": "#f1f5f9",
+          "muted-foreground": "#475569",
+          "accent": "#f1f6fd",
+          "accent-foreground": "#0161d2",
+          "destructive": "#dc2626",
+          "border": "#e2e8f0",
+          "input": "#e2e8f0",
+          "ring": "#1a73e9",
+          "sidebar": "#ffffff",
+          "sidebar-foreground": "#334155",
+          "sidebar-primary": "#0161d2",
+          "sidebar-primary-foreground": "#ffffff",
+          "sidebar-accent": "#dfebfb",
+          "sidebar-accent-foreground": "#0161d2",
+          "sidebar-border": "#e2e8f0",
+          "sidebar-ring": "#1a73e9",
+          "success": "#15803d",
+          "success-subtle": "#dcfce7",
+          "success-subtle-foreground": "#166534",
+          "warning": "#f59e0b",
+          "warning-subtle": "#fef3c7",
+          "warning-subtle-foreground": "#92400e",
+          "destructive-emphasis": "#f87171",
+          "destructive-subtle": "#fee2e2",
+          "destructive-subtle-foreground": "#991b1b",
+          "dark": "#64748b",
+          "dark-subtle": "#f1f5f9",
+          "dark-subtle-foreground": "#334155",
+          "chart-4": "#0891b2",
+          "chart-4-subtle": "#cffafe",
+          "chart-4-bolder": "#155e75",
+          "chart-5": "#ea580c",
+          "chart-5-subtle": "#ffedd5",
+          "chart-5-bolder": "#9a3412",
+          "chart-6": "#0d9488",
+          "chart-6-subtle": "#ccfbf1",
+          "chart-6-bolder": "#115e59",
+          "success-emphasis": "#4ade80",
+          "success-subtle-hover": "#bbf7d0",
+          "success-text": "#15803d",
+          "warning-emphasis": "#fcd34d",
+          "warning-subtle-hover": "#fde68a",
+          "warning-text": "#b45309",
+          "destructive-active": "#991b1b",
+          "destructive-subtle-hover": "#fecaca",
+          "destructive-text": "#dc2626",
+          "chart-1": "#468ef6",
+          "chart-2": "#a3c7fc",
+          "chart-3": "#7c3aed",
+          "chart-1-bold": "#468ef6",
+          "chart-1-subtler": "#c8dcfa",
+          "alpha-primary-90": "#0161d2e5",
+          "alpha-primary-20": "#0161d233",
+          "alpha-secondary-80": "#f1f5f9cc",
+          "alpha-destructive-90": "#dc2626e5",
+          "alpha-destructive-10": "#dc26261a",
+          "alpha-muted-50": "#f1f5f980",
+          "alpha-border-50": "#e2e8f080",
+          "alpha-sidebar-foreground-70": "#334155b2",
+          "alpha-overlay": "#00000080",
+          "alpha-ring-50": "#1a73e980",
+          "alpha-field": "#00000000",
+          "alpha-outline": "#ffffff",
+          "alpha-outline-hover": "#f1f6fd",
+          "alpha-destructive-solid": "#dc2626",
+          "alpha-switch-off": "#e2e8f0",
+          "alpha-tab-active": "#ffffff",
+          "alpha-destructive-20": "#dc262633",
+          "alpha-primary-30": "#0161d24d",
+          "muted-active": "#cbd5e1",
+          "muted-emphasis": "#94a3b8",
+          "muted-hover": "#e2e8f0",
+          "secondary-active": "#cbd5e1",
+          "secondary-hover": "#e2e8f0",
+          "dark-active": "#334155",
+          "dark-emphasis": "#cbd5e1",
+          "dark-hover": "#475569",
+          "dark-foreground": "#ffffff",
+          "dark-text": "#64748b",
+          "alpha-dark-active": "#94a3b829",
+          "alpha-dark-focus": "#94a3b81f",
+          "alpha-dark-hover": "#94a3b814",
+          "dark-subtle-active": "#cbd5e1",
+          "dark-subtle-hover": "#e2e8f0",
+          "destructive-foreground": "#ffffff",
+          "destructive-subtle-active": "#fca5a5",
+          "info-active": "#0044c2",
+          "info-emphasis": "#6098f2",
+          "info-hover": "#0052d6",
+          "info-foreground": "#ffffff",
+          "info-text": "#0044c2",
+          "alpha-info-active": "#0058e929",
+          "alpha-info-focus": "#0058e91f",
+          "alpha-info-hover": "#0058e914",
+          "info-subtle-active": "#80acf4",
+          "info-subtle-hover": "#bdd4f8",
+          "inverse-active": "#1f1f1f",
+          "inverse-emphasis": "#999999",
+          "inverse-hover": "#292929",
+          "inverse": "#3d3d3d",
+          "inverse-foreground": "#ffffff",
+          "inverse-subtle-foreground": "#ffffff",
+          "inverse-text": "#141414",
+          "alpha-inverse-active": "#14141429",
+          "alpha-inverse-focus": "#1414141f",
+          "alpha-inverse-hover": "#14141414",
+          "inverse-subtle": "#666666",
+          "inverse-subtle-active": "#3d3d3d",
+          "inverse-subtle-hover": "#525252",
+          "light-hover": "#e0e0e0",
+          "alpha-light-active": "#e0e0e029",
+          "alpha-light-focus": "#e0e0e01f",
+          "light-subtle-hover": "#f5f5f5",
+          "primary-active": "#1c4887",
+          "primary-hover": "#0a51ac",
+          "primary-text": "#0161d2",
+          "accent-active": "#c8dcfa",
+          "accent-hover": "#dfebfb",
+          "neutral-active": "#cbd5e1",
+          "neutral-emphasis": "#94a3b8",
+          "neutral-hover": "#e2e8f0",
+          "neutral-foreground": "#0f172a",
+          "neutral-subtle-foreground": "#0f172a",
+          "neutral-text": "#475569",
+          "alpha-neutral-active": "#0f172a29",
+          "alpha-neutral-focus": "#0f172a1f",
+          "alpha-neutral-hover": "#0f172a14",
+          "neutral": "#f1f5f9",
+          "neutral-subtle": "#f8fafc",
+          "neutral-subtle-active": "#e2e8f0",
+          "neutral-subtle-hover": "#f1f5f9",
+          "chart-1-bolder": "#0a51ac",
+          "chart-1-subtle": "#71a8f9",
+          "chart-2-bold": "#468ef6",
+          "chart-2-bolder": "#0161d2",
+          "chart-2-subtle": "#c8dcfa",
+          "chart-2-subtler": "#dfebfb",
+          "chart-3-bold": "#6d28d9",
+          "chart-3-bolder": "#5b21b6",
+          "chart-3-subtle": "#a78bfa",
+          "chart-3-subtler": "#ddd6fe",
+          "chart-4-bold": "#0e7490",
+          "chart-4-subtler": "#a5f3fc",
+          "chart-5-bold": "#c2410c",
+          "chart-5-subtler": "#fed7aa",
+          "chart-6-bold": "#0f766e",
+          "chart-6-subtler": "#99f6e4",
+          "success-active": "#14532d",
+          "success-hover": "#166534",
+          "success-foreground": "#ffffff",
+          "alpha-success-active": "#15803d29",
+          "alpha-success-focus": "#15803d1f",
+          "alpha-success-hover": "#15803d14",
+          "success-subtle-active": "#86efac",
+          "tertiary-active": "#014478",
+          "tertiary-emphasis": "#61c9f9",
+          "tertiary-hover": "#01579b",
+          "tertiary-subtle-foreground": "#023f5c",
+          "tertiary-text": "#0277bd",
+          "tertiary-foreground": "#ffffff",
+          "alpha-tertiary-active": "#0277bd29",
+          "alpha-tertiary-focus": "#0277bd1f",
+          "alpha-tertiary-hover": "#0277bd14",
+          "tertiary-subtle": "#d8f1fd",
+          "tertiary-subtle-active": "#a3dffb",
+          "tertiary-subtle-hover": "#c5eafc",
+          "tertiary": "#0277bd",
+          "warning-active": "#fcd34d",
+          "warning-hover": "#fbbf24",
+          "warning-foreground": "#0f172a",
+          "alpha-warning-active": "#f59e0b29",
+          "alpha-warning-focus": "#f59e0b1f",
+          "alpha-warning-hover": "#f59e0b14",
+          "warning-subtle-active": "#fcd34d",
+          "alpha-row-hover": "#0f172a1c",
+          "alpha-row-sorted": "#0f172a08",
+          "alpha-link-hover": "#0f172a33",
+          "info": "#0058e9",
+          "info-subtle": "#d2e2fb",
+          "info-subtle-foreground": "#002259",
+          "light": "#ebebeb",
+          "light-foreground": "#000000",
+          "light-subtle": "#fafafa",
+          "light-subtle-foreground": "#141414",
+          "light-emphasis": "#d6d6d6",
+          "light-text": "#e0e0e0",
+          "light-subtle-active": "#ebebeb",
+          "light-active": "#d6d6d6",
+          "primary-emphasis": "#71a8f9",
+          "muted-fill-foreground": "#0f172a",
+          "alpha-primary-hover": "#0161d214",
+          "alpha-primary-active": "#0161d229",
+          "alpha-primary-selected": "#0161d240",
+          "alpha-destructive-hover": "#dc262614",
+          "alpha-destructive-active": "#dc262629",
+          "alpha-destructive-focus": "#dc26261f",
+          "destructive-hover": "#b91c1c",
+          "alpha-muted-hover": "#0f172a14",
+          "alpha-muted-active": "#0f172a29",
+          "alpha-muted-focus": "#0f172a1f",
+          "alpha-row-alt": "#0f172a0d",
+          "alpha-light-hover": "#e0e0e014",
+          "alpha-transparent-white": "#ffffff00",
+          "alpha-outline-border": "#0f172a80",
+          "alpha-outline-border-hover": "#0f172acc",
+          "alpha-list-hover": "#0f172a14",
+          "page-background": "#f1f5f9",
+          "ees-maintenance": "#7c3aed",
+          "ees-maintenance-text": "#7c3aed",
+          "ees-maintenance-subtle": "#ede9fe",
+          "ees-maintenance-subtle-foreground": "#5b21b6",
+          "chart-electricity": "#ff7225",
+          "chart-gas": "#1274ac",
+          "chart-operation": "#ac58ff",
+          "chart-performance": "#1a73e9",
+          "chart-production": "#46c074",
+          "chart-quality": "#37b400"
         },
         "dark": {
-          "background": "var(--slate-950)",
-          "foreground": "var(--slate-50)",
-          "card": "var(--slate-900)",
-          "card-foreground": "var(--slate-50)",
-          "popover": "var(--slate-900)",
-          "popover-foreground": "var(--slate-50)",
-          "primary": "var(--brand-600)",
-          "primary-foreground": "var(--white)",
-          "secondary": "var(--slate-800)",
-          "secondary-foreground": "var(--slate-50)",
-          "muted": "var(--slate-800)",
-          "muted-foreground": "var(--slate-400)",
-          "accent": "var(--brand-950)",
-          "accent-foreground": "var(--brand-200)",
-          "destructive": "var(--red-600)",
-          "border": "var(--slate-700)",
-          "input": "var(--slate-700)",
-          "ring": "var(--brand-400)",
-          "sidebar": "var(--slate-900)",
-          "sidebar-foreground": "var(--slate-50)",
-          "sidebar-primary": "var(--brand-600)",
-          "sidebar-primary-foreground": "var(--white)",
-          "sidebar-accent": "var(--brand-950)",
-          "sidebar-accent-foreground": "var(--brand-200)",
-          "sidebar-border": "var(--slate-700)",
-          "sidebar-ring": "var(--brand-400)",
-          "success": "var(--green-700)",
-          "success-subtle": "var(--green-950)",
-          "success-subtle-foreground": "var(--green-300)",
-          "warning": "var(--amber-400)",
-          "warning-subtle": "var(--amber-950)",
-          "warning-subtle-foreground": "var(--amber-300)",
-          "destructive-emphasis": "var(--red-400)",
-          "destructive-subtle": "var(--red-950)",
-          "destructive-subtle-foreground": "var(--red-300)",
-          "dark": "var(--slate-500)",
-          "dark-subtle": "var(--slate-800)",
-          "dark-subtle-foreground": "var(--slate-300)",
-          "chart-4": "var(--cyan-500)",
-          "chart-4-subtle": "var(--cyan-950)",
-          "chart-4-bolder": "var(--cyan-300)",
-          "chart-5": "var(--orange-500)",
-          "chart-5-subtle": "var(--orange-950)",
-          "chart-5-bolder": "var(--orange-300)",
-          "chart-6": "var(--teal-500)",
-          "chart-6-subtle": "var(--teal-950)",
-          "chart-6-bolder": "var(--teal-300)",
-          "success-emphasis": "var(--green-400)",
-          "success-subtle-hover": "var(--green-900)",
-          "success-text": "var(--green-500)",
-          "warning-emphasis": "var(--amber-300)",
-          "warning-subtle-hover": "var(--amber-900)",
-          "warning-text": "var(--amber-400)",
-          "destructive-active": "var(--red-800)",
-          "destructive-subtle-hover": "var(--red-900)",
-          "destructive-text": "var(--red-500)",
-          "chart-1": "var(--brand-500)",
-          "chart-2": "var(--brand-300)",
-          "chart-3": "var(--violet-400)",
-          "chart-1-bold": "var(--brand-400)",
-          "chart-1-subtler": "var(--brand-800)",
-          "alpha-primary-90": "var(--alpha-brand-600-90)",
-          "alpha-primary-20": "var(--alpha-brand-600-20)",
-          "alpha-secondary-80": "var(--alpha-slate-800-80)",
-          "alpha-destructive-90": "var(--alpha-red-600-90)",
-          "alpha-destructive-10": "var(--alpha-red-600-20)",
-          "alpha-muted-50": "var(--alpha-slate-800-50)",
-          "alpha-border-50": "var(--alpha-slate-800-50)",
-          "alpha-sidebar-foreground-70": "var(--alpha-slate-50-70)",
-          "alpha-overlay": "var(--alpha-black-50)",
-          "alpha-ring-50": "var(--alpha-brand-400-50)",
-          "alpha-field": "var(--alpha-slate-800-30)",
-          "alpha-outline": "var(--alpha-slate-800-30)",
-          "alpha-outline-hover": "var(--alpha-slate-800-50)",
-          "alpha-destructive-solid": "var(--alpha-red-600-60)",
-          "alpha-switch-off": "var(--alpha-slate-800-80)",
-          "alpha-tab-active": "var(--alpha-slate-800-30)",
-          "alpha-destructive-20": "var(--alpha-red-600-40)",
-          "alpha-primary-30": "var(--alpha-brand-600-30)",
-          "muted-active": "var(--slate-600)",
-          "muted-emphasis": "var(--slate-400)",
-          "muted-hover": "var(--slate-700)",
-          "secondary-active": "var(--slate-600)",
-          "secondary-hover": "var(--slate-700)",
-          "dark-active": "var(--slate-700)",
-          "dark-emphasis": "var(--slate-300)",
-          "dark-hover": "var(--slate-600)",
-          "dark-foreground": "var(--white)",
-          "dark-text": "var(--slate-400)",
-          "alpha-dark-active": "var(--alpha-slate-500-16)",
-          "alpha-dark-focus": "var(--alpha-slate-500-12)",
-          "alpha-dark-hover": "var(--alpha-slate-500-8)",
-          "dark-subtle-active": "var(--slate-600)",
-          "dark-subtle-hover": "var(--slate-700)",
-          "destructive-foreground": "var(--white)",
-          "destructive-subtle-active": "var(--red-800)",
-          "info-active": "var(--cobalt-650)",
-          "info-emphasis": "var(--cobalt-450)",
-          "info-hover": "var(--cobalt-600)",
-          "info-foreground": "var(--white)",
-          "info-text": "var(--cobalt-500)",
-          "alpha-info-active": "var(--alpha-cobalt-550-16)",
-          "alpha-info-focus": "var(--alpha-cobalt-550-12)",
-          "alpha-info-hover": "var(--alpha-cobalt-550-8)",
-          "info-subtle-active": "var(--cobalt-700)",
-          "info-subtle-hover": "var(--cobalt-750)",
-          "inverse-active": "var(--mono-350)",
-          "inverse-emphasis": "var(--mono-600)",
-          "inverse-hover": "var(--mono-300)",
-          "inverse": "var(--mono-150)",
-          "inverse-foreground": "var(--black)",
-          "inverse-subtle-foreground": "var(--mono-900)",
-          "inverse-text": "var(--mono-150)",
-          "alpha-inverse-active": "var(--alpha-mono-150-16)",
-          "alpha-inverse-focus": "var(--alpha-mono-150-12)",
-          "alpha-inverse-hover": "var(--alpha-mono-150-8)",
-          "inverse-subtle": "var(--mono-350)",
-          "inverse-subtle-active": "var(--mono-500)",
-          "inverse-subtle-hover": "var(--mono-400)",
-          "light-hover": "var(--mono-250)",
-          "alpha-light-active": "var(--alpha-mono-250-16)",
-          "alpha-light-focus": "var(--alpha-mono-250-12)",
-          "light-subtle-hover": "var(--mono-100)",
-          "primary-active": "var(--brand-800)",
-          "primary-hover": "var(--brand-700)",
-          "primary-text": "var(--brand-500)",
-          "accent-active": "var(--brand-800)",
-          "accent-hover": "var(--brand-900)",
-          "neutral-active": "var(--slate-600)",
-          "neutral-emphasis": "var(--slate-400)",
-          "neutral-hover": "var(--slate-700)",
-          "neutral-foreground": "var(--slate-50)",
-          "neutral-subtle-foreground": "var(--slate-50)",
-          "neutral-text": "var(--slate-400)",
-          "alpha-neutral-active": "var(--alpha-slate-50-16)",
-          "alpha-neutral-focus": "var(--alpha-slate-50-12)",
-          "alpha-neutral-hover": "var(--alpha-slate-50-8)",
-          "neutral": "var(--slate-800)",
-          "neutral-subtle": "var(--slate-900)",
-          "neutral-subtle-active": "var(--slate-700)",
-          "neutral-subtle-hover": "var(--slate-800)",
-          "chart-1-bolder": "var(--brand-300)",
-          "chart-1-subtle": "var(--brand-700)",
-          "chart-2-bold": "var(--brand-400)",
-          "chart-2-bolder": "var(--brand-200)",
-          "chart-2-subtle": "var(--brand-600)",
-          "chart-2-subtler": "var(--brand-700)",
-          "chart-3-bold": "var(--violet-300)",
-          "chart-3-bolder": "var(--violet-200)",
-          "chart-3-subtle": "var(--violet-600)",
-          "chart-3-subtler": "var(--violet-800)",
-          "chart-4-bold": "var(--cyan-400)",
-          "chart-4-subtler": "var(--cyan-800)",
-          "chart-5-bold": "var(--orange-400)",
-          "chart-5-subtler": "var(--orange-800)",
-          "chart-6-bold": "var(--teal-400)",
-          "chart-6-subtler": "var(--teal-800)",
-          "success-active": "var(--green-900)",
-          "success-hover": "var(--green-800)",
-          "success-foreground": "var(--white)",
-          "alpha-success-active": "var(--alpha-green-700-16)",
-          "alpha-success-focus": "var(--alpha-green-700-12)",
-          "alpha-success-hover": "var(--alpha-green-700-8)",
-          "success-subtle-active": "var(--green-800)",
-          "tertiary-active": "var(--azure-700)",
-          "tertiary-emphasis": "var(--azure-350)",
-          "tertiary-hover": "var(--azure-600)",
-          "tertiary-subtle-foreground": "var(--azure-100)",
-          "tertiary-text": "var(--azure-400)",
-          "tertiary-foreground": "var(--white)",
-          "alpha-tertiary-active": "var(--alpha-azure-500-16)",
-          "alpha-tertiary-focus": "var(--alpha-azure-500-12)",
-          "alpha-tertiary-hover": "var(--alpha-azure-500-8)",
-          "tertiary-subtle": "var(--azure-750)",
-          "tertiary-subtle-active": "var(--azure-550)",
-          "tertiary-subtle-hover": "var(--azure-650)",
-          "tertiary": "var(--azure-500)",
-          "warning-active": "var(--amber-200)",
-          "warning-hover": "var(--amber-300)",
-          "warning-foreground": "var(--slate-900)",
-          "alpha-warning-active": "var(--alpha-amber-400-16)",
-          "alpha-warning-focus": "var(--alpha-amber-400-12)",
-          "alpha-warning-hover": "var(--alpha-amber-400-8)",
-          "warning-subtle-active": "var(--amber-800)",
-          "alpha-row-hover": "var(--alpha-slate-50-11)",
-          "alpha-row-sorted": "var(--alpha-slate-50-3)",
-          "alpha-link-hover": "var(--alpha-slate-50-20)",
-          "info": "var(--cobalt-550)",
-          "info-subtle": "var(--cobalt-800)",
-          "info-subtle-foreground": "var(--cobalt-150)",
-          "light": "var(--mono-150)",
-          "light-foreground": "var(--black)",
-          "light-subtle": "var(--mono-50)",
-          "light-subtle-foreground": "var(--mono-900)",
-          "light-emphasis": "var(--mono-300)",
-          "light-text": "var(--mono-250)",
-          "light-subtle-active": "var(--mono-150)",
-          "light-active": "var(--mono-300)",
-          "primary-emphasis": "var(--brand-400)",
-          "muted-fill-foreground": "var(--slate-50)",
-          "alpha-primary-hover": "var(--alpha-brand-600-8)",
-          "alpha-primary-active": "var(--alpha-brand-600-16)",
-          "alpha-primary-selected": "var(--alpha-brand-600-25)",
-          "alpha-destructive-hover": "var(--alpha-red-600-8)",
-          "alpha-destructive-active": "var(--alpha-red-600-16)",
-          "alpha-destructive-focus": "var(--alpha-red-600-12)",
-          "destructive-hover": "var(--red-700)",
-          "alpha-muted-hover": "var(--alpha-slate-50-8)",
-          "alpha-muted-active": "var(--alpha-slate-50-16)",
-          "alpha-muted-focus": "var(--alpha-slate-50-12)",
-          "alpha-row-alt": "var(--alpha-slate-50-5)",
-          "alpha-light-hover": "var(--alpha-mono-250-8)",
-          "alpha-transparent-white": "var(--alpha-white-0)",
-          "alpha-outline-border": "var(--alpha-slate-50-50)",
-          "alpha-outline-border-hover": "var(--alpha-slate-50-80)",
-          "alpha-list-hover": "var(--alpha-slate-50-8)",
-          "page-background": "var(--slate-950)",
-          "ees-maintenance": "var(--violet-600)",
-          "ees-maintenance-text": "var(--violet-400)",
-          "ees-maintenance-subtle": "var(--violet-950)",
-          "ees-maintenance-subtle-foreground": "var(--violet-300)",
-          "chart-electricity": "var(--metric-electricity)",
-          "chart-gas": "var(--metric-gas)",
-          "chart-operation": "var(--metric-operation)",
-          "chart-performance": "var(--brand-600)",
-          "chart-production": "var(--metric-production)",
-          "chart-quality": "var(--metric-quality)"
+          "background": "#020617",
+          "foreground": "#f8fafc",
+          "card": "#0f172a",
+          "card-foreground": "#f8fafc",
+          "popover": "#0f172a",
+          "popover-foreground": "#f8fafc",
+          "primary": "#1a73e9",
+          "primary-foreground": "#ffffff",
+          "secondary": "#1e293b",
+          "secondary-foreground": "#f8fafc",
+          "muted": "#1e293b",
+          "muted-foreground": "#94a3b8",
+          "accent": "#173055",
+          "accent-foreground": "#c8dcfa",
+          "destructive": "#dc2626",
+          "border": "#334155",
+          "input": "#334155",
+          "ring": "#71a8f9",
+          "sidebar": "#0f172a",
+          "sidebar-foreground": "#f8fafc",
+          "sidebar-primary": "#1a73e9",
+          "sidebar-primary-foreground": "#ffffff",
+          "sidebar-accent": "#173055",
+          "sidebar-accent-foreground": "#c8dcfa",
+          "sidebar-border": "#334155",
+          "sidebar-ring": "#71a8f9",
+          "success": "#15803d",
+          "success-subtle": "#052e16",
+          "success-subtle-foreground": "#86efac",
+          "warning": "#fbbf24",
+          "warning-subtle": "#451a03",
+          "warning-subtle-foreground": "#fcd34d",
+          "destructive-emphasis": "#f87171",
+          "destructive-subtle": "#450a0a",
+          "destructive-subtle-foreground": "#fca5a5",
+          "dark": "#64748b",
+          "dark-subtle": "#1e293b",
+          "dark-subtle-foreground": "#cbd5e1",
+          "chart-4": "#06b6d4",
+          "chart-4-subtle": "#083344",
+          "chart-4-bolder": "#67e8f9",
+          "chart-5": "#f97316",
+          "chart-5-subtle": "#431407",
+          "chart-5-bolder": "#fdba74",
+          "chart-6": "#14b8a6",
+          "chart-6-subtle": "#042f2e",
+          "chart-6-bolder": "#5eead4",
+          "success-emphasis": "#4ade80",
+          "success-subtle-hover": "#14532d",
+          "success-text": "#22c55e",
+          "warning-emphasis": "#fcd34d",
+          "warning-subtle-hover": "#78350f",
+          "warning-text": "#fbbf24",
+          "destructive-active": "#991b1b",
+          "destructive-subtle-hover": "#7f1d1d",
+          "destructive-text": "#ef4444",
+          "chart-1": "#468ef6",
+          "chart-2": "#a3c7fc",
+          "chart-3": "#a78bfa",
+          "chart-1-bold": "#71a8f9",
+          "chart-1-subtler": "#0a51ac",
+          "alpha-primary-90": "#1a73e9e5",
+          "alpha-primary-20": "#1a73e933",
+          "alpha-secondary-80": "#1e293bcc",
+          "alpha-destructive-90": "#dc2626e5",
+          "alpha-destructive-10": "#dc262633",
+          "alpha-muted-50": "#1e293b80",
+          "alpha-border-50": "#1e293b80",
+          "alpha-sidebar-foreground-70": "#f8fafcb2",
+          "alpha-overlay": "#00000080",
+          "alpha-ring-50": "#71a8f980",
+          "alpha-field": "#1e293b4d",
+          "alpha-outline": "#1e293b4d",
+          "alpha-outline-hover": "#1e293b80",
+          "alpha-destructive-solid": "#dc262699",
+          "alpha-switch-off": "#1e293bcc",
+          "alpha-tab-active": "#1e293b4d",
+          "alpha-destructive-20": "#dc262666",
+          "alpha-primary-30": "#1a73e94d",
+          "muted-active": "#475569",
+          "muted-emphasis": "#94a3b8",
+          "muted-hover": "#334155",
+          "secondary-active": "#475569",
+          "secondary-hover": "#334155",
+          "dark-active": "#334155",
+          "dark-emphasis": "#cbd5e1",
+          "dark-hover": "#475569",
+          "dark-foreground": "#ffffff",
+          "dark-text": "#94a3b8",
+          "alpha-dark-active": "#64748b29",
+          "alpha-dark-focus": "#64748b1f",
+          "alpha-dark-hover": "#64748b14",
+          "dark-subtle-active": "#475569",
+          "dark-subtle-hover": "#334155",
+          "destructive-foreground": "#ffffff",
+          "destructive-subtle-active": "#991b1b",
+          "info-active": "#0044c2",
+          "info-emphasis": "#6098f2",
+          "info-hover": "#0052d6",
+          "info-foreground": "#ffffff",
+          "info-text": "#4082ef",
+          "alpha-info-active": "#0058e929",
+          "alpha-info-focus": "#0058e91f",
+          "alpha-info-hover": "#0058e914",
+          "info-subtle-active": "#0042af",
+          "info-subtle-hover": "#003892",
+          "inverse-active": "#c2c2c2",
+          "inverse-emphasis": "#575757",
+          "inverse-hover": "#d6d6d6",
+          "inverse": "#ebebeb",
+          "inverse-foreground": "#000000",
+          "inverse-subtle-foreground": "#141414",
+          "inverse-text": "#ebebeb",
+          "alpha-inverse-active": "#ebebeb29",
+          "alpha-inverse-focus": "#ebebeb1f",
+          "alpha-inverse-hover": "#ebebeb14",
+          "inverse-subtle": "#c2c2c2",
+          "inverse-subtle-active": "#757575",
+          "inverse-subtle-hover": "#9c9c9c",
+          "light-hover": "#e0e0e0",
+          "alpha-light-active": "#e0e0e029",
+          "alpha-light-focus": "#e0e0e01f",
+          "light-subtle-hover": "#f5f5f5",
+          "primary-active": "#0a51ac",
+          "primary-hover": "#0161d2",
+          "primary-text": "#468ef6",
+          "accent-active": "#0a51ac",
+          "accent-hover": "#1c4887",
+          "neutral-active": "#475569",
+          "neutral-emphasis": "#94a3b8",
+          "neutral-hover": "#334155",
+          "neutral-foreground": "#f8fafc",
+          "neutral-subtle-foreground": "#f8fafc",
+          "neutral-text": "#94a3b8",
+          "alpha-neutral-active": "#f8fafc29",
+          "alpha-neutral-focus": "#f8fafc1f",
+          "alpha-neutral-hover": "#f8fafc14",
+          "neutral": "#1e293b",
+          "neutral-subtle": "#0f172a",
+          "neutral-subtle-active": "#334155",
+          "neutral-subtle-hover": "#1e293b",
+          "chart-1-bolder": "#a3c7fc",
+          "chart-1-subtle": "#0161d2",
+          "chart-2-bold": "#71a8f9",
+          "chart-2-bolder": "#c8dcfa",
+          "chart-2-subtle": "#1a73e9",
+          "chart-2-subtler": "#0161d2",
+          "chart-3-bold": "#c4b5fd",
+          "chart-3-bolder": "#ddd6fe",
+          "chart-3-subtle": "#7c3aed",
+          "chart-3-subtler": "#5b21b6",
+          "chart-4-bold": "#22d3ee",
+          "chart-4-subtler": "#155e75",
+          "chart-5-bold": "#fb923c",
+          "chart-5-subtler": "#9a3412",
+          "chart-6-bold": "#2dd4bf",
+          "chart-6-subtler": "#115e59",
+          "success-active": "#14532d",
+          "success-hover": "#166534",
+          "success-foreground": "#ffffff",
+          "alpha-success-active": "#15803d29",
+          "alpha-success-focus": "#15803d1f",
+          "alpha-success-hover": "#15803d14",
+          "success-subtle-active": "#166534",
+          "tertiary-active": "#014478",
+          "tertiary-emphasis": "#61c9f9",
+          "tertiary-hover": "#01579b",
+          "tertiary-subtle-foreground": "#ebf8fe",
+          "tertiary-text": "#03a9f4",
+          "tertiary-foreground": "#ffffff",
+          "alpha-tertiary-active": "#0277bd29",
+          "alpha-tertiary-focus": "#0277bd1f",
+          "alpha-tertiary-hover": "#0277bd14",
+          "tertiary-subtle": "#023f5c",
+          "tertiary-subtle-active": "#026999",
+          "tertiary-subtle-hover": "#02557a",
+          "tertiary": "#0277bd",
+          "warning-active": "#fde68a",
+          "warning-hover": "#fcd34d",
+          "warning-foreground": "#0f172a",
+          "alpha-warning-active": "#fbbf2429",
+          "alpha-warning-focus": "#fbbf241f",
+          "alpha-warning-hover": "#fbbf2414",
+          "warning-subtle-active": "#92400e",
+          "alpha-row-hover": "#f8fafc1c",
+          "alpha-row-sorted": "#f8fafc08",
+          "alpha-link-hover": "#f8fafc33",
+          "info": "#0058e9",
+          "info-subtle": "#002c75",
+          "info-subtle-foreground": "#e9f0fd",
+          "light": "#ebebeb",
+          "light-foreground": "#000000",
+          "light-subtle": "#fafafa",
+          "light-subtle-foreground": "#141414",
+          "light-emphasis": "#d6d6d6",
+          "light-text": "#e0e0e0",
+          "light-subtle-active": "#ebebeb",
+          "light-active": "#d6d6d6",
+          "primary-emphasis": "#71a8f9",
+          "muted-fill-foreground": "#f8fafc",
+          "alpha-primary-hover": "#1a73e914",
+          "alpha-primary-active": "#1a73e929",
+          "alpha-primary-selected": "#1a73e940",
+          "alpha-destructive-hover": "#dc262614",
+          "alpha-destructive-active": "#dc262629",
+          "alpha-destructive-focus": "#dc26261f",
+          "destructive-hover": "#b91c1c",
+          "alpha-muted-hover": "#f8fafc14",
+          "alpha-muted-active": "#f8fafc29",
+          "alpha-muted-focus": "#f8fafc1f",
+          "alpha-row-alt": "#f8fafc0d",
+          "alpha-light-hover": "#e0e0e014",
+          "alpha-transparent-white": "#ffffff00",
+          "alpha-outline-border": "#f8fafc80",
+          "alpha-outline-border-hover": "#f8fafccc",
+          "alpha-list-hover": "#f8fafc14",
+          "page-background": "#020617",
+          "ees-maintenance": "#7c3aed",
+          "ees-maintenance-text": "#a78bfa",
+          "ees-maintenance-subtle": "#2e1065",
+          "ees-maintenance-subtle-foreground": "#c4b5fd",
+          "chart-electricity": "#ff7225",
+          "chart-gas": "#1274ac",
+          "chart-operation": "#ac58ff",
+          "chart-performance": "#1a73e9",
+          "chart-production": "#46c074",
+          "chart-quality": "#37b400"
         }
       },
       "css": {
+        "@import \"tw-animate-css\"": {},
+        "@import \"shadcn/tailwind.css\"": {},
         "@import \"pretendard/dist/web/variable/pretendardvariable.css\"": {},
+        "@custom-variant dark (&:is(.dark *))": {},
         "@layer base": {
           "*": {
             "@apply border-border outline-ring/50": {}
@@ -980,6 +984,1255 @@
           }
         }
       }
+    },
+    {
+      "name": "mic",
+      "type": "registry:block",
+      "title": "Mic Design System",
+      "description": "Mic Design System v0.1.0 전체 — 토큰 + 부품 59개 + AI 규칙 문서(docs/mic.md)",
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/accordion.json",
+        "http://localhost:3200/r/0.1.0/alert-dialog.json",
+        "http://localhost:3200/r/0.1.0/alert.json",
+        "http://localhost:3200/r/0.1.0/autocomplete.json",
+        "http://localhost:3200/r/0.1.0/avatar.json",
+        "http://localhost:3200/r/0.1.0/badge.json",
+        "http://localhost:3200/r/0.1.0/breadcrumb.json",
+        "http://localhost:3200/r/0.1.0/button-group.json",
+        "http://localhost:3200/r/0.1.0/button.json",
+        "http://localhost:3200/r/0.1.0/calendar.json",
+        "http://localhost:3200/r/0.1.0/card.json",
+        "http://localhost:3200/r/0.1.0/chart-presets.json",
+        "http://localhost:3200/r/0.1.0/chart.json",
+        "http://localhost:3200/r/0.1.0/checkbox.json",
+        "http://localhost:3200/r/0.1.0/combobox.json",
+        "http://localhost:3200/r/0.1.0/command.json",
+        "http://localhost:3200/r/0.1.0/data-table.json",
+        "http://localhost:3200/r/0.1.0/date-picker.json",
+        "http://localhost:3200/r/0.1.0/dialog.json",
+        "http://localhost:3200/r/0.1.0/dropdown-menu.json",
+        "http://localhost:3200/r/0.1.0/field.json",
+        "http://localhost:3200/r/0.1.0/filter-chip.json",
+        "http://localhost:3200/r/0.1.0/input-group.json",
+        "http://localhost:3200/r/0.1.0/input.json",
+        "http://localhost:3200/r/0.1.0/kbd.json",
+        "http://localhost:3200/r/0.1.0/label.json",
+        "http://localhost:3200/r/0.1.0/multi-select.json",
+        "http://localhost:3200/r/0.1.0/nav-user.json",
+        "http://localhost:3200/r/0.1.0/number-input.json",
+        "http://localhost:3200/r/0.1.0/page-tabs.json",
+        "http://localhost:3200/r/0.1.0/pagination.json",
+        "http://localhost:3200/r/0.1.0/popover.json",
+        "http://localhost:3200/r/0.1.0/progress.json",
+        "http://localhost:3200/r/0.1.0/radio-group.json",
+        "http://localhost:3200/r/0.1.0/select.json",
+        "http://localhost:3200/r/0.1.0/separator.json",
+        "http://localhost:3200/r/0.1.0/sheet.json",
+        "http://localhost:3200/r/0.1.0/sidebar-brand.json",
+        "http://localhost:3200/r/0.1.0/sidebar.json",
+        "http://localhost:3200/r/0.1.0/skeleton.json",
+        "http://localhost:3200/r/0.1.0/sonner.json",
+        "http://localhost:3200/r/0.1.0/spinner.json",
+        "http://localhost:3200/r/0.1.0/stat-card.json",
+        "http://localhost:3200/r/0.1.0/stepper.json",
+        "http://localhost:3200/r/0.1.0/switch.json",
+        "http://localhost:3200/r/0.1.0/table.json",
+        "http://localhost:3200/r/0.1.0/tabs.json",
+        "http://localhost:3200/r/0.1.0/textarea.json",
+        "http://localhost:3200/r/0.1.0/toggle-group.json",
+        "http://localhost:3200/r/0.1.0/toggle.json",
+        "http://localhost:3200/r/0.1.0/toolbar.json",
+        "http://localhost:3200/r/0.1.0/tooltip.json",
+        "http://localhost:3200/r/0.1.0/tree.json",
+        "http://localhost:3200/r/0.1.0/filter-bar.json",
+        "http://localhost:3200/r/0.1.0/form-action-bar.json",
+        "http://localhost:3200/r/0.1.0/page-heading.json",
+        "http://localhost:3200/r/0.1.0/site-header.json",
+        "http://localhost:3200/r/0.1.0/theme-provider.json",
+        "http://localhost:3200/r/0.1.0/use-mobile.json"
+      ],
+      "files": [
+        {
+          "path": "docs/mic.md",
+          "type": "registry:file",
+          "target": "~/docs/mic.md"
+        }
+      ]
+    },
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "accordion",
+      "description": "Mic v0.1 · Figma \"- Layout › Accordion\" (2044:264) — state: expanded·collapsed, 테두리 있는 패널형",
+      "dependencies": [
+        "cn@0.5.0",
+        "radix-ui@1.8.1",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/accordion.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "title": "alert-dialog",
+      "description": "Mic v0.1 · Figma \"- Dialogs › AlertDialogContent\" (26:36)",
+      "dependencies": [
+        "cn@0.5.0",
+        "radix-ui@1.8.1"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/button.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/alert-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "alert",
+      "description": "Mic v0.1 · Figma \"- Alerts › Alert\" (28:20) — variant: default·destructive",
+      "dependencies": [
+        "class-variance-authority@0.7.1",
+        "cn@0.5.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/alert.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "autocomplete",
+      "type": "registry:ui",
+      "title": "autocomplete",
+      "description": "Mic v0.1 · Figma \"- Dropdowns › Autocomplete\" (2022:3)",
+      "dependencies": [
+        "cmdk@1.1.1",
+        "radix-ui@1.8.1",
+        "cn@0.5.0",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/autocomplete.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "avatar",
+      "description": "Mic v0.1 · Figma \"- Avatars › Avatar\" (81:373) — type: fallback·image, 32px",
+      "dependencies": [
+        "cn@0.5.0",
+        "radix-ui@1.8.1"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "badge",
+      "description": "Mic v0.1 · Figma \"- Badges › Badge\" (12:151) — variant: default·secondary·destructive·outline (ghost·link는 shadcn 호환용)",
+      "dependencies": [
+        "class-variance-authority@0.7.1",
+        "cn@0.5.0",
+        "radix-ui@1.8.1"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "title": "breadcrumb",
+      "description": "Mic v0.1 · Figma \"- Breadcrumbs\" (27:7 Link · 27:8 Page · 27:10 Separator · 27:13 Ellipsis)",
+      "dependencies": [
+        "cn@0.5.0",
+        "radix-ui@1.8.1",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/breadcrumb.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-group",
+      "type": "registry:ui",
+      "title": "button-group",
+      "description": "Mic v0.1 · Figma \"- Buttons › ButtonGroup\" (51:92)",
+      "dependencies": [
+        "class-variance-authority@0.7.1",
+        "cn@0.5.0",
+        "radix-ui@1.8.1"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/separator.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/button-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "button",
+      "description": "Mic v0.1 · Figma \"- Buttons › Button\" (9:458)",
+      "dependencies": [
+        "class-variance-authority@0.7.1",
+        "cn@0.5.0",
+        "radix-ui@1.8.1"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "title": "calendar",
+      "description": "Mic v0.1 · Figma \"- Date Pickers › Calendar\" (29:18) · CalendarDay (29:17) — 32px 칸, 오늘=accent, 선택=primary",
+      "dependencies": [
+        "cn@0.5.0",
+        "react-day-picker@10.0.2",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/button.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/calendar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "card",
+      "description": "Mic v0.1 · Figma \"- Cards › Card\" (23:6) — 테두리 + shadow-sm, 둥글기 xl(16), 안쪽 여백 24",
+      "dependencies": [
+        "cn@0.5.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart-presets",
+      "type": "registry:ui",
+      "title": "chart-presets",
+      "description": "Mic v0.1 · Figma \"- Charts\" 예시 차트 (35:27 Bar · 35:68 Line · 43:1319 Pie · 43:1334 BarGradient",
+      "dependencies": [
+        "cn@0.5.0",
+        "recharts@3.8.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/chart.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/chart-presets.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart",
+      "type": "registry:ui",
+      "title": "chart",
+      "description": "Mic v0.1 · Figma \"- Charts\" (35:3 ChartTooltipContent · 35:17 ChartLegendContent) — 계열 색은 chart-1~6 토큰",
+      "dependencies": [
+        "cn@0.5.0",
+        "recharts@3.8.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/chart.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "checkbox",
+      "description": "Mic v0.1 · Figma \"- Checkboxes › Checkbox\" (11:86)",
+      "dependencies": [
+        "cn@0.5.0",
+        "radix-ui@1.8.1",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/checkbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "title": "combobox",
+      "description": "Mic v0.1 · Figma \"- Command › Combobox\" (30:106) — Value: text · Open: bool",
+      "dependencies": [
+        "cn@0.5.0",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/command.json",
+        "http://localhost:3200/r/0.1.0/popover.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/combobox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command",
+      "type": "registry:ui",
+      "title": "command",
+      "description": "Mic v0.1 · Figma \"- Command\" (30:27 Item · 30:28 Input · 30:33 GroupHeading · 30:35 Command)",
+      "dependencies": [
+        "cmdk@1.1.1",
+        "cn@0.5.0",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/dialog.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/command.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "data-table",
+      "type": "registry:ui",
+      "title": "data-table",
+      "description": "Mic v0.1 · Figma \"- Tables › DataTable\" (2099:7867) — state: default·empty",
+      "dependencies": [
+        "cn@0.5.0",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/button.json",
+        "http://localhost:3200/r/0.1.0/checkbox.json",
+        "http://localhost:3200/r/0.1.0/input.json",
+        "http://localhost:3200/r/0.1.0/table.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/data-table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:ui",
+      "title": "date-picker",
+      "description": "Mic v0.1 · Figma \"- Date Pickers › DatePicker\" (29:118) — Value: text · Open: bool",
+      "dependencies": [
+        "cn@0.5.0",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/calendar.json",
+        "http://localhost:3200/r/0.1.0/popover.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/date-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "dialog",
+      "description": "Mic v0.1 · Figma \"- Dialogs › DialogContent\" (26:11) · DialogOverlay (26:51)",
+      "dependencies": [
+        "cn@0.5.0",
+        "radix-ui@1.8.1",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/button.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "title": "dropdown-menu",
+      "description": "Mic v0.1 · Figma \"- Dropdowns › DropdownMenu*\" (25:55 · 25:72 · 25:81 · 25:82 · 25:84 · 25:178)",
+      "dependencies": [
+        "cn@0.5.0",
+        "radix-ui@1.8.1",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/dropdown-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "field",
+      "type": "registry:ui",
+      "title": "field",
+      "description": "Mic v0.1 · Figma \"- Forms › FormItem\" (34:92) · Form (34:93) — control: input·textarea·select·checkbox / state: default·error",
+      "dependencies": [
+        "class-variance-authority@0.7.1",
+        "cn@0.5.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/label.json",
+        "http://localhost:3200/r/0.1.0/separator.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "filter-chip",
+      "type": "registry:ui",
+      "title": "filter-chip",
+      "description": "Mic v0.1 · Figma \"- Chips › FilterChip\" (62:237) — Show Remove: bool",
+      "dependencies": [
+        "cn@0.5.0",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/filter-chip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group",
+      "type": "registry:ui",
+      "title": "input-group",
+      "description": "Mic v0.1 · Figma \"- Inputs › InputGroup\" (48:77)",
+      "dependencies": [
+        "class-variance-authority@0.7.1",
+        "cn@0.5.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/button.json",
+        "http://localhost:3200/r/0.1.0/input.json",
+        "http://localhost:3200/r/0.1.0/textarea.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/input-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "input",
+      "description": "Mic v0.1 · Figma \"- Inputs › Input\" (10:66) — state: default·focus·disabled·invalid(aria-invalid)",
+      "dependencies": [
+        "cn@0.5.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "kbd",
+      "type": "registry:ui",
+      "title": "kbd",
+      "description": "Mic v0.1 · Figma \"- Kbd\" (48:10 Kbd · 48:12 KbdGroup)",
+      "dependencies": [
+        "cn@0.5.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/kbd.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "title": "label",
+      "description": "Mic v0.1 · Figma \"- Labels › Label\" (11:54) — Required: bool",
+      "dependencies": [
+        "cn@0.5.0",
+        "radix-ui@1.8.1"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/label.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "multi-select",
+      "type": "registry:ui",
+      "title": "multi-select",
+      "description": "Mic v0.1 · Figma \"- Dropdowns › MultiSelect\" (2022:32)",
+      "dependencies": [
+        "cmdk@1.1.1",
+        "radix-ui@1.8.1",
+        "cn@0.5.0",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/filter-chip.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/multi-select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "nav-user",
+      "type": "registry:ui",
+      "title": "nav-user",
+      "description": "Mic v0.1 · Figma \"- Sidebar › NavUser\" (43:485) — Name · Email · Show Chevron · layout: full·avatar",
+      "dependencies": [
+        "cn@0.5.0",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/avatar.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/nav-user.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "number-input",
+      "type": "registry:ui",
+      "title": "number-input",
+      "description": "Mic v0.1 · Figma \"- Inputs › NumberInput\" (2024:3)",
+      "dependencies": [
+        "cn@0.5.0",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/number-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "page-tabs",
+      "type": "registry:ui",
+      "title": "page-tabs",
+      "description": "Mic v0.1 · Figma \"- Page Tabs\" (62:500 PageTab state: default·hover·active · 62:501 PageTabBar)",
+      "dependencies": [
+        "cn@0.5.0",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/page-tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:ui",
+      "title": "pagination",
+      "description": "Mic v0.1 · Figma \"- Pagination\" (27:56 Link isActive · 27:65 Previous · 27:74 Next · 27:75 Ellipsis)",
+      "dependencies": [
+        "cn@0.5.0",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/button.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/pagination.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "popover",
+      "description": "Mic v0.1 · Figma \"- Popovers › PopoverContent\" (26:3) — 288px, 안쪽 여백 16",
+      "dependencies": [
+        "cn@0.5.0",
+        "radix-ui@1.8.1"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "title": "progress",
+      "description": "Mic v0.1 · Figma \"- Progress › Progress\" (48:41) — 8px, 트랙 primary-20",
+      "dependencies": [
+        "cn@0.5.0",
+        "radix-ui@1.8.1"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/progress.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "title": "radio-group",
+      "description": "Mic v0.1 · Figma \"- Radios › RadioGroupItem\" (11:109)",
+      "dependencies": [
+        "cn@0.5.0",
+        "radix-ui@1.8.1"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/radio-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "select",
+      "description": "Mic v0.1 · Figma \"- Dropdowns › Select\" (12:118) size: default·sm / SelectItem (25:110) / SelectContent (25:216)",
+      "dependencies": [
+        "cn@0.5.0",
+        "radix-ui@1.8.1",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "separator",
+      "description": "Mic v0.1 · Figma \"- Separators › Separator\" (11:63) — orientation: horizontal·vertical",
+      "dependencies": [
+        "cn@0.5.0",
+        "radix-ui@1.8.1"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/separator.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "title": "sheet",
+      "description": "Mic v0.1 · Figma \"- Sheets › SheetContent\" (26:147) — side: right·left·top·bottom",
+      "dependencies": [
+        "cn@0.5.0",
+        "radix-ui@1.8.1",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/button.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/sheet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-brand",
+      "type": "registry:ui",
+      "title": "sidebar-brand",
+      "description": "Mic v0.1 · Figma \"- Sidebar › SidebarBrand\" (43:109) — Name · Subtitle · Show Badge · Show Subtitle · collapsed",
+      "dependencies": [
+        "cn@0.5.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/badge.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/sidebar-brand.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "title": "sidebar",
+      "description": "Mic v0.1 · Figma \"- Sidebar\" (32:48 MenuButton collapsed·state · 32:55 SubButton · 32:56 GroupLabel · 32:58 Trigger · 32:591 Sidebar)",
+      "dependencies": [
+        "class-variance-authority@0.7.1",
+        "cn@0.5.0",
+        "radix-ui@1.8.1",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/use-mobile.json",
+        "http://localhost:3200/r/0.1.0/button.json",
+        "http://localhost:3200/r/0.1.0/input.json",
+        "http://localhost:3200/r/0.1.0/separator.json",
+        "http://localhost:3200/r/0.1.0/sheet.json",
+        "http://localhost:3200/r/0.1.0/skeleton.json",
+        "http://localhost:3200/r/0.1.0/tooltip.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/sidebar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "skeleton",
+      "description": "Mic v0.1 · Figma \"- Skeletons › Skeleton\" (12:166)",
+      "dependencies": [
+        "cn@0.5.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/skeleton.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sonner",
+      "type": "registry:ui",
+      "title": "sonner",
+      "description": "Mic v0.1 · Figma \"- Toasts › Sonner\" (28:70) — type: default·success·info·warning·error",
+      "dependencies": [
+        "next-themes@0.4.6",
+        "sonner@2.0.8",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/sonner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:ui",
+      "title": "spinner",
+      "description": "Mic v0.1 · Figma \"- Spinners › Spinner\" (48:23) — 16px loader-circle",
+      "dependencies": [
+        "cn@0.5.0",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/spinner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stat-card",
+      "type": "registry:ui",
+      "title": "stat-card",
+      "description": "Mic v0.1 · Figma \"- Cards › StatCard\" (38:344) — trend: up·down / Show Badge · Show Footer",
+      "dependencies": [
+        "cn@0.5.0",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/badge.json",
+        "http://localhost:3200/r/0.1.0/card.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/stat-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stepper",
+      "type": "registry:ui",
+      "title": "stepper",
+      "description": "Mic v0.1 · Figma \"- Steppers\" (2043:178 Stepper · 2043:86 StepperItem · 2043:95 StepperSeparator)",
+      "dependencies": [
+        "cn@0.5.0",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/stepper.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "switch",
+      "description": "Mic v0.1 · Figma \"- Switches › Switch\" (11:132)",
+      "dependencies": [
+        "cn@0.5.0",
+        "radix-ui@1.8.1"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/switch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "table",
+      "description": "Mic v0.1 · Figma \"- Tables\" (33:42 Header · 33:16 Head · 33:103 Row default·hover·selected · 33:41 Cell)",
+      "dependencies": [
+        "cn@0.5.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "tabs",
+      "description": "Mic v0.1 · Figma \"- Tabs › TabsList\" (51:139) · TabsTrigger (24:15) — variant: default·line",
+      "dependencies": [
+        "class-variance-authority@0.7.1",
+        "cn@0.5.0",
+        "radix-ui@1.8.1"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "textarea",
+      "description": "Mic v0.1 · Figma \"- Inputs › Textarea\" (10:93)",
+      "dependencies": [
+        "cn@0.5.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/textarea.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "title": "toggle-group",
+      "description": "Mic v0.1 · Figma \"- Toggles › ToggleGroup\" (50:229) · ToggleGroupItem (50:184) — variant: default·outline, position은 자동(first·middle·last)",
+      "dependencies": [
+        "class-variance-authority@0.7.1",
+        "cn@0.5.0",
+        "radix-ui@1.8.1"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/toggle.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/toggle-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "title": "toggle",
+      "description": "Mic v0.1 · Figma \"- Toggles › Toggle\" (50:123) — variant: default·outline·solid·pill / size: default·sm / pressed",
+      "dependencies": [
+        "class-variance-authority@0.7.1",
+        "cn@0.5.0",
+        "radix-ui@1.8.1"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/toggle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toolbar",
+      "type": "registry:ui",
+      "title": "toolbar",
+      "description": "Mic v0.1 · Figma \"- Layout › Toolbar\" (2044:210)",
+      "dependencies": [
+        "cn@0.5.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/toolbar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "tooltip",
+      "description": "Mic v0.1 · Figma \"- Tooltips › Tooltip\" (12:191) — side: top·right·bottom·left",
+      "dependencies": [
+        "cn@0.5.0",
+        "radix-ui@1.8.1"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tree",
+      "type": "registry:ui",
+      "title": "tree",
+      "description": "Mic v0.1 · Figma \"- Tree\" (62:177 TreeItem · 62:178 Tree)",
+      "dependencies": [
+        "cn@0.5.0",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/tree.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "filter-bar",
+      "type": "registry:block",
+      "title": "filter-bar",
+      "description": "Mic v0.1 · Figma \"03_Patterns › FilterBar\" (38:34) — Show Search · Show Filter 1·2 · Show Date · Show Reset",
+      "dependencies": [
+        "cn@0.5.0",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/button.json"
+      ],
+      "files": [
+        {
+          "path": "components/blocks/filter-bar.tsx",
+          "type": "registry:component",
+          "target": "components/blocks/filter-bar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "form-action-bar",
+      "type": "registry:block",
+      "title": "form-action-bar",
+      "description": "Mic v0.1 · Figma \"03_Patterns › FormActionBar\" (80:153)",
+      "dependencies": [
+        "cn@0.5.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/blocks/form-action-bar.tsx",
+          "type": "registry:component",
+          "target": "components/blocks/form-action-bar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "page-heading",
+      "type": "registry:block",
+      "title": "page-heading",
+      "description": "Mic v0.1 · Figma \"03_Patterns › PageHeading\" (37:74) — Title · Description · Show Description · Show Secondary · Show Primary",
+      "dependencies": [
+        "cn@0.5.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/blocks/page-heading.tsx",
+          "type": "registry:component",
+          "target": "components/blocks/page-heading.tsx"
+        }
+      ]
+    },
+    {
+      "name": "site-header",
+      "type": "registry:block",
+      "title": "site-header",
+      "description": "Mic v0.1 · Figma \"03_Patterns › SiteHeader\" (37:53)",
+      "dependencies": [
+        "cn@0.5.0",
+        "lucide-react@1.59.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json",
+        "http://localhost:3200/r/0.1.0/breadcrumb.json",
+        "http://localhost:3200/r/0.1.0/input-group.json",
+        "http://localhost:3200/r/0.1.0/kbd.json",
+        "http://localhost:3200/r/0.1.0/nav-user.json",
+        "http://localhost:3200/r/0.1.0/separator.json",
+        "http://localhost:3200/r/0.1.0/sidebar.json"
+      ],
+      "files": [
+        {
+          "path": "components/blocks/site-header.tsx",
+          "type": "registry:component",
+          "target": "components/blocks/site-header.tsx"
+        }
+      ]
+    },
+    {
+      "name": "theme-provider",
+      "type": "registry:component",
+      "title": "theme-provider",
+      "description": "Mic Design System v0.1",
+      "dependencies": [
+        "next-themes@0.4.6"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/theme-provider.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "use-mobile",
+      "type": "registry:hook",
+      "title": "use-mobile",
+      "description": "Mic Design System v0.1",
+      "dependencies": [],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "hooks/use-mobile.ts",
+          "type": "registry:hook"
+        }
+      ]
     }
   ]
 }

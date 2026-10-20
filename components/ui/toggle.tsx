@@ -5,21 +5,30 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "cn"
 import { Toggle as TogglePrimitive } from "radix-ui"
 
+// Mic v0.1 · Figma "- Toggles › Toggle" (50:123) — variant: default·outline·solid·pill / size: default·sm / pressed
 const toggleVariants = cva(
-  "group/toggle inline-flex items-center justify-center gap-1 rounded-lg text-sm font-medium whitespace-nowrap transition-all outline-none hover:bg-muted hover:text-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 aria-pressed:bg-muted data-[state=on]:bg-muted dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "group/toggle inline-flex items-center justify-center gap-2 text-sm font-medium whitespace-nowrap text-foreground transition-colors outline-none focus-visible:ring-3 focus-visible:ring-alpha-ring-50 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
-        default: "bg-transparent",
-        outline: "border border-input bg-transparent hover:bg-muted",
+        default:
+          "rounded-md bg-transparent hover:bg-muted data-[state=on]:bg-accent data-[state=on]:text-accent-foreground",
+        outline:
+          "rounded-md border border-input bg-transparent shadow-xs hover:bg-accent hover:text-accent-foreground data-[state=on]:bg-accent data-[state=on]:text-accent-foreground",
+        solid:
+          "gap-1.5 rounded-full bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground data-[state=on]:hover:bg-primary-hover",
+        pill:
+          "gap-1.5 rounded-full border border-border bg-background hover:bg-accent hover:text-accent-foreground data-[state=on]:border-primary data-[state=on]:bg-accent data-[state=on]:text-accent-foreground",
       },
       size: {
-        default:
-          "h-8 min-w-8 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
-        sm: "h-7 min-w-7 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3.5",
-        lg: "h-9 min-w-9 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
+        default: "h-9 min-w-9 px-2",
+        sm: "h-8 min-w-8 px-1.5",
       },
     },
+    compoundVariants: [
+      { variant: ["solid", "pill"], size: "default", className: "px-3" },
+      { variant: ["solid", "pill"], size: "sm", className: "px-2.5" },
+    ],
     defaultVariants: {
       variant: "default",
       size: "default",

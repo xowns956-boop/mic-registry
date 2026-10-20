@@ -11,11 +11,6 @@ const read = (f) =>
     .map((l) => l.trim())
     .filter((l) => l && !l.startsWith("#"))
 
-const ref = (v) => {
-  const m = v.match(/^\{(.+)\}$/)
-  return m ? `var(--${m[1].replaceAll("/", "-")})` : v
-}
-
 // 1_Primitive · Color → --brand-500, --alpha-brand-700-90 …
 const primitives = Object.fromEntries(
   read("primitive-color.txt").map((l) => {
@@ -32,13 +27,22 @@ const semName = (n) => {
   if (group === "base" || group === "border" || leaf.startsWith(group)) return leaf
   return `${group}-${leaf}`
 }
+// 값은 Figma 참조를 끝까지 따라가 최종 hex로 푼다.
+// (var(--brand-700) 형태로 두면 shadcn이 색으로 인식하지 못해 개발자 CSS의 @theme에 --primary: var(--primary) 같은 자기 참조 줄을 남긴다)
+const resolveColor = (v) => {
+  const m = v.match(/^\{(.+)\}$/)
+  if (!m) return v
+  const key = m[1].replaceAll("/", "-")
+  if (!(key in primitives)) throw new Error(`알 수 없는 참조: ${v}`)
+  return resolveColor(primitives[key])
+}
 const light = {}
 const dark = {}
 for (const l of read("semantic-color.txt")) {
   const [n, v] = l.split("=")
   const [lv, dv] = v.split("|")
-  light[semName(n)] = ref(lv)
-  dark[semName(n)] = ref(dv)
+  light[semName(n)] = resolveColor(lv)
+  dark[semName(n)] = resolveColor(dv)
 }
 
 // 스케일 (간격·글자·둥글기)
@@ -89,7 +93,10 @@ const theme = {
 const lightVars = { ...primitives, radius: px(resolve(scales["radius/md"])), ...light }
 
 const css = {
+  '@import "tw-animate-css"': {},
+  '@import "shadcn/tailwind.css"': {},
   '@import "pretendard/dist/web/variable/pretendardvariable.css"': {},
+  "@custom-variant dark (&:is(.dark *))": {},
   "@layer base": {
     "*": { "@apply border-border outline-ring/50": {} },
     body: { "@apply bg-background text-foreground": {} },
@@ -105,7 +112,7 @@ const item = {
   type: "registry:style",
   title: "Mic Foundations",
   description: "Mic Design System v0.1 토큰 — 색(라이트·다크), 간격, 글자, 둥글기, 그림자",
-  dependencies: ["pretendard", "tw-animate-css"],
+  dependencies: ["pretendard@1.3.9", "tw-animate-css@1.4.0", "shadcn@4.22.1"],
   cssVars: { theme, light: lightVars, dark },
   css,
 }
