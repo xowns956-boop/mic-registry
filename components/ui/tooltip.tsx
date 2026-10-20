@@ -4,6 +4,7 @@ import * as React from "react"
 import { cn } from "cn"
 import { Tooltip as TooltipPrimitive } from "radix-ui"
 
+// Mic v0.1 · Figma "- Tooltips › Tooltip" (12:191) — side: top·right·bottom·left
 function TooltipProvider({
   delayDuration = 0,
   ...props
