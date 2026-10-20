@@ -4,8 +4,8 @@
 
 - 원본: Figma `Mic-Design-system v0.1` (fileKey `Q1cGtxx0jsnSwfaPnJloYg`)
 - 대상: React + Tailwind CSS v4 + shadcn (radix 기반, style `radix-nova`, 아이콘 lucide)
-- 설치: `npx shadcn@latest add <레지스트리 주소>/r/0.1.0/mic.json` (pnpm이면 `pnpm dlx`)
-- 부품 하나만: `npx shadcn@latest add <레지스트리 주소>/r/0.1.0/<이름>.json`
+- 설치: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.1.0/mic.json` (pnpm이면 `pnpm dlx`)
+- 부품 하나만: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.1.0/<이름>.json`
 
 ## 1. 적용 원칙
 
