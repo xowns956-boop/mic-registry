@@ -1,7 +1,8 @@
 "use client"
 
+import Link from "next/link"
 import { useTheme } from "next-themes"
-import { MoonIcon, SunIcon } from "lucide-react"
+import { MoonIcon, SparklesIcon, SunIcon } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { BatchAdded } from "./_preview/batch-added"
@@ -19,10 +20,18 @@ export default function Home() {
           <h1 className="text-2xl font-semibold">Mic Design System v0.1</h1>
           <p className="text-sm text-muted-foreground">Figma 부품을 코드로 옮긴 미리보기</p>
         </div>
-        <Button variant="outline" size="icon" aria-label="테마 전환" onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}>
-          <SunIcon className="dark:hidden" aria-hidden />
-          <MoonIcon className="hidden dark:block" aria-hidden />
-        </Button>
+        <div className="flex items-center gap-2">
+          <Button asChild>
+            <Link href="/docs/ai">
+              <SparklesIcon aria-hidden />
+              AI로 설치하기
+            </Link>
+          </Button>
+          <Button variant="outline" size="icon" aria-label="테마 전환" onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}>
+            <SunIcon className="dark:hidden" aria-hidden />
+            <MoonIcon className="hidden dark:block" aria-hidden />
+          </Button>
+        </div>
       </header>
       <BatchForms />
       <BatchDisplay />

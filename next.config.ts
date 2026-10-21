@@ -7,6 +7,8 @@ const isPages = process.env.PAGES === "1";
 const nextConfig: NextConfig = isPages
   ? {
       output: "export",
+      // docs/ai/index.html 로 내보내야 Pages에서 /docs/ai 가 열린다
+      trailingSlash: true,
       basePath: process.env.BASE_PATH || "",
       images: { unoptimized: true },
     }

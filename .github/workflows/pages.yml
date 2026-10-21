@@ -21,6 +21,8 @@ jobs:
     env:
       BASE_PATH: /${{ github.event.repository.name }}
       REGISTRY_BASE: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+      # "AI로 설치하기" 페이지의 설치 주소
+      NEXT_PUBLIC_REGISTRY_BASE: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
