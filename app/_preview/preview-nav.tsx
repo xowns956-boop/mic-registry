@@ -81,7 +81,7 @@ export function PreviewSidebar({ version }: { version: string }) {
             <SidebarMenu>
               {g.items.map((s) => (
                 <SidebarMenuItem key={s.id}>
-                  <SidebarMenuButton asChild isActive={active === s.id} tooltip={s.title}>
+                  <SidebarMenuButton asChild isActive={active === s.id} tooltip={s.label}>
                     <a
                       href={`#${s.id}`}
                       onClick={(e) => {
@@ -90,7 +90,7 @@ export function PreviewSidebar({ version }: { version: string }) {
                         setOpenMobile(false)
                       }}
                     >
-                      <span>{s.title}</span>
+                      <span>{s.label}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -129,7 +129,7 @@ export function PreviewSearch({
   return (
     <CommandDialog open={open} onOpenChange={onOpenChange} title="부품 검색" description="부품 이름으로 찾아 해당 칸으로 이동해요">
       <Command>
-        <CommandInput placeholder="부품 이름 (예: 버튼, Table, 사이드바)" value={query} onValueChange={onQueryChange} />
+        <CommandInput placeholder="부품 이름 (예: 버튼, 표, 사이드바)" value={query} onValueChange={onQueryChange} />
         <CommandList>
           <CommandEmpty>찾는 부품이 없어요.</CommandEmpty>
           {PREVIEW_GROUPS.map((g) => (
@@ -137,14 +137,14 @@ export function PreviewSearch({
               {g.items.map((s) => (
                 <CommandItem
                   key={s.id}
-                  value={`${s.title} ${s.keywords ?? ""} ${s.id}`}
+                  value={`${s.label} ${s.title} ${s.keywords ?? ""} ${s.id}`}
                   onSelect={() => {
                     onOpenChange(false)
                     // 팝업이 닫힌 뒤 스크롤해야 위치가 맞는다
                     setTimeout(() => goToSection(s.id), 0)
                   }}
                 >
-                  {s.title}
+                  {s.label}
                 </CommandItem>
               ))}
             </CommandGroup>
