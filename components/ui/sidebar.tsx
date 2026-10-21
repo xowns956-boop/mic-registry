@@ -25,6 +25,7 @@ import {
 import { PanelLeftIcon } from "lucide-react"
 
 // Mic v0.1 · Figma "- Sidebar" (32:48 MenuButton collapsed·state · 32:55 SubButton · 32:56 GroupLabel · 32:58 Trigger · 32:591 Sidebar)
+// Figma 간격: 머리 칸 64(SidebarBrand) · 그룹 사이 8(SidebarContent gap-2) · 메뉴 사이 4(SidebarMenu gap-1) · 버튼 32 · 접힘 폭 48
 const SIDEBAR_COOKIE_NAME = "sidebar_state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
 const SIDEBAR_WIDTH = "16rem"
@@ -371,7 +372,7 @@ function SidebarContent({ className, ...props }: React.ComponentProps<"div">) {
       data-slot="sidebar-content"
       data-sidebar="content"
       className={cn(
-        "no-scrollbar flex min-h-0 flex-1 flex-col gap-0 overflow-auto group-data-[collapsible=icon]:overflow-hidden",
+        "no-scrollbar flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden",
         className
       )}
       {...props}
@@ -449,7 +450,7 @@ function SidebarMenu({ className, ...props }: React.ComponentProps<"ul">) {
     <ul
       data-slot="sidebar-menu"
       data-sidebar="menu"
-      className={cn("flex w-full min-w-0 flex-col gap-0", className)}
+      className={cn("flex w-full min-w-0 flex-col gap-1", className)}
       {...props}
     />
   )
