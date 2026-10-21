@@ -28,6 +28,7 @@ import {
   initCommand,
   installCommand,
   itemUrl,
+  manualCases,
   setupPrompt,
   steps,
   VERSION,
@@ -243,6 +244,25 @@ export default function InstallWithAI() {
             실행해요(<code className="font-mono text-foreground">{initCommand}</code>). 기존 부품·전역 스타일이 바뀌니 적용 전에 변경 내용을 확인해요.
           </p>
         </div>
+        <Card size="sm">
+          <CardHeader>
+            <CardTitle>이럴 땐 직접 설치가 나아요</CardTitle>
+            <CardDescription>처음 설치는 개발자도 프롬프트 복사가 편해요. 아래 경우만 직접 설치해요.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ul className="flex flex-col gap-3">
+              {manualCases.map((c) => (
+                <li key={c.title} className="flex gap-2 text-sm">
+                  <CheckIcon className="mt-0.5 size-4 shrink-0 text-primary-text" aria-hidden="true" />
+                  <span className="flex flex-col gap-0.5">
+                    <span className="font-medium text-card-foreground">{c.title}</span>
+                    <span className="text-muted-foreground">{c.body}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
         <Tabs defaultValue="npm">
           <TabsList>
             <TabsTrigger value="npm">npm</TabsTrigger>

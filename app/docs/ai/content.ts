@@ -108,6 +108,15 @@ export const faqs = [
   },
 ]
 
+// 처음 설치는 프롬프트가 편하고, 아래 경우엔 직접 설치가 낫다
+export const manualCases = [
+  { title: "이미 운영 중인 프로젝트에 넣을 때", body: "기존 부품·globals.css가 바뀌어요. 덮어쓸 파일을 하나씩 보고 고르고 싶으면 직접 설치해요." },
+  { title: "부품 하나만 추가할 때", body: "Button 하나만 필요하면 명령 한 줄이 프롬프트 전체를 돌리는 것보다 빨라요." },
+  { title: "자동화(CI·배포 스크립트)에 넣을 때", body: "사람 없이 돌아가는 과정에는 AI가 끼어들 수 없어서 명령이 필요해요." },
+  { title: "AI 도구를 쓰지 않을 때", body: "터미널에서 명령을 직접 실행하는 방법밖에 없어요." },
+  { title: "버전을 올릴 때", body: "0.1.0에서 다음 버전으로 바꿀 땐 직접 고친 부품과 바뀐 내용을 비교하면서 하는 게 안전해요." },
+]
+
 export const componentGroups = [
   { name: "버튼", items: ["Button", "Button Group", "Menu Tile", "Toggle", "Toggle Group"] },
   { name: "입력", items: ["Input", "Textarea", "Input Group", "Number Input", "Number Stepper", "Checkbox", "Radio Group", "Switch", "Label", "Field"] },
