@@ -96,7 +96,11 @@ export default function InstallWithAI() {
             부품 미리보기
           </Link>
         </Button>
-        <Button
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="sm" asChild>
+            <Link href="/docs/changelog">변경 기록</Link>
+          </Button>
+          <Button
           variant="outline"
           size="icon"
           aria-label="테마 전환"
@@ -104,7 +108,8 @@ export default function InstallWithAI() {
         >
           <SunIcon className="dark:hidden" aria-hidden="true" />
           <MoonIcon className="hidden dark:block" aria-hidden="true" />
-        </Button>
+          </Button>
+        </div>
       </nav>
 
       {/* 첫 화면: 버튼 하나로 끝나게 */}
@@ -212,7 +217,7 @@ export default function InstallWithAI() {
             들어 있는 부품
           </h2>
           <p className="text-sm text-muted-foreground">
-            Figma <span className="text-foreground">Mic-Design-system v{VERSION}</span>과 같은 이름이에요. 여기 없는 부품은 AI가 새로 만들지 않고 없다고
+            Figma <span className="text-foreground">Mic-Design-system v0.1</span>과 같은 이름이에요. 여기 없는 부품은 AI가 새로 만들지 않고 없다고
             알려 줘요.
           </p>
         </div>

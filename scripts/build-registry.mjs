@@ -6,7 +6,8 @@ import { basename, dirname, join } from "node:path"
 import { fileURLToPath } from "node:url"
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..")
-const VERSION = "0.1.0"
+// 버전은 package.json 한 곳에서만 관리한다. 옛 주소(/r/0.1.0)를 다시 만들 때만 REGISTRY_VERSION으로 덮어쓴다.
+const VERSION = process.env.REGISTRY_VERSION || JSON.parse(readFileSync(join(root, "package.json"), "utf8")).version
 const BASE = (process.env.REGISTRY_BASE || "http://localhost:3200").replace(/\/$/, "")
 const url = (name) => `${BASE}/r/${VERSION}/${name}.json`
 
@@ -33,7 +34,7 @@ const items = sources.map(({ path, kind }) => {
     name,
     type: kind === "ui" ? "registry:ui" : kind === "hook" ? "registry:hook" : kind === "block" ? "registry:block" : "registry:component",
     title: name,
-    description: figma ?? "Mic Design System v0.1",
+    description: figma ?? `Mic Design System ${VERSION}`,
     dependencies: pkgs.map((p) => `${p}@${pkgVersion(p)}`),
     registryDependencies: [url("mic-foundations"), ...local.map(url)],
     files: [

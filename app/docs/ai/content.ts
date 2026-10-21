@@ -1,6 +1,9 @@
 // "AI로 설치하기" 페이지 글·프롬프트. 문구를 고칠 때는 이 파일만 연다.
 
-export const VERSION = "0.1.0"
+import pkg from "../../../package.json"
+
+// 버전은 package.json 한 곳에서만 관리한다
+export const VERSION = pkg.version
 
 // 배포 때 워크플로가 NEXT_PUBLIC_REGISTRY_BASE를 넣는다. 로컬은 미리보기 주소.
 export const REGISTRY_BASE = process.env.NEXT_PUBLIC_REGISTRY_BASE ?? "https://xowns956-boop.github.io/mic-registry"
@@ -19,10 +22,17 @@ export const rulesBlock = `## Design system: Mic v${VERSION}
 - 설치된 부품(\`components/ui\`, \`components/blocks\`)만 조립한다. Mic에 없는 부품은 새로 만들지 말고 없다고 알린다.
 - 색·간격·둥글기는 토큰 클래스만 쓴다. hex·px 값을 직접 쓰지 않는다.
 - 새 화면은 \`app/<이름>/page.tsx\`로 만들고, 라이트/다크를 바꿔 볼 수 있게 테마 전환 버튼을 둔다.
-- 부품 파일(\`components/\`)은 고치지 않는다. 고쳐야 하면 먼저 알린다.`
+- 부품 파일(\`components/\`)은 고치지 않는다. 고쳐야 하면 먼저 알린다.
+- Mic 버전을 마음대로 올리지 않는다. 올릴 때는 변경 기록(${REGISTRY_BASE}/docs/changelog/)을 먼저 보고, 직접 고친 부품은 비교한 뒤 바꾼다. 바꾼 내용은 docs/mic-adoption.md에 적는다.`
 
 export const setupPrompt = `Mic 디자인 시스템(v${VERSION})을 이 프로젝트에 설치해 줘.
 나는 개발을 잘 모르니까 필요한 건 알아서 진행하고, 끝나면 쉬운 말로 알려 줘.
+
+## 0. 꼭 지킬 것
+- 아래 설치 주소가 열리지 않으면(404·연결 실패 등) 바로 멈추고 알려 줘. 비슷한 부품을 지어내거나 shadcn 기본 부품으로 대신 설치하거나, 설치했다고 말하지 마.
+- 설치·빌드·확인 화면 중 하나라도 실패하면 완료라고 말하지 마. 어디서 왜 실패했는지 그대로 알려 줘.
+- 프레임워크 교체, React·Next.js·Tailwind CSS 같은 주요 의존성 업그레이드는 나한테 묻기 전에 하지 마.
+- \`--overwrite\` 옵션은 쓰지 마. 덮어쓸지는 2번 규칙대로 하나씩 판단해.
 
 ## 1. 프로젝트 확인
 - 이 폴더에 package.json이 없으면: Next.js(App Router · TypeScript · Tailwind CSS v4 · ESLint, src 폴더 없이) 프로젝트를 이 폴더에 새로 만들고 shadcn을 초기화해.
@@ -50,13 +60,22 @@ app/layout.tsx를 이렇게 맞춰 줘.
 
 ${rulesBlock}
 
-## 5. 확인 화면
+## 5. 설치 기록
+docs/mic-adoption.md 파일을 만들어서 아래를 적어 줘.
+- 설치한 Mic 버전: ${VERSION}
+- 설치 주소: ${REGISTRY_BASE}/r/${VERSION}/
+- 설치 날짜
+- 덮어쓰지 않고 남겨 둔 파일, 이미 손댄 흔적이 있던 파일
+- 3번에서 바꾼 파일
+- 빌드·확인 화면 결과 (성공/실패)
+
+## 6. 확인 화면
 app/mic-check/page.tsx에 확인용 화면을 만들어 줘. Mic 부품만 써서:
 - PageHeading(제목 "Mic 설치 확인") + 테마 전환 버튼(해/달 아이콘)
 - Card 안에 주 버튼 1개, outline 버튼 1개, Badge 1개
-그다음 개발 서버를 켜고 열어 볼 주소(예: http://localhost:3000/mic-check)를 알려 줘.
+그다음 빌드가 통과하는지 확인하고, 개발 서버를 켜서 열어 볼 주소(예: http://localhost:3000/mic-check)를 알려 줘.
 
-## 6. 끝나면 알려 줄 것
+## 7. 끝나면 알려 줄 것
 - 무엇을 설치·변경했는지 3줄 이내로
 - 앞으로 이렇게 말하면 된다는 예시 2개 (예: "Mic 써서 설정 화면 만들어 줘")`
 
@@ -103,6 +122,10 @@ export const faqs = [
     a: "shadcn이 radix가 아닌 base 방식으로 초기화된 프로젝트예요. 연습용이면 빈 폴더에서 다시 시작하고, 기존 프로젝트라면 개발자와 상의해요.",
   },
   {
+    q: "“설치 주소가 열리지 않는다”며 AI가 멈췄어요",
+    a: "Mic 저장소가 비공개로 바뀌었거나 인터넷 연결이 끊긴 경우예요. AI가 멈춘 게 맞는 동작이에요. Mic 담당 디자이너에게 주소가 열려 있는지 물어봐요.",
+  },
+  {
     q: "“Tailwind v3라서 안 된다”고 해요",
     a: "Mic는 Tailwind CSS v4 전용이에요. 기존 프로젝트를 올리는 건 개발자와 상의하고, 연습용이면 빈 폴더에서 새로 시작해요.",
   },
@@ -114,7 +137,7 @@ export const manualCases = [
   { title: "부품 하나만 추가할 때", body: "Button 하나만 필요하면 명령 한 줄이 프롬프트 전체를 돌리는 것보다 빨라요." },
   { title: "자동화(CI·배포 스크립트)에 넣을 때", body: "사람 없이 돌아가는 과정에는 AI가 끼어들 수 없어서 명령이 필요해요." },
   { title: "AI 도구를 쓰지 않을 때", body: "터미널에서 명령을 직접 실행하는 방법밖에 없어요." },
-  { title: "버전을 올릴 때", body: "0.1.0에서 다음 버전으로 바꿀 땐 직접 고친 부품과 바뀐 내용을 비교하면서 하는 게 안전해요." },
+  { title: "버전을 올릴 때", body: "다음 버전으로 바꿀 땐 변경 기록을 먼저 보고, 직접 고친 부품과 바뀐 내용을 비교하면서 하는 게 안전해요." },
 ]
 
 export const componentGroups = [

@@ -6,7 +6,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Mic Design System",
-  description: "Mic Design System v0.1 부품 미리보기",
+  description: "Mic Design System 부품 미리보기",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

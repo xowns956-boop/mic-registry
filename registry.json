@@ -1056,72 +1056,72 @@
       "name": "mic",
       "type": "registry:block",
       "title": "Mic Design System",
-      "description": "Mic Design System v0.1.0 전체 — 토큰 + 부품 63개 + AI 규칙 문서(docs/mic.md)",
+      "description": "Mic Design System v0.2.0 전체 — 토큰 + 부품 63개 + AI 규칙 문서(docs/mic.md)",
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/accordion.json",
-        "http://localhost:3200/r/0.1.0/alert-dialog.json",
-        "http://localhost:3200/r/0.1.0/alert.json",
-        "http://localhost:3200/r/0.1.0/autocomplete.json",
-        "http://localhost:3200/r/0.1.0/avatar.json",
-        "http://localhost:3200/r/0.1.0/badge.json",
-        "http://localhost:3200/r/0.1.0/breadcrumb.json",
-        "http://localhost:3200/r/0.1.0/button-group.json",
-        "http://localhost:3200/r/0.1.0/button.json",
-        "http://localhost:3200/r/0.1.0/calendar.json",
-        "http://localhost:3200/r/0.1.0/card.json",
-        "http://localhost:3200/r/0.1.0/chart-presets.json",
-        "http://localhost:3200/r/0.1.0/chart.json",
-        "http://localhost:3200/r/0.1.0/checkbox.json",
-        "http://localhost:3200/r/0.1.0/combobox.json",
-        "http://localhost:3200/r/0.1.0/command.json",
-        "http://localhost:3200/r/0.1.0/data-table.json",
-        "http://localhost:3200/r/0.1.0/date-picker.json",
-        "http://localhost:3200/r/0.1.0/dialog-body.json",
-        "http://localhost:3200/r/0.1.0/dialog.json",
-        "http://localhost:3200/r/0.1.0/dropdown-menu.json",
-        "http://localhost:3200/r/0.1.0/field.json",
-        "http://localhost:3200/r/0.1.0/filter-chip.json",
-        "http://localhost:3200/r/0.1.0/form-table.json",
-        "http://localhost:3200/r/0.1.0/input-group.json",
-        "http://localhost:3200/r/0.1.0/input.json",
-        "http://localhost:3200/r/0.1.0/kbd.json",
-        "http://localhost:3200/r/0.1.0/label.json",
-        "http://localhost:3200/r/0.1.0/menu-tile.json",
-        "http://localhost:3200/r/0.1.0/multi-select.json",
-        "http://localhost:3200/r/0.1.0/nav-user.json",
-        "http://localhost:3200/r/0.1.0/number-input.json",
-        "http://localhost:3200/r/0.1.0/number-stepper.json",
-        "http://localhost:3200/r/0.1.0/page-tabs.json",
-        "http://localhost:3200/r/0.1.0/pagination.json",
-        "http://localhost:3200/r/0.1.0/popover.json",
-        "http://localhost:3200/r/0.1.0/progress.json",
-        "http://localhost:3200/r/0.1.0/radio-group.json",
-        "http://localhost:3200/r/0.1.0/select.json",
-        "http://localhost:3200/r/0.1.0/separator.json",
-        "http://localhost:3200/r/0.1.0/sheet.json",
-        "http://localhost:3200/r/0.1.0/sidebar-brand.json",
-        "http://localhost:3200/r/0.1.0/sidebar.json",
-        "http://localhost:3200/r/0.1.0/skeleton.json",
-        "http://localhost:3200/r/0.1.0/sonner.json",
-        "http://localhost:3200/r/0.1.0/spinner.json",
-        "http://localhost:3200/r/0.1.0/stat-card.json",
-        "http://localhost:3200/r/0.1.0/stepper.json",
-        "http://localhost:3200/r/0.1.0/switch.json",
-        "http://localhost:3200/r/0.1.0/table.json",
-        "http://localhost:3200/r/0.1.0/tabs.json",
-        "http://localhost:3200/r/0.1.0/textarea.json",
-        "http://localhost:3200/r/0.1.0/toggle-group.json",
-        "http://localhost:3200/r/0.1.0/toggle.json",
-        "http://localhost:3200/r/0.1.0/toolbar.json",
-        "http://localhost:3200/r/0.1.0/tooltip.json",
-        "http://localhost:3200/r/0.1.0/tree.json",
-        "http://localhost:3200/r/0.1.0/filter-bar.json",
-        "http://localhost:3200/r/0.1.0/form-action-bar.json",
-        "http://localhost:3200/r/0.1.0/page-heading.json",
-        "http://localhost:3200/r/0.1.0/site-header.json",
-        "http://localhost:3200/r/0.1.0/theme-provider.json",
-        "http://localhost:3200/r/0.1.0/use-mobile.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/accordion.json",
+        "http://localhost:3200/r/0.2.0/alert-dialog.json",
+        "http://localhost:3200/r/0.2.0/alert.json",
+        "http://localhost:3200/r/0.2.0/autocomplete.json",
+        "http://localhost:3200/r/0.2.0/avatar.json",
+        "http://localhost:3200/r/0.2.0/badge.json",
+        "http://localhost:3200/r/0.2.0/breadcrumb.json",
+        "http://localhost:3200/r/0.2.0/button-group.json",
+        "http://localhost:3200/r/0.2.0/button.json",
+        "http://localhost:3200/r/0.2.0/calendar.json",
+        "http://localhost:3200/r/0.2.0/card.json",
+        "http://localhost:3200/r/0.2.0/chart-presets.json",
+        "http://localhost:3200/r/0.2.0/chart.json",
+        "http://localhost:3200/r/0.2.0/checkbox.json",
+        "http://localhost:3200/r/0.2.0/combobox.json",
+        "http://localhost:3200/r/0.2.0/command.json",
+        "http://localhost:3200/r/0.2.0/data-table.json",
+        "http://localhost:3200/r/0.2.0/date-picker.json",
+        "http://localhost:3200/r/0.2.0/dialog-body.json",
+        "http://localhost:3200/r/0.2.0/dialog.json",
+        "http://localhost:3200/r/0.2.0/dropdown-menu.json",
+        "http://localhost:3200/r/0.2.0/field.json",
+        "http://localhost:3200/r/0.2.0/filter-chip.json",
+        "http://localhost:3200/r/0.2.0/form-table.json",
+        "http://localhost:3200/r/0.2.0/input-group.json",
+        "http://localhost:3200/r/0.2.0/input.json",
+        "http://localhost:3200/r/0.2.0/kbd.json",
+        "http://localhost:3200/r/0.2.0/label.json",
+        "http://localhost:3200/r/0.2.0/menu-tile.json",
+        "http://localhost:3200/r/0.2.0/multi-select.json",
+        "http://localhost:3200/r/0.2.0/nav-user.json",
+        "http://localhost:3200/r/0.2.0/number-input.json",
+        "http://localhost:3200/r/0.2.0/number-stepper.json",
+        "http://localhost:3200/r/0.2.0/page-tabs.json",
+        "http://localhost:3200/r/0.2.0/pagination.json",
+        "http://localhost:3200/r/0.2.0/popover.json",
+        "http://localhost:3200/r/0.2.0/progress.json",
+        "http://localhost:3200/r/0.2.0/radio-group.json",
+        "http://localhost:3200/r/0.2.0/select.json",
+        "http://localhost:3200/r/0.2.0/separator.json",
+        "http://localhost:3200/r/0.2.0/sheet.json",
+        "http://localhost:3200/r/0.2.0/sidebar-brand.json",
+        "http://localhost:3200/r/0.2.0/sidebar.json",
+        "http://localhost:3200/r/0.2.0/skeleton.json",
+        "http://localhost:3200/r/0.2.0/sonner.json",
+        "http://localhost:3200/r/0.2.0/spinner.json",
+        "http://localhost:3200/r/0.2.0/stat-card.json",
+        "http://localhost:3200/r/0.2.0/stepper.json",
+        "http://localhost:3200/r/0.2.0/switch.json",
+        "http://localhost:3200/r/0.2.0/table.json",
+        "http://localhost:3200/r/0.2.0/tabs.json",
+        "http://localhost:3200/r/0.2.0/textarea.json",
+        "http://localhost:3200/r/0.2.0/toggle-group.json",
+        "http://localhost:3200/r/0.2.0/toggle.json",
+        "http://localhost:3200/r/0.2.0/toolbar.json",
+        "http://localhost:3200/r/0.2.0/tooltip.json",
+        "http://localhost:3200/r/0.2.0/tree.json",
+        "http://localhost:3200/r/0.2.0/filter-bar.json",
+        "http://localhost:3200/r/0.2.0/form-action-bar.json",
+        "http://localhost:3200/r/0.2.0/page-heading.json",
+        "http://localhost:3200/r/0.2.0/site-header.json",
+        "http://localhost:3200/r/0.2.0/theme-provider.json",
+        "http://localhost:3200/r/0.2.0/use-mobile.json"
       ],
       "files": [
         {
@@ -1142,7 +1142,7 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1161,8 +1161,8 @@
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/button.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/button.json"
       ],
       "files": [
         {
@@ -1181,7 +1181,7 @@
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1202,7 +1202,7 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1221,7 +1221,7 @@
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1241,7 +1241,7 @@
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1261,7 +1261,7 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1281,8 +1281,8 @@
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/separator.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/separator.json"
       ],
       "files": [
         {
@@ -1302,7 +1302,7 @@
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1322,8 +1322,8 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/button.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/button.json"
       ],
       "files": [
         {
@@ -1341,7 +1341,7 @@
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1360,8 +1360,8 @@
         "recharts@3.8.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/chart.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/chart.json"
       ],
       "files": [
         {
@@ -1380,7 +1380,7 @@
         "recharts@3.8.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1400,7 +1400,7 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1419,9 +1419,9 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/command.json",
-        "http://localhost:3200/r/0.1.0/popover.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/command.json",
+        "http://localhost:3200/r/0.2.0/popover.json"
       ],
       "files": [
         {
@@ -1441,8 +1441,8 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/dialog.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/dialog.json"
       ],
       "files": [
         {
@@ -1461,11 +1461,11 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/button.json",
-        "http://localhost:3200/r/0.1.0/checkbox.json",
-        "http://localhost:3200/r/0.1.0/input.json",
-        "http://localhost:3200/r/0.1.0/table.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/button.json",
+        "http://localhost:3200/r/0.2.0/checkbox.json",
+        "http://localhost:3200/r/0.2.0/input.json",
+        "http://localhost:3200/r/0.2.0/table.json"
       ],
       "files": [
         {
@@ -1484,9 +1484,9 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/calendar.json",
-        "http://localhost:3200/r/0.1.0/popover.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/calendar.json",
+        "http://localhost:3200/r/0.2.0/popover.json"
       ],
       "files": [
         {
@@ -1504,13 +1504,13 @@
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/button.json",
-        "http://localhost:3200/r/0.1.0/input.json",
-        "http://localhost:3200/r/0.1.0/label.json",
-        "http://localhost:3200/r/0.1.0/radio-group.json",
-        "http://localhost:3200/r/0.1.0/table.json",
-        "http://localhost:3200/r/0.1.0/textarea.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/button.json",
+        "http://localhost:3200/r/0.2.0/input.json",
+        "http://localhost:3200/r/0.2.0/label.json",
+        "http://localhost:3200/r/0.2.0/radio-group.json",
+        "http://localhost:3200/r/0.2.0/table.json",
+        "http://localhost:3200/r/0.2.0/textarea.json"
       ],
       "files": [
         {
@@ -1530,8 +1530,8 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/button.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/button.json"
       ],
       "files": [
         {
@@ -1551,7 +1551,7 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1570,9 +1570,9 @@
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/label.json",
-        "http://localhost:3200/r/0.1.0/separator.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/label.json",
+        "http://localhost:3200/r/0.2.0/separator.json"
       ],
       "files": [
         {
@@ -1591,7 +1591,7 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1609,7 +1609,7 @@
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1628,10 +1628,10 @@
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/button.json",
-        "http://localhost:3200/r/0.1.0/input.json",
-        "http://localhost:3200/r/0.1.0/textarea.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/button.json",
+        "http://localhost:3200/r/0.2.0/input.json",
+        "http://localhost:3200/r/0.2.0/textarea.json"
       ],
       "files": [
         {
@@ -1649,7 +1649,7 @@
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1667,7 +1667,7 @@
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1686,7 +1686,7 @@
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1704,7 +1704,7 @@
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1725,8 +1725,8 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/filter-chip.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/filter-chip.json"
       ],
       "files": [
         {
@@ -1745,8 +1745,8 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/avatar.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/avatar.json"
       ],
       "files": [
         {
@@ -1765,7 +1765,7 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1784,9 +1784,9 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/button.json",
-        "http://localhost:3200/r/0.1.0/input.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/button.json",
+        "http://localhost:3200/r/0.2.0/input.json"
       ],
       "files": [
         {
@@ -1805,7 +1805,7 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1824,8 +1824,8 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/button.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/button.json"
       ],
       "files": [
         {
@@ -1844,7 +1844,7 @@
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1863,7 +1863,7 @@
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1882,7 +1882,7 @@
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1902,7 +1902,7 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1921,7 +1921,7 @@
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -1941,8 +1941,8 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/button.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/button.json"
       ],
       "files": [
         {
@@ -1960,8 +1960,8 @@
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/badge.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/badge.json"
       ],
       "files": [
         {
@@ -1982,14 +1982,14 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/use-mobile.json",
-        "http://localhost:3200/r/0.1.0/button.json",
-        "http://localhost:3200/r/0.1.0/input.json",
-        "http://localhost:3200/r/0.1.0/separator.json",
-        "http://localhost:3200/r/0.1.0/sheet.json",
-        "http://localhost:3200/r/0.1.0/skeleton.json",
-        "http://localhost:3200/r/0.1.0/tooltip.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/use-mobile.json",
+        "http://localhost:3200/r/0.2.0/button.json",
+        "http://localhost:3200/r/0.2.0/input.json",
+        "http://localhost:3200/r/0.2.0/separator.json",
+        "http://localhost:3200/r/0.2.0/sheet.json",
+        "http://localhost:3200/r/0.2.0/skeleton.json",
+        "http://localhost:3200/r/0.2.0/tooltip.json"
       ],
       "files": [
         {
@@ -2007,7 +2007,7 @@
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -2027,7 +2027,7 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -2046,7 +2046,7 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -2065,9 +2065,9 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/badge.json",
-        "http://localhost:3200/r/0.1.0/card.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/badge.json",
+        "http://localhost:3200/r/0.2.0/card.json"
       ],
       "files": [
         {
@@ -2086,7 +2086,7 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -2105,7 +2105,7 @@
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -2123,7 +2123,7 @@
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -2143,7 +2143,7 @@
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -2161,7 +2161,7 @@
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -2181,8 +2181,8 @@
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/toggle.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/toggle.json"
       ],
       "files": [
         {
@@ -2202,7 +2202,7 @@
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -2220,7 +2220,7 @@
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -2239,7 +2239,7 @@
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -2258,7 +2258,7 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -2277,8 +2277,8 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/button.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/button.json"
       ],
       "files": [
         {
@@ -2297,7 +2297,7 @@
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -2316,7 +2316,7 @@
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -2336,13 +2336,13 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json",
-        "http://localhost:3200/r/0.1.0/breadcrumb.json",
-        "http://localhost:3200/r/0.1.0/input-group.json",
-        "http://localhost:3200/r/0.1.0/kbd.json",
-        "http://localhost:3200/r/0.1.0/nav-user.json",
-        "http://localhost:3200/r/0.1.0/separator.json",
-        "http://localhost:3200/r/0.1.0/sidebar.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json",
+        "http://localhost:3200/r/0.2.0/breadcrumb.json",
+        "http://localhost:3200/r/0.2.0/input-group.json",
+        "http://localhost:3200/r/0.2.0/kbd.json",
+        "http://localhost:3200/r/0.2.0/nav-user.json",
+        "http://localhost:3200/r/0.2.0/separator.json",
+        "http://localhost:3200/r/0.2.0/sidebar.json"
       ],
       "files": [
         {
@@ -2356,12 +2356,12 @@
       "name": "theme-provider",
       "type": "registry:component",
       "title": "theme-provider",
-      "description": "Mic Design System v0.1",
+      "description": "Mic Design System 0.2.0",
       "dependencies": [
         "next-themes@0.4.6"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
@@ -2374,10 +2374,10 @@
       "name": "use-mobile",
       "type": "registry:hook",
       "title": "use-mobile",
-      "description": "Mic Design System v0.1",
+      "description": "Mic Design System 0.2.0",
       "dependencies": [],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.0/mic-foundations.json"
+        "http://localhost:3200/r/0.2.0/mic-foundations.json"
       ],
       "files": [
         {
