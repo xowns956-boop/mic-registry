@@ -4,7 +4,7 @@ import { cn } from "cn"
 import { Badge } from "@/components/ui/badge"
 
 // Mic v0.1 · Figma "- Sidebar › SidebarBrand" (43:109) — Name · Subtitle · Show Badge · Show Subtitle · collapsed
-// 사이드바가 접히면(collapsible="icon") 로고만 남는다. 위아래 여백은 그대로 둬서 머리 칸 높이(64)가 접혀도 같다.
+// 사이드바가 접히면(collapsible="icon") 로고만 남는다. 높이는 Figma대로 48(머리 칸 64)로 고정해 접혀도, 부제가 있어도 같다.
 function SidebarBrand({
   name,
   subtitle,
@@ -24,7 +24,7 @@ function SidebarBrand({
   return (
     <div
       data-slot="sidebar-brand"
-      className={cn("flex items-center gap-2 p-2 group-data-[collapsible=icon]:px-0", className)}
+      className={cn("flex h-12 items-center gap-2 p-2 group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:px-0", className)}
       {...props}
     >
       <span className="flex size-8 shrink-0 items-center justify-center overflow-hidden rounded-full bg-sidebar-primary text-sm text-sidebar-primary-foreground">

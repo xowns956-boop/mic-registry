@@ -22,7 +22,8 @@
           "다크 accent(hover·선택 강조)를 진한 파랑 대신 #262626 회색으로 옅게",
           "라이트 페이지 바탕(page-background)을 흰색으로",
           "표 머리글·FormTable 제목 칸·팝업 표 머리글이 table-header 색(라이트 #F0F3F7)을 씀",
-          "강조 카드·메뉴 타일은 진한 회색 대신 card-emphasis 색으로 옆 카드와 살짝만 구분"
+          "강조 카드·메뉴 타일은 진한 회색 대신 card-emphasis 색으로 옆 카드와 살짝만 구분",
+          "사이드바: Figma Sidebar 값으로 맞춤(메뉴 사이 8 · 하위 메뉴 사이 6 · 접힘 폭 56 · 접힘 때 아이콘 가운데 · 로고 칸 64)"
         ]
       },
       {
@@ -30,7 +31,7 @@
         "items": [
           "mic-foundations.json을 꼭 함께 다시 설치해야 색이 바뀌어요",
           "직접 고친 부품은 덮어쓰기 전에 비교하세요(--overwrite 바로 쓰지 않기)",
-          "stat-card · menu-tile · table · form-table · dialog-body · button 파일이 바뀌었어요"
+          "stat-card · menu-tile · table · form-table · dialog-body · button · sidebar · sidebar-brand 파일이 바뀌었어요"
         ]
       }
     ]
