@@ -16,13 +16,11 @@ import {
   SidebarContent,
   SidebarGroup,
   SidebarGroupLabel,
-  SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar"
-import { SidebarBrand } from "@/components/ui/sidebar-brand"
 import { PREVIEW_GROUPS, PREVIEW_SECTIONS } from "./sections"
 
 // 미리보기 전용 목차·검색 (레지스트리에 들어가지 않음)
@@ -65,15 +63,12 @@ function useActiveSection() {
   return active
 }
 
-export function PreviewSidebar({ version }: { version: string }) {
+export function PreviewSidebar() {
   const active = useActiveSection()
   const { setOpenMobile } = useSidebar()
 
   return (
     <Sidebar>
-      <SidebarHeader>
-        <SidebarBrand name="Mic Design System" subtitle={`부품 미리보기 · ${version}`} logo="M" />
-      </SidebarHeader>
       <SidebarContent>
         {PREVIEW_GROUPS.map((g) => (
           <SidebarGroup key={g.label}>
@@ -103,7 +98,7 @@ export function PreviewSidebar({ version }: { version: string }) {
   )
 }
 
-/** ⌘K(Ctrl+K) 또는 위쪽 검색칸에서 Enter로 여는 부품 검색 */
+/** ⌘K(Ctrl+K) 또는 제목 아래 검색칸에서 Enter로 여는 부품 검색 */
 export function PreviewSearch({
   open,
   onOpenChange,

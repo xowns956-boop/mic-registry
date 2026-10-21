@@ -8,6 +8,8 @@ import { MoonIcon, SearchIcon, SparklesIcon, SunIcon } from "lucide-react"
 import { PageHeading } from "@/components/blocks/page-heading"
 import { SiteHeader } from "@/components/blocks/site-header"
 import { Button } from "@/components/ui/button"
+import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group"
+import { Kbd } from "@/components/ui/kbd"
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
 import pkg from "../package.json"
 import { BatchAdded } from "./_preview/batch-added"
@@ -35,17 +37,12 @@ export default function Home() {
 
   return (
     <SidebarProvider>
-      <PreviewSidebar version={pkg.version} />
+      <PreviewSidebar />
       <SidebarInset className="bg-page-background">
         <SiteHeader
           className="sticky top-0 z-10"
           showHome={false}
           crumbs={[{ label: "부품 미리보기" }]}
-          searchPlaceholder="부품 검색"
-          onSearchSubmit={(q) => {
-            setQuery(q)
-            setSearchOpen(true)
-          }}
           actions={
             <>
               <Button variant="ghost" asChild>
@@ -60,20 +57,33 @@ export default function Home() {
             </>
           }
           iconButtons={
-            <>
-              {/* 좁은 화면에서는 검색칸이 숨으므로 아이콘으로 연다 */}
-              <Button variant="ghost" size="icon" className="md:hidden" aria-label="부품 검색" onClick={() => setSearchOpen(true)}>
-                <SearchIcon aria-hidden />
-              </Button>
-              <Button variant="ghost" size="icon" aria-label="테마 전환" onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}>
-                <SunIcon className="dark:hidden" aria-hidden />
-                <MoonIcon className="hidden dark:block" aria-hidden />
-              </Button>
-            </>
+            <Button variant="ghost" size="icon" aria-label="테마 전환" onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}>
+              <SunIcon className="dark:hidden" aria-hidden />
+              <MoonIcon className="hidden dark:block" aria-hidden />
+            </Button>
           }
         />
         <div className="mx-auto flex w-full max-w-layout flex-col gap-6 p-6">
           <PageHeading title={`Mic Design System ${pkg.version}`} description="Figma Mic v0.1 부품을 코드로 옮긴 미리보기" />
+          {/* 부품 검색: Enter 또는 ⌘K로 검색창을 열고, 고르면 해당 칸으로 이동한다. 폭은 DataTable 검색칸과 같은 max-w-96 */}
+          <form
+            role="search"
+            onSubmit={(e) => {
+              e.preventDefault()
+              setSearchOpen(true)
+            }}
+          >
+            <InputGroup className="max-w-96">
+              <InputGroupInput placeholder="부품 검색" aria-label="부품 검색" value={query} onChange={(e) => setQuery(e.target.value)} />
+              <InputGroupAddon>
+                <SearchIcon aria-hidden />
+              </InputGroupAddon>
+              <InputGroupAddon align="inline-end">
+                <Kbd>⌘</Kbd>
+                <Kbd>K</Kbd>
+              </InputGroupAddon>
+            </InputGroup>
+          </form>
           <BatchForms />
           <BatchDisplay />
           <BatchRest />
