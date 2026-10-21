@@ -4,6 +4,14 @@ Figma `Mic-Design-system v0.1` (fileKey `Q1cGtxx0jsnSwfaPnJloYg`)을 React + Tai
 
 ## 설치 (React + Tailwind v4 + shadcn 초기화된 프로젝트)
 
+비개발자는 [AI로 설치하기](https://xowns956-boop.github.io/mic-registry/docs/ai/) 페이지에서 프롬프트를 복사해 AI에게 보내면 된다.
+
+shadcn은 **radix 방식**으로 초기화해야 한다. 기본값(base)이면 설치 후 빌드가 깨진다.
+
+```bash
+npx shadcn@latest init -b radix -p nova -y
+```
+
 ```bash
 npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.1.0/mic-foundations.json https://xowns956-boop.github.io/mic-registry/r/0.1.0/mic.json
 ```

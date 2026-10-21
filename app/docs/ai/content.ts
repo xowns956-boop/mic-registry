@@ -7,6 +7,9 @@ export const REGISTRY_BASE = process.env.NEXT_PUBLIC_REGISTRY_BASE ?? "https://x
 
 export const itemUrl = (name: string) => `${REGISTRY_BASE}/r/${VERSION}/${name}.json`
 
+// Mic는 radix 기반. shadcn 기본값(base)으로 초기화하면 asChild가 render로 바뀌어 빌드가 깨진다.
+export const initCommand = "npx shadcn@latest init -b radix -p nova -y"
+
 export const installCommand = `npx shadcn@latest add ${itemUrl("mic-foundations")} ${itemUrl("mic")}`
 
 export const rulesBlock = `## Design system: Mic v${VERSION}
@@ -22,8 +25,10 @@ export const setupPrompt = `Mic 디자인 시스템(v${VERSION})을 이 프로�
 나는 개발을 잘 모르니까 필요한 건 알아서 진행하고, 끝나면 쉬운 말로 알려 줘.
 
 ## 1. 프로젝트 확인
-- 이 폴더에 package.json이 없으면: Next.js(App Router · TypeScript · Tailwind CSS v4 · ESLint, src 폴더 없이) 프로젝트를 이 폴더에 새로 만들고 \`npx shadcn@latest init\`으로 shadcn을 초기화해. 아이콘은 lucide.
-- React + Tailwind CSS v4 프로젝트인데 components.json이 없으면 \`npx shadcn@latest init\`만 해.
+- 이 폴더에 package.json이 없으면: Next.js(App Router · TypeScript · Tailwind CSS v4 · ESLint, src 폴더 없이) 프로젝트를 이 폴더에 새로 만들고 shadcn을 초기화해.
+- React + Tailwind CSS v4 프로젝트인데 components.json이 없으면 shadcn 초기화만 해.
+- shadcn 초기화는 반드시 radix 방식으로: \`${initCommand}\` (Mic 부품은 radix 기반이야. 기본값 base 방식으로 초기화하면 설치 후 빌드가 깨져.)
+- 이미 components.json이 있는데 "style"이 "base-"로 시작하면 설치하지 말고, radix 방식이 아니라서 안 된다고 알려 줘.
 - Tailwind CSS v3 이하이거나 React 프로젝트가 아니면 설치하지 말고, 왜 안 되는지 알려 줘.
 - Node.js가 없어서 npx가 안 되면 멈추고, https://nodejs.org 에서 LTS 버전을 설치하라고 알려 줘.
 
@@ -92,6 +97,10 @@ export const faqs = [
   {
     q: "localhost 주소를 다른 사람에게 보냈는데 안 열린대요",
     a: "localhost는 내 컴퓨터 안에서만 열리는 주소예요. 다른 사람에게 보여 주려면 배포(Vercel 등)가 필요해요.",
+  },
+  {
+    q: "설치는 됐는데 “render” 관련 오류가 나요",
+    a: "shadcn이 radix가 아닌 base 방식으로 초기화된 프로젝트예요. 연습용이면 빈 폴더에서 다시 시작하고, 기존 프로젝트라면 개발자와 상의해요.",
   },
   {
     q: "“Tailwind v3라서 안 된다”고 해요",
