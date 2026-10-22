@@ -11,15 +11,6 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {
   componentGroups,
@@ -60,7 +51,7 @@ function useCopy() {
       toast.success(message)
       setTimeout(() => setCopied((c) => (c === key ? null : c)), 2000)
     } catch {
-      toast.error("복사하지 못했어요. ‘프롬프트 내용 보기’에서 글을 직접 선택해서 복사해 주세요.")
+      toast.error("복사하지 못했어요. 다른 브라우저에서 다시 시도해 주세요.")
     }
   }
   return { copied, copy }
@@ -125,28 +116,6 @@ export default function InstallWithAI() {
             {copied === "prompt" ? <CheckIcon aria-hidden="true" /> : <SparklesIcon aria-hidden="true" />}
             {copied === "prompt" ? "복사했어요" : "설치 프롬프트 복사"}
           </Button>
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button size="lg" variant="outline">
-                프롬프트 내용 보기
-              </Button>
-            </DialogTrigger>
-            <DialogContent>
-              <DialogHeader>
-                <DialogTitle>설치 프롬프트 내용</DialogTitle>
-                <DialogDescription>AI에게 보내지는 글이에요. 직접 읽어 보지 않아도 괜찮아요.</DialogDescription>
-              </DialogHeader>
-              <div className="max-h-96 overflow-y-auto">
-                <CodeBlock>{setupPrompt}</CodeBlock>
-              </div>
-              <DialogFooter>
-                <Button onClick={copyPrompt}>
-                  {copied === "prompt" ? <CheckIcon aria-hidden="true" /> : <CopyIcon aria-hidden="true" />}
-                  {copied === "prompt" ? "복사했어요" : "복사"}
-                </Button>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
         </div>
       </header>
 
