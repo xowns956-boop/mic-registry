@@ -115,7 +115,6 @@
   --color-alpha-outline: var(--alpha-outline);
   --color-alpha-outline-hover: var(--alpha-outline-hover);
   --color-alpha-destructive-solid: var(--alpha-destructive-solid);
-  --color-alpha-switch-off: var(--alpha-switch-off);
   --color-alpha-tab-active: var(--alpha-tab-active);
   --color-alpha-destructive-20: var(--alpha-destructive-20);
   --color-alpha-primary-30: var(--alpha-primary-30);
@@ -271,6 +270,8 @@
   --color-card-emphasis-active: var(--card-emphasis-active);
   --color-card-emphasis-foreground: var(--card-emphasis-foreground);
   --color-table-header: var(--table-header);
+  --color-switch-off: var(--switch-off);
+  --color-switch-thumb: var(--switch-thumb);
 }
 
 :root {
@@ -629,7 +630,6 @@
   --alpha-outline: #ffffff;
   --alpha-outline-hover: #f1f6fd;
   --alpha-destructive-solid: #dc2626;
-  --alpha-switch-off: #e2e8f0;
   --alpha-tab-active: #ffffff;
   --alpha-destructive-20: #dc262633;
   --alpha-primary-30: #0161d24d;
@@ -785,6 +785,8 @@
   --card-emphasis-active: #cbd5e1;
   --card-emphasis-foreground: #0f172a;
   --table-header: #f0f3f7;
+  --switch-off: #e2e8f0;
+  --switch-thumb: #ffffff;
 }
 
 .dark {
@@ -863,7 +865,6 @@
   --alpha-outline: #2626264d;
   --alpha-outline-hover: #26262680;
   --alpha-destructive-solid: #dc262699;
-  --alpha-switch-off: #262626cc;
   --alpha-tab-active: #2626264d;
   --alpha-destructive-20: #dc262666;
   --alpha-primary-30: #3390ff4d;
@@ -1019,6 +1020,8 @@
   --card-emphasis-active: #404040;
   --card-emphasis-foreground: #fafafa;
   --table-header: #262626;
+  --switch-off: #737373;
+  --switch-thumb: #ffffff;
 }
 
 @layer base {

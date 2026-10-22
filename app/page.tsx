@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <SidebarProvider>
       <PreviewSidebar />
-      <SidebarInset className="bg-page-background">
+      <SidebarInset className="min-w-0 bg-page-background">
         <SiteHeader
           className="sticky top-0 z-10"
           showHome={false}
