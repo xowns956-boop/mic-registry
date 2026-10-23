@@ -1,5 +1,5 @@
 # main에 올리면 미리보기 화면 + 레지스트리(/r/<버전>/*.json) + llms.txt를 GitHub Pages로 배포한다.
-# 현재 버전은 package.json의 version. /r/0.1.0·/r/0.2.0은 이미 공유된 주소라 지우지 않고 현재 내용으로 함께 만든다(변경 기록 참고).
+# 현재 버전은 package.json의 version. /r/0.1.0·/r/0.2.0·/r/0.2.1은 이미 공유된 주소라 지우지 않고 현재 내용으로 함께 만든다(변경 기록 참고).
 name: Deploy to GitHub Pages
 
 on:
@@ -32,9 +32,9 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run tokens
-      # 옛 주소 0.1.0 · 0.2.0 (이미 공유된 주소라 지우지 않는다. 내용은 현재 버전과 같음)
+      # 옛 주소 0.1.0 · 0.2.0 · 0.2.1 (이미 공유된 주소라 지우지 않는다. 내용은 현재 버전과 같음)
       - run: |
-          for v in 0.1.0 0.2.0; do
+          for v in 0.1.0 0.2.0 0.2.1; do
             REGISTRY_VERSION=$v node scripts/build-registry.mjs
             npx shadcn@4.22.1 build -o public/r/$v
           done
