@@ -23,7 +23,7 @@ const parts = registry.items.filter((i) => !["mic-foundations", "mic"].includes(
 const describe = (i) => i.description.replace(/^Mic v0\.1 · /, "")
 const installCmd = `npx shadcn@latest add ${r("mic-foundations")} ${r("mic")}`
 
-const summary = `> React + Tailwind CSS v4 + shadcn(radix) 기반 어드민 디자인 시스템. Figma "Mic-Design-system v0.1"과 같은 이름·토큰을 쓴다. Pretendard Variable 글꼴, lucide 아이콘, 라이트·다크 두 모드(다크는 COMPASS 다크 기준). 현재 버전 ${VERSION}.`
+const summary = `> React + Tailwind CSS v4 + shadcn(radix) 기반 어드민 디자인 시스템. Figma "Mic-Design-system v0.1"과 같은 이름·토큰을 쓴다. Pretendard Variable 글꼴, lucide 아이콘, 라이트·다크 두 모드(다크 바탕은 COMPASS 다크 기준, 주 버튼·차트는 라이트와 같은 색 계열). 현재 버전 ${VERSION}.`
 
 const llms = `# Mic Design System
 

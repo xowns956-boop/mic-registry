@@ -1,19 +1,19 @@
-# Mic Design System 0.2.0
+# Mic Design System 0.2.1
 
 이 프로젝트의 디자인 시스템이다. 사용자가 "디자인 시스템 써", "Mic 써", "use the design system"이라고 하면 이 규칙을 따른다.
 
 - 원본: Figma `Mic-Design-system v0.1` (fileKey `Q1cGtxx0jsnSwfaPnJloYg`)
 - 대상: React + Tailwind CSS v4 + shadcn (radix 기반, style `radix-nova`, 아이콘 lucide)
-- 설치: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.2.0/mic-foundations.json https://xowns956-boop.github.io/mic-registry/r/0.2.0/mic.json` (pnpm이면 `pnpm dlx`, mic-foundations는 꼭 함께)
-- 부품 하나만: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.2.0/<이름>.json`
+- 설치: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.2.1/mic-foundations.json https://xowns956-boop.github.io/mic-registry/r/0.2.1/mic.json` (pnpm이면 `pnpm dlx`, mic-foundations는 꼭 함께)
+- 부품 하나만: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.2.1/<이름>.json`
 - 설치 기록: 프로젝트의 `docs/mic-adoption.md` (설치 버전·주소·직접 고친 부품). Mic를 업데이트하면 이 파일도 고친다.
 - 변경 기록: https://xowns956-boop.github.io/mic-registry/docs/changelog/ · AI용 요약: https://xowns956-boop.github.io/mic-registry/llms.txt
 
 ## 1. 적용 원칙
 
-1. 화면을 만들 때 **설치된 부품(`components/ui`, `components/blocks`)을 먼저 쓴다.** 비슷한 모양을 새로 만들지 않는다. 없는 부품은 같은 버전(0.2.0) 레지스트리에서 추가한다.
+1. 화면을 만들 때 **설치된 부품(`components/ui`, `components/blocks`)을 먼저 쓴다.** 비슷한 모양을 새로 만들지 않는다. 없는 부품은 같은 버전(0.2.1) 레지스트리에서 추가한다.
 2. 색·간격·둥글기·글자·그림자는 **토큰 클래스만** 쓴다 (`bg-primary`, `text-muted-foreground`, `rounded-md`, `shadow-xs`). hex·px 값을 직접 쓰지 않는다.
-3. 라이트·다크 두 모드를 항상 함께 지원한다. 다크는 `<html class="dark">`, `ThemeProvider`(next-themes, 기본값 system)가 처리한다. 다크 색은 COMPASS 다크 기준(파란 기운 없는 회색 · 주 버튼 #3390FF)이다.
+3. 라이트·다크 두 모드를 항상 함께 지원한다. 다크는 `<html class="dark">`, `ThemeProvider`(next-themes, 기본값 system)가 처리한다. 다크 바탕·면은 COMPASS 다크 기준(파란 기운 없는 회색)이고, 주 버튼·차트는 라이트와 같은 색 계열을 한 단계 밝게 쓴다(주 버튼 brand/600 #1A73E9).
 4. 부품의 크기·둥글기·상태 클래스를 화면에서 덮어쓰지 않는다. 바꿔야 하면 디자이너에게 확인하고 Figma와 함께 고친다.
 5. 레지스트리 버전을 임의로 올리지 않는다. 프로젝트에서 고친 부품 파일을 덮어쓰지 않는다 (`--overwrite` 금지, 먼저 비교).
 
@@ -100,6 +100,11 @@ SidebarProvider
 - 사이드바 간격은 부품 기본값을 쓴다(메뉴 사이 8, 하위 메뉴 사이 6, 그룹 사이 8, 버튼 32, 접힘 때 아이콘 가운데). `className`으로 gap·padding·높이를 바꾸지 않는다.
 - 주요 버튼(`variant="default"`)은 화면 영역마다 하나. 나머지는 outline·secondary·ghost.
 - 빈 상태: DataTable `emptyText` / 불러오는 중: `Skeleton`·`Spinner` / 오류: `Alert variant="destructive"` 또는 `toast.error`.
+
+### 화면 크기 (데스크톱 전용)
+
+- Mic는 **데스크톱 대시보드용**이다. 휴대폰 화면은 대응하지 않는다. 휴대폰 너비에서 넘치거나 깨지는 것은 고칠 대상이 아니다.
+- 반응형은 부품에 이미 들어 있는 기준만 쓴다(예: `SectionCards`의 `sm`·`xl` 줄바꿈, `SiteHeader`의 `md` 미만 검색칸 숨김). 화면에서 휴대폰용 배치를 새로 만들지 않는다.
 
 ## 5. 접근성
 
