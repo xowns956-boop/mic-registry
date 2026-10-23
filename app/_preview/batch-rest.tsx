@@ -66,6 +66,7 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { Toolbar, ToolbarSeparator } from "@/components/ui/toolbar"
 import { Tree } from "@/components/ui/tree"
 
+import { FormTable, FormTableField, FormTableRow } from "@/components/ui/form-table"
 import { Row, Section } from "./section"
 
 const lines = [
@@ -323,7 +324,7 @@ export function BatchRest() {
         </Accordion>
       </Section>
 
-      <Section id="patterns" title="Patterns" figma="03_Patterns (37:74 · 38:34 · 80:153)">
+      <Section id="patterns" title="Patterns" figma="03_Patterns (37:74 · 38:34 · 80:153 · 4046:181)">
         <PageHeading title="페이지 제목" description="페이지 설명을 입력합니다." actions={<><Button variant="outline">보조 버튼</Button><Button>주요 버튼</Button></>} />
         <FilterBar>
           <Input className="w-62" placeholder="검색" aria-label="검색" />
@@ -336,6 +337,34 @@ export function BatchRest() {
           <Button variant="outline">취소</Button>
           <Button>저장</Button>
         </FormActionBar>
+        <Row label="FormTable (정보·조건 표)">
+          <div className="w-full">
+            <FormTable className="max-w-[552px]">
+              <FormTableRow>
+                <FormTableField label="작업지시">WO-2410-0012</FormTableField>
+                <FormTableField label="품목">초코 비스킷 120g</FormTableField>
+              </FormTableRow>
+              <FormTableRow>
+                <FormTableField label="라인">2라인</FormTableField>
+                <FormTableField label="작업자">김생산</FormTableField>
+              </FormTableRow>
+              <FormTableRow>
+                <FormTableField label="교대" type="control">
+                  <Select defaultValue="day">
+                    <SelectTrigger className="w-full" aria-label="교대">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="day">주간</SelectItem>
+                      <SelectItem value="night">야간</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </FormTableField>
+                <FormTableField label="계획 수량">1,200 EA</FormTableField>
+              </FormTableRow>
+            </FormTable>
+          </div>
+        </Row>
       </Section>
     </>
   )

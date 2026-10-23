@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { PlusIcon, SearchIcon, ArrowRightIcon, Trash2Icon, CopyIcon } from "lucide-react"
+import { PlusIcon, SearchIcon, ArrowRightIcon, Trash2Icon, CopyIcon, ClipboardIcon, FactoryIcon, LayoutGridIcon, WrenchIcon } from "lucide-react"
 
 import { Autocomplete } from "@/components/ui/autocomplete"
 import { Button } from "@/components/ui/button"
@@ -26,7 +26,9 @@ import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/in
 import { Kbd } from "@/components/ui/kbd"
 import { Label } from "@/components/ui/label"
 import { MultiSelect } from "@/components/ui/multi-select"
+import { MenuTile } from "@/components/ui/menu-tile"
 import { NumberInput } from "@/components/ui/number-input"
+import { NumberStepper } from "@/components/ui/number-stepper"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Switch } from "@/components/ui/switch"
@@ -48,9 +50,9 @@ export function BatchForms() {
 
   return (
     <>
-      <Section id="button" title="Button · ButtonGroup" figma="- Buttons (9:458 · 51:92)">
+      <Section id="button" title="Button · ButtonGroup · MenuTile" figma="- Buttons (9:458 · 51:92 · 4045:6191)">
         {(["default", "destructive", "outline", "secondary", "ghost", "link"] as const).map((v) => (
-          <Row key={v} label={`variant=${v}`}>
+          <Row key={v} label={v === "default" ? "variant=default · 누르고 있는 동안 pressed 색(모든 variant 공통)" : `variant=${v}`}>
             <Button variant={v}>버튼</Button>
             <Button variant={v} size="sm">버튼</Button>
             <Button variant={v} size="lg">버튼</Button>
@@ -69,9 +71,17 @@ export function BatchForms() {
             <Button variant="outline">다음</Button>
           </ButtonGroup>
         </Row>
+        <Row label="MenuTile (태블릿 메뉴)">
+          <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <MenuTile icon={<LayoutGridIcon />}>메뉴명</MenuTile>
+            <MenuTile icon={<FactoryIcon />}>생산 실적</MenuTile>
+            <MenuTile icon={<WrenchIcon />}>설비 점검</MenuTile>
+            <MenuTile icon={<ClipboardIcon />}>품질 검사</MenuTile>
+          </div>
+        </Row>
       </Section>
 
-      <Section id="input" title="Input · Textarea · InputGroup · NumberInput" figma="- Inputs (10:66 · 10:93 · 48:77 · 2024:3)">
+      <Section id="input" title="Input · Textarea · InputGroup · NumberInput · NumberStepper" figma="- Inputs (10:66 · 10:93 · 48:77 · 2024:3 · 4045:6163)">
         <Row label="Input: default · filled · disabled · invalid">
           <Input className="w-80" placeholder="내용을 입력하세요" />
           <Input className="w-80" defaultValue="입력한 내용" />
@@ -91,6 +101,10 @@ export function BatchForms() {
         </Row>
         <Row label="NumberInput">
           <NumberInput className="w-80" defaultValue={0} min={0} aria-label="수량" />
+        </Row>
+        <Row label="NumberStepper (태블릿 숫자 입력): default · disabled">
+          <NumberStepper defaultValue={0} min={0} aria-label="수량" />
+          <NumberStepper defaultValue={5} disabled aria-label="수량(비활성)" />
         </Row>
       </Section>
 

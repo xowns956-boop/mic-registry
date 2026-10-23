@@ -12,7 +12,6 @@ import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/in
 import { Kbd } from "@/components/ui/kbd"
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
 import pkg from "../package.json"
-import { BatchAdded } from "./_preview/batch-added"
 import { BatchDisplay } from "./_preview/batch-display"
 import { BatchForms } from "./_preview/batch-forms"
 import { BatchRest } from "./_preview/batch-rest"
@@ -87,7 +86,6 @@ export default function Home() {
           <BatchForms />
           <BatchDisplay />
           <BatchRest />
-          <BatchAdded />
         </div>
       </SidebarInset>
       <PreviewSearch open={searchOpen} onOpenChange={setSearchOpen} query={query} onQueryChange={setQuery} />

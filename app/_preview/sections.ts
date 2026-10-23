@@ -8,8 +8,8 @@ export const PREVIEW_GROUPS: { label: string; items: PreviewSection[] }[] = [
   {
     label: "입력",
     items: [
-      { id: "button", label: "버튼", title: "Button · ButtonGroup", keywords: "버튼 버튼그룹" },
-      { id: "input", label: "입력칸", title: "Input · Textarea · InputGroup · NumberInput", keywords: "입력 텍스트 숫자" },
+      { id: "button", label: "버튼", title: "Button · ButtonGroup · MenuTile", keywords: "버튼 버튼그룹 눌림 pressed 메뉴 타일 태블릿" },
+      { id: "input", label: "입력칸", title: "Input · Textarea · InputGroup · NumberInput · NumberStepper", keywords: "입력 텍스트 숫자 증감 스테퍼" },
       { id: "select", label: "선택 목록", title: "Select · DropdownMenu · Autocomplete · MultiSelect", keywords: "선택 드롭다운 자동완성" },
       { id: "checkbox", label: "체크박스·스위치", title: "Checkbox · Radio · Switch · Label · FilterChip", keywords: "체크박스 라디오 스위치 라벨 칩" },
     ],
@@ -18,9 +18,9 @@ export const PREVIEW_GROUPS: { label: string; items: PreviewSection[] }[] = [
     label: "표시",
     items: [
       { id: "badge", label: "배지·아바타", title: "Badge · Avatar · Tooltip · Separator · Skeleton", keywords: "배지 아바타 툴팁 구분선 스켈레톤" },
-      { id: "card", label: "카드", title: "Card · StatCard · SectionCards", keywords: "카드 통계" },
+      { id: "card", label: "카드", title: "Card · StatCard · SectionCards", keywords: "카드 통계 강조 tone emphasis" },
       { id: "tabs", label: "탭", title: "Tabs", keywords: "탭" },
-      { id: "overlay", label: "팝업", title: "Popover · Dialog · AlertDialog · Sheet", keywords: "팝오버 팝업 다이얼로그 모달 시트" },
+      { id: "overlay", label: "팝업", title: "Popover · Dialog · AlertDialog · Sheet · DialogBody", keywords: "팝오버 팝업 다이얼로그 모달 시트 팝업내용" },
     ],
   },
   {
@@ -35,18 +35,7 @@ export const PREVIEW_GROUPS: { label: string; items: PreviewSection[] }[] = [
       { id: "chart", label: "차트", title: "Charts", keywords: "차트 그래프" },
       { id: "toggle", label: "진행·토글", title: "Progress · Toggle · Spinner · Kbd", keywords: "진행 토글 로딩 키" },
       { id: "tree", label: "트리·화면 탭", title: "Tree · FilterChip · PageTabs · Toolbar · Accordion", keywords: "트리 칩 화면탭 툴바 아코디언" },
-      { id: "patterns", label: "화면 패턴", title: "Patterns", keywords: "패턴 헤더 필터바 페이지제목 SiteHeader FilterBar PageHeading FormActionBar" },
-    ],
-  },
-  {
-    label: "0.2.0 추가",
-    items: [
-      { id: "added-button", label: "버튼 눌림", title: "Button · state=pressed", keywords: "버튼 눌림" },
-      { id: "added-stat", label: "강조 카드", title: "StatCard · tone", keywords: "통계 카드 강조" },
-      { id: "added-stepper", label: "숫자 증감", title: "NumberStepper", keywords: "숫자 증감" },
-      { id: "added-menu-tile", label: "메뉴 타일", title: "MenuTile", keywords: "메뉴 타일 태블릿" },
-      { id: "added-form-table", label: "정보 표", title: "FormTable", keywords: "정보 조건 표" },
-      { id: "added-dialog-body", label: "팝업 내용", title: "DialogBody (팝업 내용)", keywords: "팝업 내용 다이얼로그" },
+      { id: "patterns", label: "화면 패턴", title: "Patterns", keywords: "패턴 헤더 필터바 페이지제목 정보표 조건표 SiteHeader FilterBar PageHeading FormActionBar FormTable" },
     ],
   },
 ]

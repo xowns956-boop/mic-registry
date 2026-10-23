@@ -43,7 +43,28 @@ import { SectionCards, StatCard } from "@/components/ui/stat-card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 
+import {
+  DialogBodyInfo,
+  DialogBodyLotInput,
+  DialogBodyOptionButtons,
+  DialogBodyOptionList,
+  DialogBodyTable,
+  DialogBodyTextarea,
+} from "@/components/ui/dialog-body"
 import { Row, Section } from "./section"
+
+// DialogBody 미리보기용 더미 데이터
+const tableRows = [
+  { id: "1", lot: "L-240101", item: "초코 비스킷 120g", qty: "1,200", unit: "EA" },
+  { id: "2", lot: "L-240102", item: "카스타드 6입", qty: "860", unit: "BOX" },
+  { id: "3", lot: "L-240103", item: "빼빼로 오리지널", qty: "2,400", unit: "EA" },
+  { id: "4", lot: "L-240104", item: "몽쉘 12입", qty: "540", unit: "BOX" },
+]
+const options = [
+  { value: "1", label: "선택 항목 1" },
+  { value: "2", label: "선택 항목 2" },
+  { value: "3", label: "선택 항목 3" },
+]
 
 const Slot = () => (
   <div className="flex h-20 items-center justify-center rounded-md border border-border bg-alpha-muted-50 text-xs text-muted-foreground">
@@ -81,7 +102,7 @@ export function BatchDisplay() {
         </Row>
       </Section>
 
-      <Section id="card" title="Card · StatCard · SectionCards" figma="- Cards (23:6 · 38:344 · 38:345)">
+      <Section id="card" title="Card · StatCard · SectionCards" figma="- Cards (23:6 · 38:344 · 38:345) · 첫 StatCard = tone=emphasis">
         <Row>
           <Card className="w-96">
             <CardHeader>
@@ -93,7 +114,7 @@ export function BatchDisplay() {
           </Card>
         </Row>
         <SectionCards>
-          <StatCard label="오늘 주문" value="1,250건" badge="+12.5%" trend="up" summary="지난주 대비 증가" detail="최근 6개월 기준" />
+          <StatCard tone="emphasis" label="오늘 주문" value="1,250건" badge="+12.5%" trend="up" summary="지난주 대비 증가" detail="최근 6개월 기준" />
           <StatCard label="불량률" value="1.8%" badge="-20%" trend="down" summary="지난주 대비 감소" detail="최근 6개월 기준" />
           <StatCard label="가동률" value="92%" />
           <StatCard label="에너지" value="3,420kWh" badge="+4%" />
@@ -121,7 +142,7 @@ export function BatchDisplay() {
         </Tabs>
       </Section>
 
-      <Section id="overlay" title="Popover · Dialog · AlertDialog · Sheet" figma="- Popovers · Dialogs · Sheets">
+      <Section id="overlay" title="Popover · Dialog · AlertDialog · Sheet · DialogBody" figma="- Popovers · Dialogs · Sheets · DialogBody (4047:18)">
         <Row>
           <Popover>
             <PopoverTrigger asChild><Button variant="outline">팝오버</Button></PopoverTrigger>
@@ -171,6 +192,47 @@ export function BatchDisplay() {
             </Sheet>
           ))}
         </Row>
+        <div className="grid gap-6 lg:grid-cols-2">
+          <Row label="DialogBodyTable">
+            <DialogBodyTable
+              rows={tableRows}
+              getRowId={(r) => r.id}
+              columns={[
+                { key: "lot", header: "LOT" },
+                { key: "item", header: "품목" },
+                { key: "qty", header: "수량", className: "text-right" },
+                { key: "unit", header: "단위" },
+              ]}
+            />
+          </Row>
+          <Row label="DialogBodyInfo">
+            <DialogBodyInfo
+              items={[
+                { label: "작업지시", value: "WO-2410-0012" },
+                { label: "품목", value: "초코 비스킷 120g" },
+                { label: "라인", value: "2라인" },
+              ]}
+            />
+          </Row>
+          <Row label="DialogBodyLotInput">
+            <DialogBodyLotInput />
+          </Row>
+          <Row label="DialogBodyTextarea">
+            <DialogBodyTextarea aria-label="내용" />
+          </Row>
+          <Row label="DialogBodyOptionList">
+            <DialogBodyOptionList options={options} defaultValue="1" aria-label="항목 선택" />
+          </Row>
+          <Row label="DialogBodyOptionButtons">
+            <DialogBodyOptionButtons
+              options={[
+                { value: "a", label: "방식 1" },
+                { value: "b", label: "방식 2" },
+                { value: "c", label: "방식 3" },
+              ]}
+            />
+          </Row>
+        </div>
       </Section>
     </>
   )
