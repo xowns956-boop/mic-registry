@@ -1,6 +1,6 @@
 import { cn } from "cn"
 
-// Mic v0.1 · Figma "- Kbd" (48:10 Kbd · 48:12 KbdGroup)
+// Mic · Kbd
 function Kbd({ className, ...props }: React.ComponentProps<"kbd">) {
   return (
     <kbd

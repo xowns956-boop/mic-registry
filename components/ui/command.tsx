@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/dialog"
 import { SearchIcon, CheckIcon } from "lucide-react"
 
-// Mic v0.1 · Figma "- Command" (30:27 Item · 30:28 Input · 30:33 GroupHeading · 30:35 Command)
+// Mic · Command
 function Command({
   className,
   ...props

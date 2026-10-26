@@ -1,7 +1,7 @@
 import * as React from "react"
 import { cn } from "cn"
 
-// Mic v0.1 · Figma "- Cards › Card" (23:6) — 테두리 + shadow-sm, 둥글기 xl(16), 안쪽 여백 24
+// Mic · Card — 테두리 + shadow-sm, 둥글기 xl(16), 안쪽 여백 24
 function Card({
   className,
   size = "default",

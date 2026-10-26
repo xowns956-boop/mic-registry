@@ -30,7 +30,7 @@ function SelectValue({
   return <SelectPrimitive.Value data-slot="select-value" {...props} />
 }
 
-// Mic v0.1 · Figma "- Dropdowns › Select" (12:118) size: default·sm / SelectItem (25:110) / SelectContent (25:216)
+// Mic · Select size: default·sm / SelectItem / SelectContent
 function SelectTrigger({
   className,
   size = "default",

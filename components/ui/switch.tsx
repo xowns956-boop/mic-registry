@@ -4,7 +4,7 @@ import * as React from "react"
 import { cn } from "cn"
 import { Switch as SwitchPrimitive } from "radix-ui"
 
-// Mic v0.1 · Figma "- Switches › Switch" (11:132)
+// Mic · Switch
 // 바탕(꺼짐) = switch-off, 손잡이 = switch-thumb(두 모드 모두 흰색). 다크에서도 바탕·손잡이가 보이도록 대비 3:1 이상.
 function Switch({
   className,

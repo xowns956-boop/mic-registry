@@ -23,7 +23,7 @@ function Tabs({
   )
 }
 
-// Mic v0.1 · Figma "- Tabs › TabsList" (51:139) · TabsTrigger (24:15) — variant: default·line
+// Mic · TabsList · TabsTrigger — variant: default·line
 const tabsListVariants = cva(
   "group/tabs-list inline-flex w-fit items-center text-foreground group-data-vertical/tabs:h-fit group-data-vertical/tabs:flex-col",
   {

@@ -1,7 +1,7 @@
 import * as React from "react"
 import { cn } from "cn"
 
-// Mic v0.1 · Figma "- Inputs › Textarea" (10:93)
+// Mic · Textarea
 function Textarea({ className, ...props }: React.ComponentProps<"textarea">) {
   return (
     <textarea

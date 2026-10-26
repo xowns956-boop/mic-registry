@@ -1,6 +1,6 @@
 import { cn } from "cn"
 
-// Mic v0.1 · Figma "- Skeletons › Skeleton" (12:166)
+// Mic · Skeleton
 function Skeleton({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div

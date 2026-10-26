@@ -3,7 +3,7 @@
 import * as React from "react"
 import { cn } from "cn"
 
-// Mic v0.1 · Figma "- Tables" (33:42 Header · 33:16 Head · 33:103 Row default·hover·selected · 33:41 Cell)
+// Mic · Tables
 function Table({ className, ...props }: React.ComponentProps<"table">) {
   return (
     <div

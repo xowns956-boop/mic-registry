@@ -17,7 +17,7 @@ function RadioGroup({
   )
 }
 
-// Mic v0.1 · Figma "- Radios › RadioGroupItem" (11:109)
+// Mic · RadioGroupItem
 function RadioGroupItem({
   className,
   ...props

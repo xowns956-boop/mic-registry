@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
-// Mic v0.1 · Figma "- Inputs › InputGroup" (48:77)
+// Mic · InputGroup
 function InputGroup({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div

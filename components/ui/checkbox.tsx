@@ -5,7 +5,7 @@ import { cn } from "cn"
 import { Checkbox as CheckboxPrimitive } from "radix-ui"
 import { CheckIcon } from "lucide-react"
 
-// Mic v0.1 · Figma "- Checkboxes › Checkbox" (11:86)
+// Mic · Checkbox
 function Checkbox({
   className,
   ...props

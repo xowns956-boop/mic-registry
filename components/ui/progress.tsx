@@ -4,7 +4,7 @@ import * as React from "react"
 import { cn } from "cn"
 import { Progress as ProgressPrimitive } from "radix-ui"
 
-// Mic v0.1 · Figma "- Progress › Progress" (48:41) — 8px, 트랙 primary-20
+// Mic · Progress — 8px, 트랙 primary-20
 function Progress({
   className,
   value,

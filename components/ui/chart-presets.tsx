@@ -13,8 +13,7 @@ import {
   type ChartConfig,
 } from "@/components/ui/chart"
 
-// Mic v0.1 · Figma "- Charts" 예시 차트 (35:27 Bar · 35:68 Line · 43:1319 Pie · 43:1334 BarGradient
-// · 2031:30 BarItem · 2031:35 BarLabeled · 2031:56 Combo)
+// Mic · 예시 차트 (Bar · Line · Pie · BarGradient · BarItem · BarLabeled · Combo)
 // 색은 config의 color에 var(--chart-1) 같은 토큰을 넣는다. 눈금 글자는 text-xs muted-foreground, 격자선은 border.
 
 type Row = Record<string, string | number>
@@ -81,7 +80,7 @@ function ChartPie({
   )
 }
 
-// Figma paint style "chart/bar-gradient": 위 chart-1-bold → 아래 chart-1-subtler
+// 막대 그라데이션: 위 chart-1-bold → 아래 chart-1-subtler
 function ChartBarGradient({
   data,
   xKey,

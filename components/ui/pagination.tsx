@@ -4,7 +4,7 @@ import { cn } from "cn"
 import { Button } from "@/components/ui/button"
 import { ChevronLeftIcon, ChevronRightIcon, MoreHorizontalIcon } from "lucide-react"
 
-// Mic v0.1 · Figma "- Pagination" (27:56 Link isActive · 27:65 Previous · 27:74 Next · 27:75 Ellipsis)
+// Mic · Pagination
 function Pagination({ className, ...props }: React.ComponentProps<"nav">) {
   return (
     <nav
