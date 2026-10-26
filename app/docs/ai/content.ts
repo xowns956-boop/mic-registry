@@ -35,6 +35,8 @@ export const setupPrompt = `Mic 디자인 시스템(v${VERSION})을 이 프로�
 - 설치·빌드·확인 화면 중 하나라도 실패하면 완료라고 말하지 마. 어디서 왜 실패했는지 그대로 알려 줘.
 - 프레임워크 교체, React·Next.js·Tailwind CSS 같은 주요 의존성 업그레이드는 나한테 묻기 전에 하지 마.
 - \`--overwrite\` 옵션은 쓰지 마. 덮어쓸지는 2번 규칙대로 하나씩 판단해.
+- 명령이 네트워크 차단·권한 부족으로 실패하면 몰래 건너뛰지 말고, 권한 승인을 요청하거나 나한테 알려 줘.
+- 중간에 질문을 띄우는 명령은 자동 응답 옵션(-y 등)을 붙여서 멈추지 않게 실행해.
 
 ## 1. 프로젝트 확인
 - 이 폴더에 package.json이 없으면: Next.js(App Router · TypeScript · Tailwind CSS v4 · ESLint, src 폴더 없이) 프로젝트를 이 폴더에 새로 만들고 shadcn을 초기화해.
@@ -58,7 +60,9 @@ app/layout.tsx를 이렇게 맞춰 줘.
 - 화면 전체를 ThemeProvider(@/components/theme-provider) → TooltipProvider(@/components/ui/tooltip) 순서로 감싸고, 그 안 맨 아래에 <Toaster />(@/components/ui/sonner)를 둬.
 
 ## 4. AI 규칙 저장
-프로젝트 맨 위 CLAUDE.md에 아래 블록을 추가해 줘(없으면 파일을 만들어). AGENTS.md가 있으면 거기에도 똑같이 추가해.
+어떤 AI 도구(Claude Code·Cursor·Codex 등)로 열어도 같은 규칙을 읽도록 두 파일을 맞춰 줘.
+- 프로젝트 맨 위 AGENTS.md에 아래 블록을 추가해 줘(없으면 파일을 만들어). Cursor·Codex는 이 파일을 읽어.
+- 프로젝트 맨 위 CLAUDE.md에는 \`@AGENTS.md\` 한 줄이 있게 해 줘(없으면 파일을 만들어). Claude Code는 이 줄로 AGENTS.md를 읽어. CLAUDE.md에 예전 Mic 블록이 있으면 지워서 규칙이 두 군데 생기지 않게 해.
 
 ${rulesBlock}
 
@@ -74,7 +78,7 @@ app/mic-check/page.tsx에 확인용 화면을 만들어 줘. 처음 보는 사�
 - Card (CardTitle "다음 단계")
   - "이제 AI에게 'Mic 써서 ○○ 화면 만들어 줘'라고 말하면 Mic 부품으로 화면을 만들어요."
   - "확인이 끝났으면 이 화면은 지워도 돼요. (app/mic-check 폴더)"
-그다음 빌드가 통과하는지 확인하고, 개발 서버를 켜서 열어 볼 주소(예: http://localhost:3000/mic-check)를 알려 줘.
+그다음 빌드가 통과하는지 확인하고, 개발 서버를 켜서 열어 볼 주소(예: http://localhost:3000/mic-check)를 알려 줘. 지금 쓰는 도구에서 개발 서버를 켜 둘 수 없으면, 내가 터미널에 입력할 명령(\`npm run dev\`)과 주소를 알려 줘.
 
 ## 6. 끝나면 알려 줄 것
 - 무엇을 설치·변경했는지 3줄 이내로
@@ -83,11 +87,11 @@ app/mic-check/page.tsx에 확인용 화면을 만들어 줘. 처음 보는 사�
 export const steps = [
   {
     title: "AI 도구로 프로젝트 폴더 열기",
-    body: "Claude Code·Cursor 같은 AI 도구에서 작업할 폴더를 열어요. 아무것도 없는 빈 폴더여도 괜찮아요. AI가 프로젝트부터 만들어요.",
+    body: "Claude Code·Cursor·Codex 같은 AI 도구에서 작업할 폴더를 열어요. 아무것도 없는 빈 폴더여도 괜찮아요. AI가 프로젝트부터 만들어요.",
   },
   {
     title: "설치 프롬프트 붙여넣기",
-    body: "위 버튼으로 복사한 글을 AI 채팅창에 그대로 붙여넣고 보내요. 파일 수정·설치 허락을 물어보면 허용해요.",
+    body: "위 버튼으로 복사한 글을 AI 채팅창에 그대로 붙여넣고 보내요. Cursor는 채팅을 Agent 모드로 두고 보내요. 파일 수정·명령 실행·인터넷 사용 허락을 물어보면 허용해요.",
   },
   {
     title: "확인 화면 열어 보기",
@@ -130,7 +134,19 @@ export const faqs = [
     q: "“Tailwind v3라서 안 된다”고 해요",
     a: "Mic는 Tailwind CSS v4 전용이에요. 기존 프로젝트를 올리는 건 개발자와 상의하고, 연습용이면 빈 폴더에서 새로 시작해요.",
   },
-    {
+  {
+    q: "Cursor에서 붙여넣었는데 설명만 하고 설치를 안 해요",
+    a: "채팅이 Ask 모드라서 그래요. 채팅창 아래에서 Agent 모드로 바꾸고 프롬프트를 다시 보내요.",
+  },
+  {
+    q: "Codex에서 설치 명령이 인터넷 문제로 실패해요",
+    a: "Codex는 기본으로 인터넷 사용을 막아 둘 수 있어요. 허락을 물어보면 허용하고, 묻지 않고 실패하면 Codex 승인 모드를 바꾸거나 “설치 명령을 인터넷 허용으로 다시 실행해 줘”라고 말해요.",
+  },
+  {
+    q: "다른 AI 도구로 바꿔도 규칙이 그대로인가요?",
+    a: "네. 규칙은 AGENTS.md에 저장되고 Claude Code는 CLAUDE.md에서 그 파일을 불러와요. Claude Code·Cursor·Codex 어느 쪽으로 열어도 같은 규칙으로 화면을 만들어요.",
+  },
+  {
     q: "UI 디자인을 만들지 못해요",
     a: "UI를 배포 중이거나 디자인을 만들고 있는 거예요 MIC Design은 Figma를 통해 관리가 되고 배포해요 디자이너에게 문의해 주세요.",
   },
