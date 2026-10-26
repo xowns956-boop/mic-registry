@@ -44,3 +44,6 @@ next-env.d.ts
 /public/r/
 /public/llms.txt
 /public/llms-full.txt
+
+# 이 컴퓨터 전용 제작 규칙
+CLAUDE.local.md
