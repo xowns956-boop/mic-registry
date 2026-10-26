@@ -7,7 +7,7 @@
 - 설치: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.2.2/mic-foundations.json https://xowns956-boop.github.io/mic-registry/r/0.2.2/mic.json` (pnpm이면 `pnpm dlx`, mic-foundations는 꼭 함께)
 - 부품 하나만: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.2.2/<이름>.json`
 - 설치 기록: 프로젝트의 `docs/mic-adoption.md` (설치 버전·주소·직접 고친 부품). Mic를 업데이트하면 이 파일도 고친다.
-- 변경 기록: https://xowns956-boop.github.io/mic-registry/docs/changelog/ · AI용 요약: https://xowns956-boop.github.io/mic-registry/llms.txt
+- 업데이트 현황: https://xowns956-boop.github.io/mic-registry/docs/changelog/ · AI용 요약: https://xowns956-boop.github.io/mic-registry/llms.txt
 
 ## 1. 적용 원칙
 
