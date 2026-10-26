@@ -19,11 +19,11 @@ const rules = read("docs/mic.md")
 const r = (name) => `${BASE}/r/${VERSION}/${name}.json`
 const foundations = registry.items.find((i) => i.name === "mic-foundations")
 const parts = registry.items.filter((i) => !["mic-foundations", "mic"].includes(i.name))
-// 부품 설명은 "Mic v0.1 · Figma "...")" 주석에서 왔다. Figma 위치만 남긴다.
-const describe = (i) => i.description.replace(/^Mic v0\.1 · /, "")
+// 부품 설명: 이름만 (Figma 위치·노드는 공개하지 않는다)
+const describe = (i) => i.title
 const installCmd = `npx shadcn@latest add ${r("mic-foundations")} ${r("mic")}`
 
-const summary = `> React + Tailwind CSS v4 + shadcn(radix) 기반 어드민 디자인 시스템. Figma "Mic-Design-system v0.1"과 같은 이름·토큰을 쓴다. Pretendard Variable 글꼴, lucide 아이콘, 라이트·다크 두 모드(다크 바탕은 COMPASS 다크 기준, 주 버튼·차트는 라이트와 같은 색 계열). 현재 버전 ${VERSION}.`
+const summary = `> React + Tailwind CSS v4 + shadcn(radix) 기반 어드민 디자인 시스템. Pretendard Variable 글꼴, lucide 아이콘, 라이트·다크 두 모드(다크는 파란 기운 없는 회색 바탕, 주 버튼·차트는 라이트와 같은 색 계열). 현재 버전 ${VERSION}.`
 
 const llms = `# Mic Design System
 
@@ -33,7 +33,7 @@ ${summary}
 
 ## AI Reference
 
-- [AI로 설치하기](${BASE}/docs/ai/): 설치 프롬프트(프로젝트 확인 → 설치 → 앱 연결 → 규칙 저장 → 설치 기록 → 확인 화면)
+- [AI로 설치하기](${BASE}/docs/ai/): 설치 프롬프트(프로젝트 확인 → 설치 → 앱 연결 → 규칙 저장 → 확인 화면)
 - [전체 참고서](${BASE}/llms-full.txt): 화면 규칙(docs/mic.md 전문), 색 토큰 라이트·다크 값, 부품 목록과 설치 주소, 업데이트 현황
 
 ## 설치
@@ -83,7 +83,6 @@ ${installCmd}
 
 - 부품 하나만: \`npx shadcn@latest add ${r("<이름>")}\`
 - 앱 최상위: ThemeProvider(@/components/theme-provider) → TooltipProvider → 화면 + <Toaster />. <body className="bg-page-background text-foreground">
-- 설치 기록은 프로젝트의 docs/mic-adoption.md에 남긴다(버전·주소·덮어쓰지 않은 파일·직접 고친 부품).
 - 설치 주소가 열리지 않거나 빌드가 실패하면 완료라고 말하지 않는다.
 
 ## 화면 규칙 (docs/mic.md 전문)

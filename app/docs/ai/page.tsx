@@ -186,8 +186,7 @@ export default function InstallWithAI() {
             들어 있는 부품
           </h2>
           <p className="text-sm text-muted-foreground">
-            Figma <span className="text-foreground">Mic-Design-system v0.1</span>과 같은 이름이에요. 여기 없는 부품은 AI가 새로 만들지 않고 없다고
-            알려 줘요.
+            여기 없는 부품은 AI가 새로 만들지 않고 없다고 알려 줘요. 필요한 부품은 디자이너에게 요청해 주세요.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">

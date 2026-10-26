@@ -63,7 +63,7 @@ export default function Home() {
           }
         />
         <div className="mx-auto flex w-full max-w-layout flex-col gap-6 p-6">
-          <PageHeading title={`Mic Design System ${pkg.version}`} description="Figma Mic v0.1 부품을 코드로 옮긴 미리보기" />
+          <PageHeading title={`Mic Design System ${pkg.version}`} description="Mic 부품 미리보기" />
           {/* 부품 검색: Enter 또는 ⌘K로 검색창을 열고, 고르면 해당 칸으로 이동한다. 폭은 DataTable 검색칸과 같은 max-w-96 */}
           <form
             role="search"

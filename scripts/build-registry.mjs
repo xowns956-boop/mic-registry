@@ -28,13 +28,12 @@ const items = sources.map(({ path, kind }) => {
   const pkgs = [...new Set(imports.filter((i) => !i.startsWith(".") && !i.startsWith("@/")).map((i) => (i.startsWith("@") ? i.split("/").slice(0, 2).join("/") : i.split("/")[0])))]
     .filter((p) => !NOT_DEPS.has(p))
   const local = [...new Set(imports.filter((i) => i.startsWith("@/components/") || i.startsWith("@/hooks/")).map(nameOf))]
-  const figma = (src.match(/\/\/ (Mic v0\.1 · Figma[^\n]*)/) || [])[1]
   const name = nameOf(path)
   return {
     name,
     type: kind === "ui" ? "registry:ui" : kind === "hook" ? "registry:hook" : kind === "block" ? "registry:block" : "registry:component",
     title: name,
-    description: figma ?? `Mic Design System ${VERSION}`,
+    description: `Mic Design System ${VERSION} · ${nameOf(path)}`,
     dependencies: pkgs.map((p) => `${p}@${pkgVersion(p)}`),
     registryDependencies: [url("mic-foundations"), ...local.map(url)],
     files: [

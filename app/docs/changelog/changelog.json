@@ -2,7 +2,7 @@
   {
     "version": "0.1.0",
     "date": "2026-10-26",
-    "summary": "Figma Mic-Design-system v0.1을 코드 부품으로 처음 공개했어요.",
+    "summary": "Mic 디자인 시스템을 코드 부품으로 처음 공개했어요.",
     "groups": [
       {
         "title": "추가",
@@ -12,7 +12,7 @@
           "MES 실무 부품: NumberStepper(− 값 +), MenuTile(태블릿 메뉴 타일), FormTable(정보·조건 표), DialogBody(팝업 내용 6종)",
           "상태·옵션: Button 누르는 동안의 색(pressed), StatCard 강조(tone)",
           "AI 규칙 문서(docs/mic.md), AI용 안내 파일(llms.txt · llms-full.txt)",
-          "AI로 설치하기: 프롬프트 복사로 설치, 설치 확인 화면, 설치 기록(docs/mic-adoption.md)"
+          "AI로 설치하기: 프롬프트 복사로 설치, 설치 확인 화면"
         ]
       },
       {

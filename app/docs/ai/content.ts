@@ -25,7 +25,7 @@ export const rulesBlock = `## Design system: Mic v${VERSION}
 - 색·간격·둥글기는 토큰 클래스만 쓴다. hex·px 값을 직접 쓰지 않는다.
 - 새 화면은 \`app/<이름>/page.tsx\`로 만들고, 라이트/다크를 바꿔 볼 수 있게 테마 전환 버튼을 둔다.
 - 부품 파일(\`components/\`)은 고치지 않는다. 고쳐야 하면 먼저 알린다.
-- Mic 버전을 마음대로 올리지 않는다. 올릴 때는 업데이트 현황(${REGISTRY_BASE}/docs/changelog/)을 먼저 보고, 직접 고친 부품은 비교한 뒤 바꾼다. 바꾼 내용은 docs/mic-adoption.md에 적는다.`
+- Mic 버전을 마음대로 올리지 않는다. 올릴 때는 업데이트 현황(${REGISTRY_BASE}/docs/changelog/)을 먼저 보고, 직접 고친 부품은 비교한 뒤 바꾼다.`
 
 export const setupPrompt = `Mic 디자인 시스템(v${VERSION})을 이 프로젝트에 설치해 줘.
 나는 개발을 잘 모르니까 필요한 건 알아서 진행하고, 끝나면 쉬운 말로 알려 줘.
@@ -62,16 +62,7 @@ app/layout.tsx를 이렇게 맞춰 줘.
 
 ${rulesBlock}
 
-## 5. 설치 기록
-docs/mic-adoption.md 파일을 만들어서 아래를 적어 줘.
-- 설치한 Mic 버전: ${VERSION}
-- 설치 주소: ${REGISTRY_BASE}/r/${VERSION}/
-- 설치 날짜
-- 덮어쓰지 않고 남겨 둔 파일, 이미 손댄 흔적이 있던 파일
-- 3번에서 바꾼 파일
-- 빌드·확인 화면 결과 (성공/실패)
-
-## 6. 확인 화면
+## 5. 확인 화면
 app/mic-check/page.tsx에 확인용 화면을 만들어 줘. 처음 보는 사람도 "이게 왜 생겼지?" 하지 않게, 무슨 화면인지 화면 안에 적어 줘. Mic 부품만 써서, 문구는 아래 그대로:
 - PageHeading
   - 제목: "Mic 설치 확인"
@@ -85,7 +76,7 @@ app/mic-check/page.tsx에 확인용 화면을 만들어 줘. 처음 보는 사�
   - "확인이 끝났으면 이 화면은 지워도 돼요. (app/mic-check 폴더)"
 그다음 빌드가 통과하는지 확인하고, 개발 서버를 켜서 열어 볼 주소(예: http://localhost:3000/mic-check)를 알려 줘.
 
-## 7. 끝나면 알려 줄 것
+## 6. 끝나면 알려 줄 것
 - 무엇을 설치·변경했는지 3줄 이내로
 - 앞으로 이렇게 말하면 된다는 예시 2개 (예: "Mic 써서 설정 화면 만들어 줘")`
 
