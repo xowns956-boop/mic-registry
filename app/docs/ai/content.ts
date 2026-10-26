@@ -19,7 +19,9 @@ export const rulesBlock = `## Design system: Mic v${VERSION}
 
 사용자가 "디자인 시스템 써", "Mic 써", "Mic 디자인 시스템 써", "use the design system"이라고 하면 docs/mic.md를 먼저 읽고 그 규칙대로 만든다.
 
-- 설치된 부품(\`components/ui\`, \`components/blocks\`)만 조립한다. Mic에 없는 부품은 새로 만들지 말고 없다고 알린다.
+- 설치된 부품(\`components/ui\`, \`components/blocks\`)만 조립한다. UI를 만드는 것은 디자이너의 일이다.
+- Mic에 없는 UI는 만들지 않는다. "제가 만들까요?"·"제 방식대로 만들어 볼까요?" 같은 제안이나 질문도 하지 않는다. 없는 UI를 빠짐없이 목록으로 알리고, 디자이너에게 Figma 디자인을 요청하라고 안내한다. 그 자리는 "디자인 필요: <UI 이름>" 빈 자리로 둔다 (docs/mic.md "Mic에 없는 UI").
+- 새 부품은 디자이너가 준 Figma 링크나 Figma MCP 연결로만 만든다. shadcn 방식 + Figma 이름 그대로 + Mic 토큰 클래스만 쓰고, Mic 레지스트리에 추가해 배포한 뒤 설치해 쓴다 (docs/mic.md "새 부품 추가").
 - 색·간격·둥글기는 토큰 클래스만 쓴다. hex·px 값을 직접 쓰지 않는다.
 - 새 화면은 \`app/<이름>/page.tsx\`로 만들고, 라이트/다크를 바꿔 볼 수 있게 테마 전환 버튼을 둔다.
 - 부품 파일(\`components/\`)은 고치지 않는다. 고쳐야 하면 먼저 알린다.
