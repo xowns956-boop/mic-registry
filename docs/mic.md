@@ -1,15 +1,15 @@
-# Mic Design System 0.1.0
+# Mic Design System 0.1.1
 
 이 프로젝트의 디자인 시스템이다. 사용자가 "디자인 시스템 써", "Mic 써", "use the design system"이라고 하면 이 규칙을 따른다.
 
 - 대상: React + Tailwind CSS v4 + shadcn (radix 기반, style `radix-nova`, 아이콘 lucide)
-- 설치: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.1.0/mic-foundations.json https://xowns956-boop.github.io/mic-registry/r/0.1.0/mic.json` (pnpm이면 `pnpm dlx`, mic-foundations는 꼭 함께)
-- 부품 하나만: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.1.0/<이름>.json`
+- 설치: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.1.1/mic-foundations.json https://xowns956-boop.github.io/mic-registry/r/0.1.1/mic.json` (pnpm이면 `pnpm dlx`, mic-foundations는 꼭 함께)
+- 부품 하나만: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.1.1/<이름>.json`
 - 업데이트 현황: https://xowns956-boop.github.io/mic-registry/docs/changelog/
 
 ## 1. 적용 원칙
 
-1. 화면은 **Mic 부품(`components/ui`, `components/blocks`)으로만 조립한다.** 설치 안 된 Mic 부품은 같은 버전(0.1.0) 레지스트리에서 설치해 쓴다. Mic에 없는 UI는 만들지 않고 디자이너에게 넘긴다(아래 "Mic에 없는 UI").
+1. 화면은 **Mic 부품(`components/ui`, `components/blocks`)으로만 조립한다.** 설치 안 된 Mic 부품은 같은 버전(0.1.1) 레지스트리에서 설치해 쓴다. Mic에 없는 UI는 만들지 않고 디자이너에게 넘긴다(아래 "Mic에 없는 UI").
 2. 색·간격·둥글기·글자·그림자는 **토큰 클래스만** 쓴다 (`bg-primary`, `text-muted-foreground`, `rounded-md`, `shadow-xs`). hex·px 값을 직접 쓰지 않는다.
 3. 라이트·다크 두 모드를 항상 함께 지원한다. 다크는 `<html class="dark">`, `ThemeProvider`(next-themes, 기본값 system)가 처리한다. 다크 바탕·면은 파란 기운 없는 회색이고, 주 버튼·차트는 라이트와 같은 색 계열을 한 단계 밝게 쓴다.
 4. 부품의 크기·둥글기·상태 클래스를 화면에서 덮어쓰지 않는다. 바꿔야 하면 디자이너에게 요청한다.
@@ -30,7 +30,7 @@ UI를 만드는 것은 **디자이너의 일**이다. AI는 Mic에 있는 부품
    → 디자이너에게 요청해 주세요. 디자이너가 Mic에 추가하면 업데이트로 받아 쓸 수 있어요.
    ```
 
-5. 화면의 나머지는 Mic 부품으로 만들고, 없는 UI 자리는 모양을 지어내지 않고 **`디자인 필요: <UI 이름>` 글자만 있는 빈 자리**로 남긴다(`rounded-md border border-dashed border-border` + `text-sm text-muted-foreground`).
+5. 화면의 나머지는 Mic 부품으로 만들고, 없는 UI 자리는 모양을 지어내지 않고 **`디자인 필요: <UI 이름>` 글자만 있는 빈 자리**로 화면에 반드시 표시한다. 빼먹거나 숨기지 않는다. 눈에 띄도록 빨간 점선으로 둔다(`rounded-md border-2 border-dashed border-destructive` + `text-sm font-semibold text-destructive-text` + 경고 아이콘 `TriangleAlertIcon`).
 6. 부품은 있지만 필요한 옵션·상태·크기가 없을 때도 같다. 화면에서 덮어써서 만들지 말고 "없는 옵션"으로 알리고 디자이너에게 넘긴다.
 
 ### 새 UI가 필요할 때
