@@ -67,6 +67,7 @@ import { Toolbar, ToolbarSeparator } from "@/components/ui/toolbar"
 import { Tree } from "@/components/ui/tree"
 
 import { FormTable, FormTableField, FormTableRow } from "@/components/ui/form-table"
+import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable"
 import { Row, Section } from "./section"
 
 const lines = [
@@ -288,7 +289,7 @@ export function BatchRest() {
         </Row>
       </Section>
 
-      <Section id="tree" title="Tree · FilterChip · PageTabs · Toolbar · Accordion" figma="- Tree · Chips · Page Tabs · Layout">
+      <Section id="tree" title="Tree · FilterChip · PageTabs · Toolbar · Accordion · Resizable" figma="- Tree · Chips · Page Tabs · Layout">
         <Row>
           <Tree
             aria-label="설비 분류"
@@ -322,6 +323,38 @@ export function BatchRest() {
             <AccordionContent><div className="flex h-20 items-center justify-center rounded-md border border-border bg-alpha-muted-50 text-xs text-muted-foreground">내용 자리</div></AccordionContent>
           </AccordionItem>
         </Accordion>
+        <Row label="Resizable — 막대를 끌어 칸 크기 바꾸기 (withHandle = 가운데 손잡이)">
+          <div className="h-48 w-full max-w-120 overflow-hidden rounded-lg border border-border">
+            <ResizablePanelGroup direction="horizontal">
+              <ResizablePanel defaultSize="35%" minSize="20%">
+                <div className="flex size-full items-center justify-center text-sm text-muted-foreground">설비 목록</div>
+              </ResizablePanel>
+              <ResizableHandle withHandle />
+              <ResizablePanel defaultSize="65%" minSize="20%">
+                <ResizablePanelGroup direction="vertical">
+                  <ResizablePanel defaultSize="50%" minSize="20%">
+                    <div className="flex size-full items-center justify-center text-sm text-muted-foreground">상세 정보</div>
+                  </ResizablePanel>
+                  <ResizableHandle withHandle />
+                  <ResizablePanel defaultSize="50%" minSize="20%">
+                    <div className="flex size-full items-center justify-center text-sm text-muted-foreground">작업 이력</div>
+                  </ResizablePanel>
+                </ResizablePanelGroup>
+              </ResizablePanel>
+            </ResizablePanelGroup>
+          </div>
+          <div className="h-48 w-full max-w-80 overflow-hidden rounded-lg border border-border">
+            <ResizablePanelGroup direction="horizontal">
+              <ResizablePanel defaultSize="50%">
+                <div className="flex size-full items-center justify-center text-sm text-muted-foreground">손잡이 없음</div>
+              </ResizablePanel>
+              <ResizableHandle />
+              <ResizablePanel defaultSize="50%">
+                <div className="flex size-full items-center justify-center text-sm text-muted-foreground">막대만</div>
+              </ResizablePanel>
+            </ResizablePanelGroup>
+          </div>
+        </Row>
       </Section>
 
       <Section id="patterns" title="Patterns" figma="03_Patterns (37:74 · 38:34 · 80:153 · 4046:181)">

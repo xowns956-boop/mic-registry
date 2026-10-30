@@ -1,15 +1,15 @@
-# Mic Design System 0.1.1
+# Mic Design System 0.1.2
 
 이 프로젝트의 디자인 시스템이다. 사용자가 "디자인 시스템 써", "Mic 써", "use the design system"이라고 하면 이 규칙을 따른다.
 
 - 대상: React + Tailwind CSS v4 + shadcn (radix 기반, style `radix-nova`, 아이콘 lucide)
-- 설치: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.1.1/mic-foundations.json https://xowns956-boop.github.io/mic-registry/r/0.1.1/mic.json` (pnpm이면 `pnpm dlx`, mic-foundations는 꼭 함께)
-- 부품 하나만: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.1.1/<이름>.json`
+- 설치: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.1.2/mic-foundations.json https://xowns956-boop.github.io/mic-registry/r/0.1.2/mic.json` (pnpm이면 `pnpm dlx`, mic-foundations는 꼭 함께)
+- 부품 하나만: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.1.2/<이름>.json`
 - 업데이트 현황: https://xowns956-boop.github.io/mic-registry/docs/changelog/
 
 ## 1. 적용 원칙
 
-1. 화면은 **Mic 부품(`components/ui`, `components/blocks`)으로만 조립한다.** 설치 안 된 Mic 부품은 같은 버전(0.1.1) 레지스트리에서 설치해 쓴다. Mic에 없는 UI는 만들지 않고 디자이너에게 넘긴다(아래 "Mic에 없는 UI").
+1. 화면은 **Mic 부품(`components/ui`, `components/blocks`)으로만 조립한다.** 설치 안 된 Mic 부품은 같은 버전(0.1.2) 레지스트리에서 설치해 쓴다. Mic에 없는 UI는 만들지 않고 디자이너에게 넘긴다(아래 "Mic에 없는 UI").
 2. 색·간격·둥글기·글자·그림자는 **토큰 클래스만** 쓴다 (`bg-primary`, `text-muted-foreground`, `rounded-md`, `shadow-xs`). hex·px 값을 직접 쓰지 않는다.
 3. 라이트·다크 두 모드를 항상 함께 지원한다. 다크는 `<html class="dark">`, `ThemeProvider`(next-themes, 기본값 system)가 처리한다. 다크 바탕·면은 파란 기운 없는 회색이고, 주 버튼·차트는 라이트와 같은 색 계열을 한 단계 밝게 쓴다.
 4. 부품의 크기·둥글기·상태 클래스를 화면에서 덮어쓰지 않는다. 바꿔야 하면 디자이너에게 요청한다.
@@ -121,7 +121,7 @@ UI를 만드는 것은 **디자이너의 일**이다. AI는 Mic에 있는 부품
 | Charts | `ui/chart`, `ui/chart-presets` | `ChartBar`·`ChartLine`·`ChartPie`·`ChartBarGradient`·`ChartBarItem`·`ChartBarLabeled`·`ChartCombo` |
 | Progress · Toggles · Spinners · Kbd | `ui/progress`, `ui/toggle`, `ui/toggle-group`, `ui/spinner`, `ui/kbd` | Toggle `variant`: default·outline·solid·pill, `size`: default·sm |
 | Tree · Chips · Page Tabs | `ui/tree`, `ui/filter-chip`, `ui/page-tabs` | Tree `nodes`·`selectedId`, PageTab `active`·`onClose` |
-| Layout | `ui/accordion`, `ui/toolbar` | |
+| Layout | `ui/accordion`, `ui/toolbar`, `ui/resizable` | Resizable(칸 크기 끌어서 조절): `ResizablePanelGroup` `direction`: horizontal(좌우 칸)·vertical(위아래 칸), `ResizablePanel` `defaultSize`·`minSize`·`maxSize`(비율은 "30%"처럼 글자로, 숫자만 쓰면 px), `ResizableHandle` `withHandle`(가운데 손잡이). 묶음은 높이가 정해진 상자 안에 둔다(묶음이 부모 높이를 그대로 채움) |
 | 화면 패턴 | `blocks/site-header`, `blocks/page-heading`, `blocks/filter-bar`, `blocks/form-action-bar`, `ui/form-table` | 보이기 옵션 = props 유무. 정보·조건 표 = `FormTable` > `FormTableRow` > `FormTableField`(`label`, `type`: text·control), 한 줄에 칸 1~2개 |
 
 `button`의 `xs`·`icon-sm`, `badge`의 `ghost`·`link`, `avatar`의 `size`는 shadcn 호환용이며 Mic 규격이 아니다. 새 화면에서는 쓰지 않는다.
