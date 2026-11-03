@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { cn } from "cn"
-import { Bar, BarChart, CartesianGrid, Cell, ComposedChart, LabelList, Line, LineChart, Pie, PieChart, XAxis, YAxis } from "recharts"
+import { Bar, BarChart, CartesianGrid, Cell, ComposedChart, LabelList, Line, LineChart, Pie, PieChart, PolarAngleAxis, RadialBar, RadialBarChart, XAxis, YAxis } from "recharts"
 
 import {
   ChartContainer,
@@ -13,7 +13,7 @@ import {
   type ChartConfig,
 } from "@/components/ui/chart"
 
-// Mic · 예시 차트 (Bar · Line · Pie · BarGradient · BarItem · BarLabeled · Combo)
+// Mic · 예시 차트 (Bar · Line · Pie · BarGradient · BarItem · BarLabeled · Combo · Radial)
 // 색은 config의 color에 var(--chart-1) 같은 토큰을 넣는다. 눈금 글자는 text-xs muted-foreground, 격자선은 border.
 
 type Row = Record<string, string | number>
@@ -206,4 +206,96 @@ function ChartCombo({
   )
 }
 
-export { ChartBar, ChartLine, ChartPie, ChartBarGradient, ChartBarItem, ChartBarLabeled, ChartCombo }
+// 링 도넛(달성률): 바깥→안 링, 12시에서 시계 방향, 바탕 링 secondary. 값은 0~100(%)
+// size=default: 160, 링 3개까지(두께 12 · 간격 4) + 가운데 caption·value / sm: 72, 링 1개(두께 7) + 가운데 value
+// tone=default: chart-1·2·3 / metric: chart-operation·performance·quality (sm은 chart-production)
+// legend: 오른쪽 세로 범례(색 8px + "이름 : 값%")
+const radialTones = {
+  default: ["var(--chart-1)", "var(--chart-2)", "var(--chart-3)"],
+  metric: ["var(--chart-operation)", "var(--chart-performance)", "var(--chart-quality)"],
+}
+
+function ChartRadial({
+  data,
+  tone = "default",
+  size = "default",
+  caption,
+  valueText,
+  legend = false,
+  formatValue = (v) => `${v}%`,
+  className,
+}: {
+  /** 바깥 링부터. value는 0~100 */
+  data: { label: string; value: number }[]
+  tone?: "default" | "metric"
+  size?: "default" | "sm"
+  caption?: React.ReactNode
+  valueText?: React.ReactNode
+  legend?: boolean
+  formatValue?: (v: number) => React.ReactNode
+  className?: string
+}) {
+  const sm = size === "sm"
+  const rings = data.slice(0, sm ? 1 : 3)
+  const colors = sm && tone === "metric" ? ["var(--chart-production)"] : radialTones[tone]
+  const box = sm ? 72 : 160
+  const thick = sm ? 7 : 12
+  const band = thick + 4
+  // recharts는 첫 줄을 가장 안쪽에 그리므로 뒤집어 넣는다. 링 하나당 band 칸, 막대는 칸 가운데 thick 두께
+  const rows = rings.map((r, i) => ({ ...r, fill: colors[i] })).reverse()
+  const outer = box / 2 + (band - thick) / 2
+  const inner = outer - band * rows.length
+  const config = Object.fromEntries(rings.map((r, i) => [r.label, { label: r.label, color: colors[i] }])) satisfies ChartConfig
+
+  const chart = (
+    <div className={cn("relative shrink-0", sm ? "size-18" : "size-40")}>
+      <ChartContainer config={config} className="aspect-square size-full">
+        <RadialBarChart
+          data={rows}
+          startAngle={90}
+          endAngle={-270}
+          innerRadius={inner}
+          outerRadius={outer}
+          barSize={thick}
+          margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
+          accessibilityLayer
+        >
+          <PolarAngleAxis type="number" domain={[0, 100]} tick={false} axisLine={false} />
+          <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel nameKey="label" />} />
+          <RadialBar dataKey="value" background={{ fill: "var(--secondary)" }} isAnimationActive={false} />
+        </RadialBarChart>
+      </ChartContainer>
+      <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center whitespace-nowrap">
+        {!sm && caption != null && <span className="text-xs font-medium text-muted-foreground">{caption}</span>}
+        {valueText != null && (
+          <span
+            className={cn(
+              "font-semibold tabular-nums",
+              sm ? "text-sm" : "text-xl text-primary-text",
+              sm && (tone === "metric" ? "text-chart-production" : "text-chart-1")
+            )}
+          >
+            {valueText}
+          </span>
+        )}
+      </div>
+    </div>
+  )
+
+  if (!legend) return <div data-slot="chart-radial" className={className}>{chart}</div>
+  return (
+    <div data-slot="chart-radial" className={cn("flex items-center justify-between gap-4", className)}>
+      {chart}
+      <ul className="flex flex-col gap-3">
+        {rings.map((r, i) => (
+          <li key={r.label} className="flex items-center gap-1.5 text-sm text-foreground">
+            <span className="size-2 shrink-0 rounded-[2px] bg-(--legend-color)" style={{ "--legend-color": colors[i] } as React.CSSProperties} />
+            {r.label} : {formatValue(r.value)}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+export { ChartBar, ChartLine, ChartPie, ChartBarGradient, ChartBarItem, ChartBarLabeled, ChartCombo, ChartRadial }

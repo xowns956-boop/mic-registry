@@ -32,7 +32,7 @@ export const PREVIEW_GROUPS: { label: string; items: PreviewSection[] }[] = [
       { id: "sidebar", label: "사이드바", title: "Sidebar · SidebarBrand · NavUser", keywords: "사이드바 메뉴 사용자" },
       { id: "table", label: "표", title: "DataTable · Table", keywords: "표 테이블 그리드" },
       { id: "form", label: "입력 양식", title: "Form (Field)", keywords: "폼 필드 입력양식" },
-      { id: "chart", label: "차트", title: "Charts", keywords: "차트 그래프" },
+      { id: "chart", label: "차트", title: "Charts", keywords: "차트 그래프 도넛 링 달성률 radial" },
       { id: "toggle", label: "진행·토글", title: "Progress · Toggle · Spinner · Kbd", keywords: "진행 토글 로딩 키" },
       { id: "tree", label: "트리·화면 탭", title: "Tree · FilterChip · PageTabs · Toolbar · Accordion · Resizable", keywords: "트리 칩 화면탭 툴바 아코디언 스플리터 분할 크기조절 리사이즈" },
       { id: "patterns", label: "화면 패턴", title: "Patterns", keywords: "패턴 헤더 필터바 페이지제목 정보표 조건표 SiteHeader FilterBar PageHeading FormActionBar FormTable" },

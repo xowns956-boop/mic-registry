@@ -21,7 +21,7 @@ import {
 } from "@/components/ui/breadcrumb"
 import { Button } from "@/components/ui/button"
 import { Calendar } from "@/components/ui/calendar"
-import { ChartBar, ChartBarGradient, ChartBarLabeled, ChartCombo, ChartLine, ChartPie } from "@/components/ui/chart-presets"
+import { ChartBar, ChartBarGradient, ChartBarLabeled, ChartCombo, ChartLine, ChartPie, ChartRadial } from "@/components/ui/chart-presets"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Combobox } from "@/components/ui/combobox"
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandShortcut } from "@/components/ui/command"
@@ -259,6 +259,12 @@ export function BatchRest() {
         </div>
         <ChartBarLabeled items={[{ label: "항목 1", value: 120 }, { label: "항목 2", value: 250, valueText: "250 (2.4%)" }, { label: "항목 3", value: 140 }, { label: "항목 4", value: 125 }]} />
         <ChartCombo data={months} xKey="month" barKey="a" lineKey="rate" barLabel="생산량" lineLabel="불량률" />
+        <div className="flex flex-wrap items-center gap-10">
+          <ChartRadial data={[{ label: "계열 1", value: 76 }, { label: "계열 2", value: 85 }, { label: "계열 3", value: 98 }]} caption="Total" valueText="63%" />
+          <ChartRadial className="w-80" tone="metric" legend data={[{ label: "가동", value: 76 }, { label: "성능", value: 85 }, { label: "품질", value: 98 }]} caption="Total" valueText="63%" />
+          <ChartRadial size="sm" data={[{ label: "달성률", value: 72 }]} valueText="72%" />
+          <ChartRadial size="sm" tone="metric" data={[{ label: "달성률", value: 72 }]} valueText="72%" />
+        </div>
       </Section>
 
       <Section id="toggle" title="Progress · Toggle · Spinner · Kbd" figma="- Progress · Toggles · Spinners · Kbd">

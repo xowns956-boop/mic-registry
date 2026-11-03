@@ -1,5 +1,18 @@
 [
   {
+    "version": "0.1.3",
+    "date": "2026-11-03",
+    "summary": "달성률을 링으로 보여 주는 도넛 차트가 생겼어요.",
+    "groups": [
+      {
+        "title": "추가",
+        "items": [
+          "ChartRadial(링 도넛): 링 3개(바깥→안) + 가운데 Total·값, 오른쪽 범례(legend), 작은 크기(size=sm, 링 1개), 색 tone=default(chart-1~3)·metric(가동·성능·품질)"
+        ]
+      }
+    ]
+  },
+  {
     "version": "0.1.2",
     "date": "2026-10-30",
     "summary": "칸 크기를 끌어서 바꾸는 스플리터가 생겼어요.",
