@@ -102,12 +102,20 @@ export function BatchDisplay() {
         </Row>
       </Section>
 
-      <Section id="card" title="Card · StatCard · SectionCards" figma="- Cards (23:6 · 38:344 · 38:345) · 첫 StatCard = tone=emphasis">
+      <Section id="card" title="Card · StatCard · SectionCards" figma="- Cards (23:6 · 4162:289 · 38:344 · 38:345) · 첫 StatCard = tone=emphasis">
         <Row>
           <Card className="w-96">
             <CardHeader>
               <CardTitle>카드 제목</CardTitle>
               <CardDescription>카드 설명</CardDescription>
+            </CardHeader>
+            <CardContent><Slot /></CardContent>
+            <CardFooter><Button>버튼</Button></CardFooter>
+          </Card>
+          <Card state="selected" className="w-96">
+            <CardHeader>
+              <CardTitle>카드 제목</CardTitle>
+              <CardDescription>state="selected"</CardDescription>
             </CardHeader>
             <CardContent><Slot /></CardContent>
             <CardFooter><Button>버튼</Button></CardFooter>

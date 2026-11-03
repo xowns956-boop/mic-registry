@@ -2,12 +2,13 @@
   {
     "version": "0.1.3",
     "date": "2026-11-03",
-    "summary": "달성률을 링으로 보여 주는 도넛 차트가 생겼어요.",
+    "summary": "달성률을 링으로 보여 주는 도넛 차트가 생겼어요. 카드에 선택 상태가 생겼어요.",
     "groups": [
       {
         "title": "추가",
         "items": [
-          "ChartRadial(링 도넛): 링 3개(바깥→안, 9시(왼쪽)에서 시계 방향으로 차는) + 가운데 Total·값, 오른쪽 범례(legend), 작은 크기(size=sm, 링 1개), 색 tone=default(chart-1~3)·metric(가동·성능·품질)"
+          "ChartRadial(링 도넛): 링 3개(바깥→안) + 가운데 Total·값, 오른쪽 범례(legend), 작은 크기(size=sm, 링 1개), 색 tone=default(chart-1~3)·metric(가동·성능·품질)",
+          "Card state=selected: 고른 카드를 accent 바탕으로 표시(state: default·selected)"
         ]
       }
     ]

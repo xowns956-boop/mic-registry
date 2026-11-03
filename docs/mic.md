@@ -107,7 +107,7 @@ UI를 만드는 것은 **디자이너의 일**이다. AI는 Mic에 있는 부품
 | Dropdowns | `ui/select`, `ui/dropdown-menu`, `ui/autocomplete`, `ui/multi-select` | Select `size`: default·sm, DropdownMenuItem `variant`: default·destructive |
 | Checkboxes · Radios · Switches · Labels | `ui/checkbox`, `ui/radio-group`, `ui/switch`, `ui/label` | Label `required` (빨간 점) |
 | Badges · Avatars · Tooltips · Separators · Skeletons | `ui/badge`, `ui/avatar`, `ui/tooltip`, `ui/separator`, `ui/skeleton` | Badge `variant`: default·secondary·destructive·outline |
-| Cards | `ui/card`, `ui/stat-card` (`StatCard`, `SectionCards`) | StatCard `label`·`value`·`badge`·`summary`·`detail`·`trend`(up·down)·`tone`(default·emphasis=진한 바탕) |
+| Cards | `ui/card`, `ui/stat-card` (`StatCard`, `SectionCards`) | Card `state`: default·selected(고른 카드, 바탕 accent) · StatCard `label`·`value`·`badge`·`summary`·`detail`·`trend`(up·down)·`tone`(default·emphasis=진한 바탕) |
 | Tabs | `ui/tabs` | TabsList `variant`: default·line |
 | Popovers · Dialogs · Sheets | `ui/popover`, `ui/dialog`, `ui/alert-dialog`, `ui/sheet`, `ui/dialog-body` | Sheet `side`: right·left·top·bottom. 팝업 내용: `DialogBodyTable`(columns·rows)·`DialogBodyInfo`(items)·`DialogBodyLotInput`·`DialogBodyTextarea`·`DialogBodyOptionList`(options)·`DialogBodyOptionButtons`(options·onSelect) |
 | Breadcrumbs · Pagination | `ui/breadcrumb`, `ui/pagination` | PaginationLink `isActive` |
@@ -158,3 +158,67 @@ SidebarProvider
 - 포커스 링(`ring-alpha-ring-50`)·비활성(`opacity-50`)·오류(`aria-invalid`) 표시를 지우지 않는다.
 - 라벨은 `Label htmlFor` 또는 `FieldLabel`로 연결한다. 표의 체크박스에는 `aria-label`.
 - 대비: 본문 4.5:1 이상. `muted-foreground` 글자를 `muted` 바탕 위에 작게 쓰지 않는다.
+
+## 6. 한글 글자·문구
+
+### 글자 배치
+
+1. 한글에 `break-all`을 쓰지 않는다. 글자 단위로 끊겨서 "등록했 / 어요"처럼 읽기 어려워진다.
+2. LOT 번호·품목 코드·URL처럼 띄어쓰기 없이 긴 값만 칸 안에서 줄바꿈을 허용한다. 넘치는 값에만 `wrap-anywhere`를 쓴다.
+3. 한글에 기울임꼴(`italic`)을 쓰지 않는다. 강조가 필요하면 굵기나 색 토큰을 쓴다.
+4. 숫자는 천 단위 쉼표(1,250 EA)를 쓰고, 한 화면에서는 같은 방식으로 맞춘다. 표의 숫자 열은 `tabular-nums`를 쓴다.
+5. 글자는 12px(`text-xs`)보다 작게 쓰지 않는다.
+
+### 문구
+
+아래 규칙은 **AI가 새로 쓰는 문구에만** 적용한다(알림, 빈 화면, 오류, 확인 팝업). 디자인이나 이미지에 적힌 문구는 그대로 쓴다.
+
+6. 맞춤법을 지킨다. 돼요 / 됐어요 / 할게요 / 며칠 (✕ 되요, 됬어요, 할께요, 몇일)
+7. 띄어쓰기를 지킨다. 할 수 있어요 / 등록할 때 / 작업 중이에요
+8. 버튼 이름 끝에는 마침표를 찍지 않는다. "저장" (✕ "저장.")
+9. 오류 문구에는 무슨 일이 생겼는지와 지금 할 일을 같이 쓴다. "LOT 번호가 이미 등록돼 있어요. 다른 번호를 입력해 주세요." (✕ "오류가 발생했습니다")
+10. 버튼 이름은 누르면 일어나는 일로 쓴다. 실적 등록 / 작업 시작 / 닫기 (✕ 확인, 예)
+11. 한 문장에는 한 가지 내용만 쓴다.
+12. 쉬운 말로 쓴다. 금일 → 오늘, 익일 → 다음 날. 단, 공정·실적·LOT·설비 같은 업무 용어는 그대로 둔다.
+13. 데이터가 아니라 사용자가 한 일로 쓴다. "실적을 등록했어요" (✕ "실적 데이터가 생성되었습니다")
+14. 같은 내용이면 할 수 있는 쪽으로 쓴다. "작업 시작 후에 수정할 수 있어요" (✕ "작업 시작 전에는 수정할 수 없어요")
+15. 사물은 높이지 않는다. "결과가 나왔어요" (✕ "결과가 나오셨습니다")
+16. 겁주거나 탓하는 문구를 쓰지 않는다. (✕ "잘못 입력하셨습니다", "데이터가 모두 사라집니다!")
+17. 느낌표는 거의 쓰지 않고, 오류 문구에는 쓰지 않는다.
+18. 이미지 대체 텍스트에 "이미지", "사진"을 넣지 않는다. "설비 3호기 정면" (✕ "설비 3호기 이미지")
+19. 확인 팝업의 버튼은 질문에 맞는 동작으로 쓴다. "삭제할까요?" → [취소] [삭제] (✕ [아니요] [예])
+
+## 7. 화면 완성도
+
+Mic로 화면을 만들 때마다 따로 시키지 않아도 이 장을 함께 지킨다. **판단 기준은 이 문서다.** 다른 디자인 점검 규칙이나 도구와 부딪히면 이 문서가 우선이고, Mic 부품의 모양·동작 자체는 고칠 대상이 아니다. 휴대폰 너비는 점검하지 않는다(4장 "화면 크기").
+
+### 만들지 않는 것 (근거 없는 장식)
+
+1. 장식용 그라디언트, 빛 번짐, 흐린 원, 그라디언트 글자를 넣지 않는다.
+2. 제목마다 아이콘 상자를 붙이지 않는다. 카드 왼쪽 색 띠는 상태·선택을 나타낼 때만 쓴다.
+3. 설명 문단을 카드 여러 개로 쪼개지 않는다. 카드 안에 카드를 넣는 것은 괜찮다. 4장의 `SectionCards`(StatCard)·차트 카드·MenuTile처럼 Mic가 정한 카드 배치는 그대로 쓴다.
+4. 순서가 없는 내용에 01·02·03 같은 번호를 붙이지 않는다.
+5. 받은 자료에 없는 수치·기능·효과를 지어내지 않는다. "혁신적인", "강력한" 같은 꾸밈말을 쓰지 않는다. 예시 데이터는 실제 업무 데이터 모양(품목명·LOT·수량·날짜)으로 채운다.
+6. 색은 토큰 역할대로만 쓴다. 상태 색(destructive·success 등)은 상태를 나타낼 때만 쓴다. 상태는 색만으로 구분하지 않고 글자(Badge 문구 등)를 함께 쓴다.
+7. 같은 주요 버튼을 영역마다 반복하지 않는다. 버튼 이름과 누른 뒤 실제로 일어나는 일이 같아야 한다.
+8. 긴 설정, 비교, 여러 단계 작업은 `Dialog`에 넣지 않고 화면으로 만든다. `Dialog`는 짧은 입력·확인에만 쓴다.
+
+### 조작감 (화면 코드에서 직접 넣는 것만)
+
+9. 움직임은 Mic 부품에 들어 있는 것만 쓴다. 화면 코드에서 등장 효과(차례로 나타나기, 튀기, 떠오르기)를 새로 넣지 않는다. 꼭 필요하면 `transform`·`opacity`만, 300ms 이하로 하고 `motion-reduce:` 대응을 같이 넣는다. `transition-all`은 쓰지 않는다.
+10. 데이터를 보여 주는 영역은 내용이 있을 때만 만들지 않는다. 비었을 때·불러오는 중·오류 상태도 같이 만든다. 빈 화면·오류에는 다음에 할 일(버튼이나 안내)을 둔다.
+11. 불러오는 중에는 모양을 아는 곳은 `Skeleton`을 쓴다. `Spinner`는 오래 걸리는 작업에만 쓴다.
+12. 이미지·차트 자리는 높이나 비율을 먼저 정해 둔다. 불러온 뒤 화면이 밀리지 않게 한다.
+13. 입력 검사는 칸을 벗어날 때 처음 하고, 오류가 난 칸은 고치는 즉시 오류를 지운다.
+14. 삭제처럼 되돌릴 수 없는 일의 확인은 `AlertDialog`를 쓴다. 입력 중인 `Dialog`는 바깥을 눌러도 닫히지 않게 한다(`DialogContent`의 `onInteractOutside`).
+
+### 다 만든 뒤 점검
+
+화면을 다 만들면 결과를 알리기 전에 직접 만든 화면 코드를 아래 항목으로 다시 보고, 걸린 것은 고친 뒤 알린다.
+
+- hex·px 값 0개, 부품 크기·둥글기를 `className`으로 덮어쓴 곳 0개
+- 위 1~8번에 걸리는 곳 0개
+- 데이터 영역마다 빈·불러오는 중·오류 상태가 있음
+- 9번(움직임)과 6장(한글) 위반 0개
+
+보고 끝에 "점검: 통과" 또는 "점검: N개 고침(무엇을)"을 한 줄로 적는다.
