@@ -206,7 +206,7 @@ function ChartCombo({
   )
 }
 
-// 링 도넛(달성률): 바깥→안 링, 12시에서 시계 방향, 바탕 링 secondary. 값은 0~100(%)
+// 링 도넛(달성률): 바깥→안 링, 9시(왼쪽)에서 시계 방향, 바탕 링 secondary. 값은 0~100(%)
 // size=default: 160, 링 3개까지(두께 12 · 간격 4) + 가운데 caption·value / sm: 72, 링 1개(두께 7) + 가운데 value
 // tone=default: chart-1·2·3 / metric: chart-operation·performance·quality (sm은 chart-production)
 // legend: 오른쪽 세로 범례(색 8px + "이름 : 값%")
@@ -252,8 +252,8 @@ function ChartRadial({
       <ChartContainer config={config} className="aspect-square size-full">
         <RadialBarChart
           data={rows}
-          startAngle={90}
-          endAngle={-270}
+          startAngle={180}
+          endAngle={-180}
           innerRadius={inner}
           outerRadius={outer}
           barSize={thick}
