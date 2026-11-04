@@ -148,6 +148,20 @@ export function BatchDisplay() {
             <TabsTrigger value="set" disabled>설정</TabsTrigger>
           </TabsList>
         </Tabs>
+        <Tabs defaultValue="info" className="w-[480px]">
+          <TabsList fill>
+            <TabsTrigger value="info">기본 정보</TabsTrigger>
+            <TabsTrigger value="log">변경 이력</TabsTrigger>
+            <TabsTrigger value="alarm">알람</TabsTrigger>
+          </TabsList>
+        </Tabs>
+        <Tabs defaultValue="info" className="w-[480px]">
+          <TabsList variant="line" fill>
+            <TabsTrigger value="info">기본 정보</TabsTrigger>
+            <TabsTrigger value="log">변경 이력</TabsTrigger>
+            <TabsTrigger value="alarm">알람</TabsTrigger>
+          </TabsList>
+        </Tabs>
       </Section>
 
       <Section id="overlay" title="Popover · Dialog · AlertDialog · Sheet · DialogBody" figma="- Popovers · Dialogs · Sheets · DialogBody (4047:18)">
