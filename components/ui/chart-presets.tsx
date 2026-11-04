@@ -262,7 +262,8 @@ function ChartRadial({
         >
           <PolarAngleAxis type="number" domain={[0, 100]} tick={false} axisLine={false} />
           <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel nameKey="label" />} />
-          <RadialBar dataKey="value" background={{ fill: "var(--secondary)" }} isAnimationActive={false} />
+          {/* 처음 그릴 때 0에서 값까지 링이 차오른다(원형 차트와 같게 0.4초 뒤 1.5초 ease). 움직임 줄이기 설정이면 바로 그린다 */}
+          <RadialBar dataKey="value" background={{ fill: "var(--secondary)" }} isAnimationActive="auto" animationBegin={400} animationDuration={1500} animationEasing="ease" />
         </RadialBarChart>
       </ChartContainer>
       <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center whitespace-nowrap">
