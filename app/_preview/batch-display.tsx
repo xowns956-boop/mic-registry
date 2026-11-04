@@ -81,6 +81,10 @@ export function BatchDisplay() {
           <Badge variant="secondary">배지</Badge>
           <Badge variant="destructive">배지</Badge>
           <Badge variant="outline">배지</Badge>
+          <Badge variant="info">배지</Badge>
+          <Badge variant="success">배지</Badge>
+          <Badge variant="warning">배지</Badge>
+          <Badge variant="destructive-subtle">배지</Badge>
         </Row>
         <Row label="Avatar">
           <Avatar><AvatarFallback>관</AvatarFallback></Avatar>
