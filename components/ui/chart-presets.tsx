@@ -66,7 +66,7 @@ function ChartPie({
   className?: string
 }) {
   return (
-    <ChartContainer config={config} className={cn("aspect-auto h-47 w-42", className)}>
+    <ChartContainer config={config} className={cn("aspect-auto h-47 w-full", className)}>
       <PieChart accessibilityLayer margin={{ top: 0, right: 0, bottom: 0, left: 0 }}>
         <ChartTooltip content={<ChartTooltipContent hideLabel nameKey={nameKey} />} />
         {/* 반지름 = 범례를 뺀 남은 칸의 100%. 범례 한 줄이면 지금과 같은 80, 범례가 두 줄로 넘어가면 그만큼 작아져 겹치지 않는다 */}
