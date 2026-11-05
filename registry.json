@@ -1059,7 +1059,7 @@
       "name": "mic",
       "type": "registry:block",
       "title": "Mic Design System",
-      "description": "Mic Design System v0.1.3 전체 — 토큰 + 부품 64개 + AI 규칙 문서(docs/mic.md)",
+      "description": "Mic Design System v0.1.3 전체 — 토큰 + 부품 65개 + AI 규칙 문서(docs/mic.md)",
       "registryDependencies": [
         "http://localhost:3200/r/0.1.3/mic-foundations.json",
         "http://localhost:3200/r/0.1.3/accordion.json",
@@ -1110,6 +1110,7 @@
         "http://localhost:3200/r/0.1.3/sonner.json",
         "http://localhost:3200/r/0.1.3/spinner.json",
         "http://localhost:3200/r/0.1.3/stat-card.json",
+        "http://localhost:3200/r/0.1.3/status-badge.json",
         "http://localhost:3200/r/0.1.3/stepper.json",
         "http://localhost:3200/r/0.1.3/switch.json",
         "http://localhost:3200/r/0.1.3/table.json",
@@ -2096,6 +2097,25 @@
       "files": [
         {
           "path": "components/ui/stat-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "status-badge",
+      "type": "registry:ui",
+      "title": "status-badge",
+      "description": "Mic Design System 0.1.3 · status-badge",
+      "dependencies": [
+        "class-variance-authority@0.7.1",
+        "cn@0.5.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/status-badge.tsx",
           "type": "registry:ui"
         }
       ]

@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/alert-dialog"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
+import { StatusBadge } from "@/components/ui/status-badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import {
@@ -75,7 +76,7 @@ const Slot = () => (
 export function BatchDisplay() {
   return (
     <>
-      <Section id="badge" title="Badge · Avatar · Tooltip · Separator · Skeleton" figma="- Badges · Avatars · Tooltips · Separators · Skeletons">
+      <Section id="badge" title="Badge · StatusBadge · Avatar · Tooltip · Separator · Skeleton" figma="- Badges · StatusBadge(4188:69) · Avatars · Tooltips · Separators · Skeletons">
         <Row label="Badge">
           <Badge>배지</Badge>
           <Badge variant="secondary">배지</Badge>
@@ -85,6 +86,22 @@ export function BatchDisplay() {
           <Badge variant="success">배지</Badge>
           <Badge variant="warning">배지</Badge>
           <Badge variant="destructive-subtle">배지</Badge>
+        </Row>
+        <Row label="StatusBadge · size=default">
+          <StatusBadge status="run" />
+          <StatusBadge status="idle" />
+          <StatusBadge status="error" />
+          <StatusBadge status="maintenance" />
+          <StatusBadge status="offline" />
+          <StatusBadge status="run">정상 가동</StatusBadge>
+        </Row>
+        <Row label="StatusBadge · size=sm (표 칸·판정)">
+          <StatusBadge size="sm" status="run" />
+          <StatusBadge size="sm" status="idle" />
+          <StatusBadge size="sm" status="error" />
+          <StatusBadge size="sm" status="maintenance" />
+          <StatusBadge size="sm" status="offline" />
+          <StatusBadge size="sm" status="error">불량</StatusBadge>
         </Row>
         <Row label="Avatar">
           <Avatar><AvatarFallback>관</AvatarFallback></Avatar>
