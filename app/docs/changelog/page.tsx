@@ -5,6 +5,8 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import changelog from "./changelog.json"
+import { VERSION } from "../ai/content"
+import { UpdateButton } from "./update-button"
 
 // 업데이트 현황. 내용은 changelog.json 한 곳에서만 고친다 (llms-full.txt도 같은 파일을 읽는다).
 export const metadata = { title: "업데이트 현황 · Mic Design System" }
@@ -27,7 +29,7 @@ export default function Changelog() {
       <header className="flex flex-col gap-2">
         <h1 className="text-4xl font-bold text-foreground">업데이트 현황</h1>
         <p className="text-base text-muted-foreground">
-          버전마다 새로 추가된 UI·기능과 바뀐 점을 정리해요. 설치 주소에 버전이 들어 있어서, Mic가 바뀌어도 이미 설치한 프로젝트는 자동으로 바뀌지 않아요. 버전을 올리기 전에 여기서 확인해요.
+          버전마다 새로 추가된 UI·기능과 바뀐 점을 정리해요. 설치 주소에 버전이 들어 있어서, Mic가 바뀌어도 이미 설치한 프로젝트는 자동으로 바뀌지 않아요. 버전을 올리기 전에 여기서 확인하고, 최신 버전 카드의 버튼으로 업데이트 프롬프트를 복사해 설치한 프로젝트의 AI 채팅창에 붙여넣어요.
         </p>
       </header>
 
@@ -36,9 +38,12 @@ export default function Changelog() {
           <li key={release.version}>
             <Card>
               <CardHeader>
-                <div className="flex flex-wrap items-center gap-2">
-                  <CardTitle className="text-xl">{release.version}</CardTitle>
-                  <Badge variant="outline">{release.date}</Badge>
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <CardTitle className="text-xl">{`v${release.version}`}</CardTitle>
+                    <Badge variant="outline">{release.date}</Badge>
+                  </div>
+                  {release.version === VERSION && <UpdateButton />}
                 </div>
                 <CardDescription>{release.summary}</CardDescription>
               </CardHeader>
