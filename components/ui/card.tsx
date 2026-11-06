@@ -24,13 +24,17 @@ function Card({
       data-interactive={interactive || undefined}
       role={interactive ? "button" : undefined}
       tabIndex={interactive ? 0 : undefined}
-      onKeyDown={(e) => {
-        onKeyDown?.(e)
-        if (interactive && !e.defaultPrevented && e.target === e.currentTarget && (e.key === "Enter" || e.key === " ")) {
-          e.preventDefault()
-          e.currentTarget.click()
-        }
-      }}
+      onKeyDown={
+        interactive
+          ? (e) => {
+              onKeyDown?.(e)
+              if (!e.defaultPrevented && e.target === e.currentTarget && (e.key === "Enter" || e.key === " ")) {
+                e.preventDefault()
+                e.currentTarget.click()
+              }
+            }
+          : onKeyDown
+      }
       className={cn(
         "group/card flex flex-col gap-(--card-spacing) overflow-hidden rounded-xl border border-border bg-card py-(--card-spacing) text-sm text-card-foreground shadow-sm [--card-spacing:--spacing(6)] has-[>img:first-child]:pt-0 data-[size=sm]:[--card-spacing:--spacing(4)] data-[state=selected]:bg-accent *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl",
         "data-interactive:cursor-pointer data-interactive:transition-colors data-interactive:outline-none data-interactive:hover:border-ring data-interactive:active:bg-accent-active data-interactive:focus-visible:border-ring data-interactive:focus-visible:ring-3 data-interactive:focus-visible:ring-alpha-ring-50",
