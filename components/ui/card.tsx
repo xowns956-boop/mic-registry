@@ -3,22 +3,37 @@ import { cn } from "cn"
 
 // Mic · Card — 테두리 + shadow-sm, 둥글기 xl(16), 안쪽 여백 24
 // state: default(바탕 card) · selected(바탕 accent, 고른 카드 표시)
+// interactive: 카드 전체를 누르는 경우만 켬 → hover(테두리 ring) · pressed(바탕 accent-active) · focus(테두리 ring + 링 3px)
 function Card({
   className,
   size = "default",
   state = "default",
+  interactive = false,
+  onKeyDown,
   ...props
 }: React.ComponentProps<"div"> & {
   size?: "default" | "sm"
   state?: "default" | "selected"
+  interactive?: boolean
 }) {
   return (
     <div
       data-slot="card"
       data-size={size}
       data-state={state}
+      data-interactive={interactive || undefined}
+      role={interactive ? "button" : undefined}
+      tabIndex={interactive ? 0 : undefined}
+      onKeyDown={(e) => {
+        onKeyDown?.(e)
+        if (interactive && !e.defaultPrevented && e.target === e.currentTarget && (e.key === "Enter" || e.key === " ")) {
+          e.preventDefault()
+          e.currentTarget.click()
+        }
+      }}
       className={cn(
         "group/card flex flex-col gap-(--card-spacing) overflow-hidden rounded-xl border border-border bg-card py-(--card-spacing) text-sm text-card-foreground shadow-sm [--card-spacing:--spacing(6)] has-[>img:first-child]:pt-0 data-[size=sm]:[--card-spacing:--spacing(4)] data-[state=selected]:bg-accent *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl",
+        "data-interactive:cursor-pointer data-interactive:transition-colors data-interactive:outline-none data-interactive:hover:border-ring data-interactive:active:bg-accent-active data-interactive:focus-visible:border-ring data-interactive:focus-visible:ring-3 data-interactive:focus-visible:ring-alpha-ring-50",
         className
       )}
       {...props}

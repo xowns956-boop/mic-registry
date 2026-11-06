@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { InboxIcon } from "lucide-react"
 
 import {
   AlertDialog,
@@ -17,6 +18,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { StatusBadge } from "@/components/ui/status-badge"
 import { Button } from "@/components/ui/button"
+import { Empty, EmptyContent, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTitle } from "@/components/ui/empty"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import {
   Dialog,
@@ -123,7 +125,7 @@ export function BatchDisplay() {
         </Row>
       </Section>
 
-      <Section id="card" title="Card · StatCard · SectionCards" figma="- Cards (23:6 · 4162:289 · 38:344 · 38:345) · 첫 StatCard = tone=emphasis">
+      <Section id="card" title="Card · Empty · StatCard · SectionCards" figma="- Cards (23:6 · 4162:289 · 4162:299 · 38:344 · 38:345) · Empty (4212:8) · 첫 StatCard = tone=emphasis">
         <Row>
           <Card className="w-96">
             <CardHeader>
@@ -133,6 +135,13 @@ export function BatchDisplay() {
             <CardContent><Slot /></CardContent>
             <CardFooter><Button>버튼</Button></CardFooter>
           </Card>
+          <Card interactive className="w-96" onClick={() => {}}>
+            <CardHeader>
+              <CardTitle>카드 제목</CardTitle>
+              <CardDescription>interactive — 마우스를 올리거나 누르거나 Tab으로 확인</CardDescription>
+            </CardHeader>
+            <CardContent><Slot /></CardContent>
+          </Card>
           <Card state="selected" className="w-96">
             <CardHeader>
               <CardTitle>카드 제목</CardTitle>
@@ -141,6 +150,19 @@ export function BatchDisplay() {
             <CardContent><Slot /></CardContent>
             <CardFooter><Button>버튼</Button></CardFooter>
           </Card>
+        </Row>
+        <Row label="Empty (빈 화면 안내)">
+          <Empty className="w-full rounded-xl border border-dashed border-border">
+            <EmptyHeader>
+              <EmptyMedia><InboxIcon aria-hidden="true" /></EmptyMedia>
+              <EmptyTitle>열린 화면이 없어요</EmptyTitle>
+              <EmptyDescription>왼쪽 메뉴나 즐겨찾기에서 화면을 열어 주세요.</EmptyDescription>
+            </EmptyHeader>
+            <EmptyContent>
+              <Button>대시보드 열기</Button>
+              <Button variant="outline">즐겨찾기 보기</Button>
+            </EmptyContent>
+          </Empty>
         </Row>
         <SectionCards>
           <StatCard tone="emphasis" label="오늘 주문" value="1,250건" badge="+12.5%" trend="up" summary="지난주 대비 증가" detail="최근 6개월 기준" />

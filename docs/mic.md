@@ -1,15 +1,15 @@
-# Mic Design System 0.1.3
+# Mic Design System 0.1.4
 
 이 프로젝트의 디자인 시스템이다. 사용자가 "디자인 시스템 써", "Mic 써", "use the design system"이라고 하면 이 규칙을 따른다.
 
 - 대상: React + Tailwind CSS v4 + shadcn (radix 기반, style `radix-nova`, 아이콘 lucide)
-- 설치: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.1.3/mic-foundations.json https://xowns956-boop.github.io/mic-registry/r/0.1.3/mic.json` (pnpm이면 `pnpm dlx`, mic-foundations는 꼭 함께)
-- 부품 하나만: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.1.3/<이름>.json`
+- 설치: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.1.4/mic-foundations.json https://xowns956-boop.github.io/mic-registry/r/0.1.4/mic.json` (pnpm이면 `pnpm dlx`, mic-foundations는 꼭 함께)
+- 부품 하나만: `npx shadcn@latest add https://xowns956-boop.github.io/mic-registry/r/0.1.4/<이름>.json`
 - 업데이트 현황: https://xowns956-boop.github.io/mic-registry/docs/changelog/
 
 ## 1. 적용 원칙
 
-1. 화면은 **Mic 부품(`components/ui`, `components/blocks`)으로만 조립한다.** 설치 안 된 Mic 부품은 같은 버전(0.1.3) 레지스트리에서 설치해 쓴다. Mic에 없는 UI는 만들지 않고 디자이너에게 넘긴다(아래 "Mic에 없는 UI").
+1. 화면은 **Mic 부품(`components/ui`, `components/blocks`)으로만 조립한다.** 설치 안 된 Mic 부품은 같은 버전(0.1.4) 레지스트리에서 설치해 쓴다. Mic에 없는 UI는 만들지 않고 디자이너에게 넘긴다(아래 "Mic에 없는 UI").
 2. 색·간격·둥글기·글자·그림자는 **토큰 클래스만** 쓴다 (`bg-primary`, `text-muted-foreground`, `rounded-md`, `shadow-xs`). hex·px 값을 직접 쓰지 않는다.
 3. 라이트·다크 두 모드를 항상 함께 지원한다. 다크는 `<html class="dark">`, `ThemeProvider`(next-themes, 기본값 system)가 처리한다. 다크 바탕·면은 파란 기운 없는 회색이고, 주 버튼·차트는 라이트와 같은 색 계열을 한 단계 밝게 쓴다.
 4. 부품의 크기·둥글기·상태 클래스를 화면에서 덮어쓰지 않는다. 바꿔야 하면 디자이너에게 요청한다.
@@ -107,7 +107,7 @@ UI를 만드는 것은 **디자이너의 일**이다. AI는 Mic에 있는 부품
 | Dropdowns | `ui/select`, `ui/dropdown-menu`, `ui/autocomplete`, `ui/multi-select` | Select `size`: default·sm, DropdownMenuItem `variant`: default·destructive |
 | Checkboxes · Radios · Switches · Labels | `ui/checkbox`, `ui/radio-group`, `ui/switch`, `ui/label` | Label `required` (빨간 점) |
 | Badges · Avatars · Tooltips · Separators · Skeletons | `ui/badge`, `ui/status-badge`, `ui/avatar`, `ui/tooltip`, `ui/separator`, `ui/skeleton` | Badge `variant`: default·secondary·destructive·outline · 상태 info(통과·진행 중)·success(완료)·warning(주의)·destructive-subtle(불량·문제, 연한 바탕). StatusBadge(설비·공정 상태) `status`: run(정상 가동)·idle(대기)·error(오류)·maintenance(점검)·offline(꺼짐) / `size`: default(20)·sm(16, 표 칸·판정 표시) / 문구는 children(없으면 상태 이름) |
-| Cards | `ui/card`, `ui/stat-card` (`StatCard`, `SectionCards`) | Card `state`: default·selected(고른 카드, 바탕 accent) · StatCard `label`·`value`·`badge`·`summary`·`detail`·`trend`(up·down)·`tone`(default·emphasis=진한 바탕) |
+| Cards | `ui/card`, `ui/stat-card` (`StatCard`, `SectionCards`) | Card `state`: default·selected(고른 카드, 바탕 accent) · Card `interactive`: 카드 전체를 누를 때만 켬(hover 테두리 ring · 누르는 동안 바탕 accent-active · focus 테두리 ring + 링, 키보드 Enter·Space로 누름) · StatCard `label`·`value`·`badge`·`summary`·`detail`·`trend`(up·down)·`tone`(default·emphasis=진한 바탕) |
 | Tabs | `ui/tabs` | TabsList `variant`: default·line / `fill`: 꽉 채우기(부모 폭을 채우고 탭이 똑같이 나눠 퍼짐, 사용자가 요청할 때만 켬. 기본은 내용만큼) |
 | Popovers · Dialogs · Sheets | `ui/popover`, `ui/dialog`, `ui/alert-dialog`, `ui/sheet`, `ui/dialog-body` | Sheet `side`: right·left·top·bottom. 팝업 내용: `DialogBodyTable`(columns·rows)·`DialogBodyInfo`(items)·`DialogBodyLotInput`·`DialogBodyTextarea`·`DialogBodyOptionList`(options)·`DialogBodyOptionButtons`(options·onSelect) |
 | Breadcrumbs · Pagination | `ui/breadcrumb`, `ui/pagination` | PaginationLink `isActive` |
@@ -119,8 +119,9 @@ UI를 만드는 것은 **디자이너의 일**이다. AI는 Mic에 있는 부품
 | Tables | `ui/table`, `ui/data-table` | DataTable `columns`(sortValue·muted)·`selectable`·`searchText`·`actions` |
 | Forms | `ui/field` (`Field`, `FieldLabel`, `FieldDescription`, `FieldError`) | 오류는 `Field data-invalid` + 컨트롤 `aria-invalid` |
 | Charts | `ui/chart`, `ui/chart-presets` | `ChartBar`·`ChartLine`·`ChartPie`·`ChartBarGradient`·`ChartBarItem`·`ChartBarLabeled`·`ChartCombo`·`ChartRadial` · ChartPie(구성 비율) `type`: pie·donut(가운데 빈 고리), donut일 때 `caption`·`valueText`(가운데 글자, 안 넘기면 빈 고리) · ChartRadial(링 도넛, 달성률): `data`=[{label, value(0~100)}] 바깥 링부터 3개까지, `caption`·`valueText`(가운데 글자), `legend`(오른쪽 범례), `size`: default(160)·sm(72, 링 1개·가운데 값만), `tone`: default(chart-1~3)·metric(가동·성능·품질) |
-| Progress · Toggles · Spinners · Kbd | `ui/progress`, `ui/toggle`, `ui/toggle-group`, `ui/spinner`, `ui/kbd` | Toggle `variant`: default·outline·solid·pill, `size`: default·sm |
-| Tree · Chips · Page Tabs | `ui/tree`, `ui/filter-chip`, `ui/page-tabs` | Tree `nodes`·`selectedId`, PageTab `active`·`onClose` |
+| Progress · Toggles · Spinners · Kbd | `ui/progress`, `ui/toggle`, `ui/toggle-group`, `ui/favorite-toggle`, `ui/spinner`, `ui/kbd` | Toggle `variant`: default·outline·solid·pill, `size`: default·sm. FavoriteToggle(즐겨찾기 별) `pressed`·`onPressedChange`, 빈 별 ↔ 채운 별(amber), `aria-label` 필수(예: "생산 실적 등록 즐겨찾기 해제") |
+| Tree · Chips · Page Tabs | `ui/tree`, `ui/filter-chip`, `ui/page-tabs` | Tree `nodes`·`selectedId`, PageTab `active`·`onClose`, PageTabBar `emptyText`(탭이 0개일 때 같은 줄에 안내, 기본 "열린 화면이 없어요") |
+| Empty | `ui/empty` | 빈 화면 안내: `Empty` > `EmptyHeader`(`EmptyMedia` 아이콘 칸·선택, `EmptyTitle`, `EmptyDescription`) + `EmptyContent`(주 버튼 default 1개 + 보조 outline). 탭을 모두 닫은 화면, 목록이 빈 경우 |
 | Layout | `ui/accordion`, `ui/toolbar`, `ui/resizable` | Resizable(칸 크기 끌어서 조절): `ResizablePanelGroup` `direction`: horizontal(좌우 칸)·vertical(위아래 칸), `ResizablePanel` `defaultSize`·`minSize`·`maxSize`(비율은 "30%"처럼 글자로, 숫자만 쓰면 px), `ResizableHandle` `withHandle`(가운데 손잡이). 묶음은 높이가 정해진 상자 안에 둔다(묶음이 부모 높이를 그대로 채움) |
 | 화면 패턴 | `blocks/site-header`, `blocks/page-heading`, `blocks/filter-bar`, `blocks/form-action-bar`, `ui/form-table` | 보이기 옵션 = props 유무. 정보·조건 표 = `FormTable` > `FormTableRow` > `FormTableField`(`label`, `type`: text·control), 한 줄에 칸 1~2개 |
 
@@ -166,7 +167,7 @@ SidebarProvider
 - 사이드바 구조: `SidebarHeader` 안에 `SidebarBrand`(접혀도 넣는다. 머리 칸 64) → `SidebarContent` → `SidebarGroup`(펼침일 때 `SidebarGroupLabel`) → `SidebarMenu` → `SidebarMenuItem` → `SidebarMenuButton`(`tooltip`에 메뉴명) → `SidebarFooter`(`NavUser`, 필요할 때만).
 - 사이드바 간격은 부품 기본값을 쓴다(메뉴 사이 8, 하위 메뉴 사이 6, 그룹 사이 8, 버튼 32, 접힘 때 아이콘 가운데). `className`으로 gap·padding·높이를 바꾸지 않는다.
 - 주요 버튼(`variant="default"`)은 화면 영역마다 하나. 나머지는 outline·secondary·ghost.
-- 빈 상태: DataTable `emptyText` / 불러오는 중: `Skeleton`·`Spinner` / 오류: `Alert variant="destructive"` 또는 `toast.error`.
+- 빈 상태: DataTable `emptyText`, 화면·영역 전체가 비면 `Empty` / 불러오는 중: `Skeleton`·`Spinner` / 오류: `Alert variant="destructive"` 또는 `toast.error`.
 
 ### 화면설계서(이미지)를 받았을 때 — 배치는 이미지 그대로 (반드시 지킨다)
 

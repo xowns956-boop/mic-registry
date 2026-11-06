@@ -1059,74 +1059,76 @@
       "name": "mic",
       "type": "registry:block",
       "title": "Mic Design System",
-      "description": "Mic Design System v0.1.3 전체 — 토큰 + 부품 65개 + AI 규칙 문서(docs/mic.md)",
+      "description": "Mic Design System v0.1.4 전체 — 토큰 + 부품 67개 + AI 규칙 문서(docs/mic.md)",
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/accordion.json",
-        "http://localhost:3200/r/0.1.3/alert-dialog.json",
-        "http://localhost:3200/r/0.1.3/alert.json",
-        "http://localhost:3200/r/0.1.3/autocomplete.json",
-        "http://localhost:3200/r/0.1.3/avatar.json",
-        "http://localhost:3200/r/0.1.3/badge.json",
-        "http://localhost:3200/r/0.1.3/breadcrumb.json",
-        "http://localhost:3200/r/0.1.3/button-group.json",
-        "http://localhost:3200/r/0.1.3/button.json",
-        "http://localhost:3200/r/0.1.3/calendar.json",
-        "http://localhost:3200/r/0.1.3/card.json",
-        "http://localhost:3200/r/0.1.3/chart-presets.json",
-        "http://localhost:3200/r/0.1.3/chart.json",
-        "http://localhost:3200/r/0.1.3/checkbox.json",
-        "http://localhost:3200/r/0.1.3/combobox.json",
-        "http://localhost:3200/r/0.1.3/command.json",
-        "http://localhost:3200/r/0.1.3/data-table.json",
-        "http://localhost:3200/r/0.1.3/date-picker.json",
-        "http://localhost:3200/r/0.1.3/dialog-body.json",
-        "http://localhost:3200/r/0.1.3/dialog.json",
-        "http://localhost:3200/r/0.1.3/dropdown-menu.json",
-        "http://localhost:3200/r/0.1.3/field.json",
-        "http://localhost:3200/r/0.1.3/filter-chip.json",
-        "http://localhost:3200/r/0.1.3/form-table.json",
-        "http://localhost:3200/r/0.1.3/input-group.json",
-        "http://localhost:3200/r/0.1.3/input.json",
-        "http://localhost:3200/r/0.1.3/kbd.json",
-        "http://localhost:3200/r/0.1.3/label.json",
-        "http://localhost:3200/r/0.1.3/menu-tile.json",
-        "http://localhost:3200/r/0.1.3/multi-select.json",
-        "http://localhost:3200/r/0.1.3/nav-user.json",
-        "http://localhost:3200/r/0.1.3/number-input.json",
-        "http://localhost:3200/r/0.1.3/number-stepper.json",
-        "http://localhost:3200/r/0.1.3/page-tabs.json",
-        "http://localhost:3200/r/0.1.3/pagination.json",
-        "http://localhost:3200/r/0.1.3/popover.json",
-        "http://localhost:3200/r/0.1.3/progress.json",
-        "http://localhost:3200/r/0.1.3/radio-group.json",
-        "http://localhost:3200/r/0.1.3/resizable.json",
-        "http://localhost:3200/r/0.1.3/select.json",
-        "http://localhost:3200/r/0.1.3/separator.json",
-        "http://localhost:3200/r/0.1.3/sheet.json",
-        "http://localhost:3200/r/0.1.3/sidebar-brand.json",
-        "http://localhost:3200/r/0.1.3/sidebar.json",
-        "http://localhost:3200/r/0.1.3/skeleton.json",
-        "http://localhost:3200/r/0.1.3/sonner.json",
-        "http://localhost:3200/r/0.1.3/spinner.json",
-        "http://localhost:3200/r/0.1.3/stat-card.json",
-        "http://localhost:3200/r/0.1.3/status-badge.json",
-        "http://localhost:3200/r/0.1.3/stepper.json",
-        "http://localhost:3200/r/0.1.3/switch.json",
-        "http://localhost:3200/r/0.1.3/table.json",
-        "http://localhost:3200/r/0.1.3/tabs.json",
-        "http://localhost:3200/r/0.1.3/textarea.json",
-        "http://localhost:3200/r/0.1.3/toggle-group.json",
-        "http://localhost:3200/r/0.1.3/toggle.json",
-        "http://localhost:3200/r/0.1.3/toolbar.json",
-        "http://localhost:3200/r/0.1.3/tooltip.json",
-        "http://localhost:3200/r/0.1.3/tree.json",
-        "http://localhost:3200/r/0.1.3/filter-bar.json",
-        "http://localhost:3200/r/0.1.3/form-action-bar.json",
-        "http://localhost:3200/r/0.1.3/page-heading.json",
-        "http://localhost:3200/r/0.1.3/site-header.json",
-        "http://localhost:3200/r/0.1.3/theme-provider.json",
-        "http://localhost:3200/r/0.1.3/use-mobile.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/accordion.json",
+        "http://localhost:3200/r/0.1.4/alert-dialog.json",
+        "http://localhost:3200/r/0.1.4/alert.json",
+        "http://localhost:3200/r/0.1.4/autocomplete.json",
+        "http://localhost:3200/r/0.1.4/avatar.json",
+        "http://localhost:3200/r/0.1.4/badge.json",
+        "http://localhost:3200/r/0.1.4/breadcrumb.json",
+        "http://localhost:3200/r/0.1.4/button-group.json",
+        "http://localhost:3200/r/0.1.4/button.json",
+        "http://localhost:3200/r/0.1.4/calendar.json",
+        "http://localhost:3200/r/0.1.4/card.json",
+        "http://localhost:3200/r/0.1.4/chart-presets.json",
+        "http://localhost:3200/r/0.1.4/chart.json",
+        "http://localhost:3200/r/0.1.4/checkbox.json",
+        "http://localhost:3200/r/0.1.4/combobox.json",
+        "http://localhost:3200/r/0.1.4/command.json",
+        "http://localhost:3200/r/0.1.4/data-table.json",
+        "http://localhost:3200/r/0.1.4/date-picker.json",
+        "http://localhost:3200/r/0.1.4/dialog-body.json",
+        "http://localhost:3200/r/0.1.4/dialog.json",
+        "http://localhost:3200/r/0.1.4/dropdown-menu.json",
+        "http://localhost:3200/r/0.1.4/empty.json",
+        "http://localhost:3200/r/0.1.4/favorite-toggle.json",
+        "http://localhost:3200/r/0.1.4/field.json",
+        "http://localhost:3200/r/0.1.4/filter-chip.json",
+        "http://localhost:3200/r/0.1.4/form-table.json",
+        "http://localhost:3200/r/0.1.4/input-group.json",
+        "http://localhost:3200/r/0.1.4/input.json",
+        "http://localhost:3200/r/0.1.4/kbd.json",
+        "http://localhost:3200/r/0.1.4/label.json",
+        "http://localhost:3200/r/0.1.4/menu-tile.json",
+        "http://localhost:3200/r/0.1.4/multi-select.json",
+        "http://localhost:3200/r/0.1.4/nav-user.json",
+        "http://localhost:3200/r/0.1.4/number-input.json",
+        "http://localhost:3200/r/0.1.4/number-stepper.json",
+        "http://localhost:3200/r/0.1.4/page-tabs.json",
+        "http://localhost:3200/r/0.1.4/pagination.json",
+        "http://localhost:3200/r/0.1.4/popover.json",
+        "http://localhost:3200/r/0.1.4/progress.json",
+        "http://localhost:3200/r/0.1.4/radio-group.json",
+        "http://localhost:3200/r/0.1.4/resizable.json",
+        "http://localhost:3200/r/0.1.4/select.json",
+        "http://localhost:3200/r/0.1.4/separator.json",
+        "http://localhost:3200/r/0.1.4/sheet.json",
+        "http://localhost:3200/r/0.1.4/sidebar-brand.json",
+        "http://localhost:3200/r/0.1.4/sidebar.json",
+        "http://localhost:3200/r/0.1.4/skeleton.json",
+        "http://localhost:3200/r/0.1.4/sonner.json",
+        "http://localhost:3200/r/0.1.4/spinner.json",
+        "http://localhost:3200/r/0.1.4/stat-card.json",
+        "http://localhost:3200/r/0.1.4/status-badge.json",
+        "http://localhost:3200/r/0.1.4/stepper.json",
+        "http://localhost:3200/r/0.1.4/switch.json",
+        "http://localhost:3200/r/0.1.4/table.json",
+        "http://localhost:3200/r/0.1.4/tabs.json",
+        "http://localhost:3200/r/0.1.4/textarea.json",
+        "http://localhost:3200/r/0.1.4/toggle-group.json",
+        "http://localhost:3200/r/0.1.4/toggle.json",
+        "http://localhost:3200/r/0.1.4/toolbar.json",
+        "http://localhost:3200/r/0.1.4/tooltip.json",
+        "http://localhost:3200/r/0.1.4/tree.json",
+        "http://localhost:3200/r/0.1.4/filter-bar.json",
+        "http://localhost:3200/r/0.1.4/form-action-bar.json",
+        "http://localhost:3200/r/0.1.4/page-heading.json",
+        "http://localhost:3200/r/0.1.4/site-header.json",
+        "http://localhost:3200/r/0.1.4/theme-provider.json",
+        "http://localhost:3200/r/0.1.4/use-mobile.json"
       ],
       "files": [
         {
@@ -1140,14 +1142,14 @@
       "name": "accordion",
       "type": "registry:ui",
       "title": "accordion",
-      "description": "Mic Design System 0.1.3 · accordion",
+      "description": "Mic Design System 0.1.4 · accordion",
       "dependencies": [
         "cn@0.5.0",
         "radix-ui@1.8.1",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1160,14 +1162,14 @@
       "name": "alert-dialog",
       "type": "registry:ui",
       "title": "alert-dialog",
-      "description": "Mic Design System 0.1.3 · alert-dialog",
+      "description": "Mic Design System 0.1.4 · alert-dialog",
       "dependencies": [
         "cn@0.5.0",
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/button.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/button.json"
       ],
       "files": [
         {
@@ -1180,13 +1182,13 @@
       "name": "alert",
       "type": "registry:ui",
       "title": "alert",
-      "description": "Mic Design System 0.1.3 · alert",
+      "description": "Mic Design System 0.1.4 · alert",
       "dependencies": [
         "class-variance-authority@0.7.1",
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1199,7 +1201,7 @@
       "name": "autocomplete",
       "type": "registry:ui",
       "title": "autocomplete",
-      "description": "Mic Design System 0.1.3 · autocomplete",
+      "description": "Mic Design System 0.1.4 · autocomplete",
       "dependencies": [
         "cmdk@1.1.1",
         "radix-ui@1.8.1",
@@ -1207,7 +1209,7 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1220,13 +1222,13 @@
       "name": "avatar",
       "type": "registry:ui",
       "title": "avatar",
-      "description": "Mic Design System 0.1.3 · avatar",
+      "description": "Mic Design System 0.1.4 · avatar",
       "dependencies": [
         "cn@0.5.0",
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1239,14 +1241,14 @@
       "name": "badge",
       "type": "registry:ui",
       "title": "badge",
-      "description": "Mic Design System 0.1.3 · badge",
+      "description": "Mic Design System 0.1.4 · badge",
       "dependencies": [
         "class-variance-authority@0.7.1",
         "cn@0.5.0",
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1259,14 +1261,14 @@
       "name": "breadcrumb",
       "type": "registry:ui",
       "title": "breadcrumb",
-      "description": "Mic Design System 0.1.3 · breadcrumb",
+      "description": "Mic Design System 0.1.4 · breadcrumb",
       "dependencies": [
         "cn@0.5.0",
         "radix-ui@1.8.1",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1279,15 +1281,15 @@
       "name": "button-group",
       "type": "registry:ui",
       "title": "button-group",
-      "description": "Mic Design System 0.1.3 · button-group",
+      "description": "Mic Design System 0.1.4 · button-group",
       "dependencies": [
         "class-variance-authority@0.7.1",
         "cn@0.5.0",
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/separator.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/separator.json"
       ],
       "files": [
         {
@@ -1300,14 +1302,14 @@
       "name": "button",
       "type": "registry:ui",
       "title": "button",
-      "description": "Mic Design System 0.1.3 · button",
+      "description": "Mic Design System 0.1.4 · button",
       "dependencies": [
         "class-variance-authority@0.7.1",
         "cn@0.5.0",
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1320,15 +1322,15 @@
       "name": "calendar",
       "type": "registry:ui",
       "title": "calendar",
-      "description": "Mic Design System 0.1.3 · calendar",
+      "description": "Mic Design System 0.1.4 · calendar",
       "dependencies": [
         "cn@0.5.0",
         "react-day-picker@10.0.2",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/button.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/button.json"
       ],
       "files": [
         {
@@ -1341,12 +1343,12 @@
       "name": "card",
       "type": "registry:ui",
       "title": "card",
-      "description": "Mic Design System 0.1.3 · card",
+      "description": "Mic Design System 0.1.4 · card",
       "dependencies": [
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1359,14 +1361,14 @@
       "name": "chart-presets",
       "type": "registry:ui",
       "title": "chart-presets",
-      "description": "Mic Design System 0.1.3 · chart-presets",
+      "description": "Mic Design System 0.1.4 · chart-presets",
       "dependencies": [
         "cn@0.5.0",
         "recharts@3.8.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/chart.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/chart.json"
       ],
       "files": [
         {
@@ -1379,13 +1381,13 @@
       "name": "chart",
       "type": "registry:ui",
       "title": "chart",
-      "description": "Mic Design System 0.1.3 · chart",
+      "description": "Mic Design System 0.1.4 · chart",
       "dependencies": [
         "cn@0.5.0",
         "recharts@3.8.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1398,14 +1400,14 @@
       "name": "checkbox",
       "type": "registry:ui",
       "title": "checkbox",
-      "description": "Mic Design System 0.1.3 · checkbox",
+      "description": "Mic Design System 0.1.4 · checkbox",
       "dependencies": [
         "cn@0.5.0",
         "radix-ui@1.8.1",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1418,15 +1420,15 @@
       "name": "combobox",
       "type": "registry:ui",
       "title": "combobox",
-      "description": "Mic Design System 0.1.3 · combobox",
+      "description": "Mic Design System 0.1.4 · combobox",
       "dependencies": [
         "cn@0.5.0",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/command.json",
-        "http://localhost:3200/r/0.1.3/popover.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/command.json",
+        "http://localhost:3200/r/0.1.4/popover.json"
       ],
       "files": [
         {
@@ -1439,15 +1441,15 @@
       "name": "command",
       "type": "registry:ui",
       "title": "command",
-      "description": "Mic Design System 0.1.3 · command",
+      "description": "Mic Design System 0.1.4 · command",
       "dependencies": [
         "cmdk@1.1.1",
         "cn@0.5.0",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/dialog.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/dialog.json"
       ],
       "files": [
         {
@@ -1460,17 +1462,17 @@
       "name": "data-table",
       "type": "registry:ui",
       "title": "data-table",
-      "description": "Mic Design System 0.1.3 · data-table",
+      "description": "Mic Design System 0.1.4 · data-table",
       "dependencies": [
         "cn@0.5.0",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/button.json",
-        "http://localhost:3200/r/0.1.3/checkbox.json",
-        "http://localhost:3200/r/0.1.3/input.json",
-        "http://localhost:3200/r/0.1.3/table.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/button.json",
+        "http://localhost:3200/r/0.1.4/checkbox.json",
+        "http://localhost:3200/r/0.1.4/input.json",
+        "http://localhost:3200/r/0.1.4/table.json"
       ],
       "files": [
         {
@@ -1483,15 +1485,15 @@
       "name": "date-picker",
       "type": "registry:ui",
       "title": "date-picker",
-      "description": "Mic Design System 0.1.3 · date-picker",
+      "description": "Mic Design System 0.1.4 · date-picker",
       "dependencies": [
         "cn@0.5.0",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/calendar.json",
-        "http://localhost:3200/r/0.1.3/popover.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/calendar.json",
+        "http://localhost:3200/r/0.1.4/popover.json"
       ],
       "files": [
         {
@@ -1504,18 +1506,18 @@
       "name": "dialog-body",
       "type": "registry:ui",
       "title": "dialog-body",
-      "description": "Mic Design System 0.1.3 · dialog-body",
+      "description": "Mic Design System 0.1.4 · dialog-body",
       "dependencies": [
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/button.json",
-        "http://localhost:3200/r/0.1.3/input.json",
-        "http://localhost:3200/r/0.1.3/label.json",
-        "http://localhost:3200/r/0.1.3/radio-group.json",
-        "http://localhost:3200/r/0.1.3/table.json",
-        "http://localhost:3200/r/0.1.3/textarea.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/button.json",
+        "http://localhost:3200/r/0.1.4/input.json",
+        "http://localhost:3200/r/0.1.4/label.json",
+        "http://localhost:3200/r/0.1.4/radio-group.json",
+        "http://localhost:3200/r/0.1.4/table.json",
+        "http://localhost:3200/r/0.1.4/textarea.json"
       ],
       "files": [
         {
@@ -1528,15 +1530,15 @@
       "name": "dialog",
       "type": "registry:ui",
       "title": "dialog",
-      "description": "Mic Design System 0.1.3 · dialog",
+      "description": "Mic Design System 0.1.4 · dialog",
       "dependencies": [
         "cn@0.5.0",
         "radix-ui@1.8.1",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/button.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/button.json"
       ],
       "files": [
         {
@@ -1549,14 +1551,14 @@
       "name": "dropdown-menu",
       "type": "registry:ui",
       "title": "dropdown-menu",
-      "description": "Mic Design System 0.1.3 · dropdown-menu",
+      "description": "Mic Design System 0.1.4 · dropdown-menu",
       "dependencies": [
         "cn@0.5.0",
         "radix-ui@1.8.1",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1566,18 +1568,56 @@
       ]
     },
     {
+      "name": "empty",
+      "type": "registry:ui",
+      "title": "empty",
+      "description": "Mic Design System 0.1.4 · empty",
+      "dependencies": [
+        "cn@0.5.0"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/empty.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "favorite-toggle",
+      "type": "registry:ui",
+      "title": "favorite-toggle",
+      "description": "Mic Design System 0.1.4 · favorite-toggle",
+      "dependencies": [
+        "cn@0.5.0",
+        "lucide-react@1.59.0",
+        "radix-ui@1.8.1"
+      ],
+      "registryDependencies": [
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
+      ],
+      "files": [
+        {
+          "path": "components/ui/favorite-toggle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "field",
       "type": "registry:ui",
       "title": "field",
-      "description": "Mic Design System 0.1.3 · field",
+      "description": "Mic Design System 0.1.4 · field",
       "dependencies": [
         "class-variance-authority@0.7.1",
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/label.json",
-        "http://localhost:3200/r/0.1.3/separator.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/label.json",
+        "http://localhost:3200/r/0.1.4/separator.json"
       ],
       "files": [
         {
@@ -1590,13 +1630,13 @@
       "name": "filter-chip",
       "type": "registry:ui",
       "title": "filter-chip",
-      "description": "Mic Design System 0.1.3 · filter-chip",
+      "description": "Mic Design System 0.1.4 · filter-chip",
       "dependencies": [
         "cn@0.5.0",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1609,12 +1649,12 @@
       "name": "form-table",
       "type": "registry:ui",
       "title": "form-table",
-      "description": "Mic Design System 0.1.3 · form-table",
+      "description": "Mic Design System 0.1.4 · form-table",
       "dependencies": [
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1627,16 +1667,16 @@
       "name": "input-group",
       "type": "registry:ui",
       "title": "input-group",
-      "description": "Mic Design System 0.1.3 · input-group",
+      "description": "Mic Design System 0.1.4 · input-group",
       "dependencies": [
         "class-variance-authority@0.7.1",
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/button.json",
-        "http://localhost:3200/r/0.1.3/input.json",
-        "http://localhost:3200/r/0.1.3/textarea.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/button.json",
+        "http://localhost:3200/r/0.1.4/input.json",
+        "http://localhost:3200/r/0.1.4/textarea.json"
       ],
       "files": [
         {
@@ -1649,12 +1689,12 @@
       "name": "input",
       "type": "registry:ui",
       "title": "input",
-      "description": "Mic Design System 0.1.3 · input",
+      "description": "Mic Design System 0.1.4 · input",
       "dependencies": [
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1667,12 +1707,12 @@
       "name": "kbd",
       "type": "registry:ui",
       "title": "kbd",
-      "description": "Mic Design System 0.1.3 · kbd",
+      "description": "Mic Design System 0.1.4 · kbd",
       "dependencies": [
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1685,13 +1725,13 @@
       "name": "label",
       "type": "registry:ui",
       "title": "label",
-      "description": "Mic Design System 0.1.3 · label",
+      "description": "Mic Design System 0.1.4 · label",
       "dependencies": [
         "cn@0.5.0",
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1704,12 +1744,12 @@
       "name": "menu-tile",
       "type": "registry:ui",
       "title": "menu-tile",
-      "description": "Mic Design System 0.1.3 · menu-tile",
+      "description": "Mic Design System 0.1.4 · menu-tile",
       "dependencies": [
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1722,7 +1762,7 @@
       "name": "multi-select",
       "type": "registry:ui",
       "title": "multi-select",
-      "description": "Mic Design System 0.1.3 · multi-select",
+      "description": "Mic Design System 0.1.4 · multi-select",
       "dependencies": [
         "cmdk@1.1.1",
         "radix-ui@1.8.1",
@@ -1730,8 +1770,8 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/filter-chip.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/filter-chip.json"
       ],
       "files": [
         {
@@ -1744,14 +1784,14 @@
       "name": "nav-user",
       "type": "registry:ui",
       "title": "nav-user",
-      "description": "Mic Design System 0.1.3 · nav-user",
+      "description": "Mic Design System 0.1.4 · nav-user",
       "dependencies": [
         "cn@0.5.0",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/avatar.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/avatar.json"
       ],
       "files": [
         {
@@ -1764,13 +1804,13 @@
       "name": "number-input",
       "type": "registry:ui",
       "title": "number-input",
-      "description": "Mic Design System 0.1.3 · number-input",
+      "description": "Mic Design System 0.1.4 · number-input",
       "dependencies": [
         "cn@0.5.0",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1783,15 +1823,15 @@
       "name": "number-stepper",
       "type": "registry:ui",
       "title": "number-stepper",
-      "description": "Mic Design System 0.1.3 · number-stepper",
+      "description": "Mic Design System 0.1.4 · number-stepper",
       "dependencies": [
         "cn@0.5.0",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/button.json",
-        "http://localhost:3200/r/0.1.3/input.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/button.json",
+        "http://localhost:3200/r/0.1.4/input.json"
       ],
       "files": [
         {
@@ -1804,13 +1844,13 @@
       "name": "page-tabs",
       "type": "registry:ui",
       "title": "page-tabs",
-      "description": "Mic Design System 0.1.3 · page-tabs",
+      "description": "Mic Design System 0.1.4 · page-tabs",
       "dependencies": [
         "cn@0.5.0",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1823,14 +1863,14 @@
       "name": "pagination",
       "type": "registry:ui",
       "title": "pagination",
-      "description": "Mic Design System 0.1.3 · pagination",
+      "description": "Mic Design System 0.1.4 · pagination",
       "dependencies": [
         "cn@0.5.0",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/button.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/button.json"
       ],
       "files": [
         {
@@ -1843,13 +1883,13 @@
       "name": "popover",
       "type": "registry:ui",
       "title": "popover",
-      "description": "Mic Design System 0.1.3 · popover",
+      "description": "Mic Design System 0.1.4 · popover",
       "dependencies": [
         "cn@0.5.0",
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1862,13 +1902,13 @@
       "name": "progress",
       "type": "registry:ui",
       "title": "progress",
-      "description": "Mic Design System 0.1.3 · progress",
+      "description": "Mic Design System 0.1.4 · progress",
       "dependencies": [
         "cn@0.5.0",
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1881,13 +1921,13 @@
       "name": "radio-group",
       "type": "registry:ui",
       "title": "radio-group",
-      "description": "Mic Design System 0.1.3 · radio-group",
+      "description": "Mic Design System 0.1.4 · radio-group",
       "dependencies": [
         "cn@0.5.0",
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1900,14 +1940,14 @@
       "name": "resizable",
       "type": "registry:ui",
       "title": "resizable",
-      "description": "Mic Design System 0.1.3 · resizable",
+      "description": "Mic Design System 0.1.4 · resizable",
       "dependencies": [
         "lucide-react@1.59.0",
         "cn@0.5.0",
         "react-resizable-panels@4.15.2"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1920,14 +1960,14 @@
       "name": "select",
       "type": "registry:ui",
       "title": "select",
-      "description": "Mic Design System 0.1.3 · select",
+      "description": "Mic Design System 0.1.4 · select",
       "dependencies": [
         "cn@0.5.0",
         "radix-ui@1.8.1",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1940,13 +1980,13 @@
       "name": "separator",
       "type": "registry:ui",
       "title": "separator",
-      "description": "Mic Design System 0.1.3 · separator",
+      "description": "Mic Design System 0.1.4 · separator",
       "dependencies": [
         "cn@0.5.0",
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -1959,15 +1999,15 @@
       "name": "sheet",
       "type": "registry:ui",
       "title": "sheet",
-      "description": "Mic Design System 0.1.3 · sheet",
+      "description": "Mic Design System 0.1.4 · sheet",
       "dependencies": [
         "cn@0.5.0",
         "radix-ui@1.8.1",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/button.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/button.json"
       ],
       "files": [
         {
@@ -1980,13 +2020,13 @@
       "name": "sidebar-brand",
       "type": "registry:ui",
       "title": "sidebar-brand",
-      "description": "Mic Design System 0.1.3 · sidebar-brand",
+      "description": "Mic Design System 0.1.4 · sidebar-brand",
       "dependencies": [
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/badge.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/badge.json"
       ],
       "files": [
         {
@@ -1999,7 +2039,7 @@
       "name": "sidebar",
       "type": "registry:ui",
       "title": "sidebar",
-      "description": "Mic Design System 0.1.3 · sidebar",
+      "description": "Mic Design System 0.1.4 · sidebar",
       "dependencies": [
         "class-variance-authority@0.7.1",
         "cn@0.5.0",
@@ -2007,14 +2047,14 @@
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/use-mobile.json",
-        "http://localhost:3200/r/0.1.3/button.json",
-        "http://localhost:3200/r/0.1.3/input.json",
-        "http://localhost:3200/r/0.1.3/separator.json",
-        "http://localhost:3200/r/0.1.3/sheet.json",
-        "http://localhost:3200/r/0.1.3/skeleton.json",
-        "http://localhost:3200/r/0.1.3/tooltip.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/use-mobile.json",
+        "http://localhost:3200/r/0.1.4/button.json",
+        "http://localhost:3200/r/0.1.4/input.json",
+        "http://localhost:3200/r/0.1.4/separator.json",
+        "http://localhost:3200/r/0.1.4/sheet.json",
+        "http://localhost:3200/r/0.1.4/skeleton.json",
+        "http://localhost:3200/r/0.1.4/tooltip.json"
       ],
       "files": [
         {
@@ -2027,12 +2067,12 @@
       "name": "skeleton",
       "type": "registry:ui",
       "title": "skeleton",
-      "description": "Mic Design System 0.1.3 · skeleton",
+      "description": "Mic Design System 0.1.4 · skeleton",
       "dependencies": [
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -2045,14 +2085,14 @@
       "name": "sonner",
       "type": "registry:ui",
       "title": "sonner",
-      "description": "Mic Design System 0.1.3 · sonner",
+      "description": "Mic Design System 0.1.4 · sonner",
       "dependencies": [
         "next-themes@0.4.6",
         "sonner@2.0.8",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -2065,13 +2105,13 @@
       "name": "spinner",
       "type": "registry:ui",
       "title": "spinner",
-      "description": "Mic Design System 0.1.3 · spinner",
+      "description": "Mic Design System 0.1.4 · spinner",
       "dependencies": [
         "cn@0.5.0",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -2084,15 +2124,15 @@
       "name": "stat-card",
       "type": "registry:ui",
       "title": "stat-card",
-      "description": "Mic Design System 0.1.3 · stat-card",
+      "description": "Mic Design System 0.1.4 · stat-card",
       "dependencies": [
         "cn@0.5.0",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/badge.json",
-        "http://localhost:3200/r/0.1.3/card.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/badge.json",
+        "http://localhost:3200/r/0.1.4/card.json"
       ],
       "files": [
         {
@@ -2105,13 +2145,13 @@
       "name": "status-badge",
       "type": "registry:ui",
       "title": "status-badge",
-      "description": "Mic Design System 0.1.3 · status-badge",
+      "description": "Mic Design System 0.1.4 · status-badge",
       "dependencies": [
         "class-variance-authority@0.7.1",
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -2124,13 +2164,13 @@
       "name": "stepper",
       "type": "registry:ui",
       "title": "stepper",
-      "description": "Mic Design System 0.1.3 · stepper",
+      "description": "Mic Design System 0.1.4 · stepper",
       "dependencies": [
         "cn@0.5.0",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -2143,13 +2183,13 @@
       "name": "switch",
       "type": "registry:ui",
       "title": "switch",
-      "description": "Mic Design System 0.1.3 · switch",
+      "description": "Mic Design System 0.1.4 · switch",
       "dependencies": [
         "cn@0.5.0",
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -2162,12 +2202,12 @@
       "name": "table",
       "type": "registry:ui",
       "title": "table",
-      "description": "Mic Design System 0.1.3 · table",
+      "description": "Mic Design System 0.1.4 · table",
       "dependencies": [
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -2180,14 +2220,14 @@
       "name": "tabs",
       "type": "registry:ui",
       "title": "tabs",
-      "description": "Mic Design System 0.1.3 · tabs",
+      "description": "Mic Design System 0.1.4 · tabs",
       "dependencies": [
         "class-variance-authority@0.7.1",
         "cn@0.5.0",
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -2200,12 +2240,12 @@
       "name": "textarea",
       "type": "registry:ui",
       "title": "textarea",
-      "description": "Mic Design System 0.1.3 · textarea",
+      "description": "Mic Design System 0.1.4 · textarea",
       "dependencies": [
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -2218,15 +2258,15 @@
       "name": "toggle-group",
       "type": "registry:ui",
       "title": "toggle-group",
-      "description": "Mic Design System 0.1.3 · toggle-group",
+      "description": "Mic Design System 0.1.4 · toggle-group",
       "dependencies": [
         "class-variance-authority@0.7.1",
         "cn@0.5.0",
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/toggle.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/toggle.json"
       ],
       "files": [
         {
@@ -2239,14 +2279,14 @@
       "name": "toggle",
       "type": "registry:ui",
       "title": "toggle",
-      "description": "Mic Design System 0.1.3 · toggle",
+      "description": "Mic Design System 0.1.4 · toggle",
       "dependencies": [
         "class-variance-authority@0.7.1",
         "cn@0.5.0",
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -2259,12 +2299,12 @@
       "name": "toolbar",
       "type": "registry:ui",
       "title": "toolbar",
-      "description": "Mic Design System 0.1.3 · toolbar",
+      "description": "Mic Design System 0.1.4 · toolbar",
       "dependencies": [
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -2277,13 +2317,13 @@
       "name": "tooltip",
       "type": "registry:ui",
       "title": "tooltip",
-      "description": "Mic Design System 0.1.3 · tooltip",
+      "description": "Mic Design System 0.1.4 · tooltip",
       "dependencies": [
         "cn@0.5.0",
         "radix-ui@1.8.1"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -2296,13 +2336,13 @@
       "name": "tree",
       "type": "registry:ui",
       "title": "tree",
-      "description": "Mic Design System 0.1.3 · tree",
+      "description": "Mic Design System 0.1.4 · tree",
       "dependencies": [
         "cn@0.5.0",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -2315,14 +2355,14 @@
       "name": "filter-bar",
       "type": "registry:block",
       "title": "filter-bar",
-      "description": "Mic Design System 0.1.3 · filter-bar",
+      "description": "Mic Design System 0.1.4 · filter-bar",
       "dependencies": [
         "cn@0.5.0",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/button.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/button.json"
       ],
       "files": [
         {
@@ -2336,12 +2376,12 @@
       "name": "form-action-bar",
       "type": "registry:block",
       "title": "form-action-bar",
-      "description": "Mic Design System 0.1.3 · form-action-bar",
+      "description": "Mic Design System 0.1.4 · form-action-bar",
       "dependencies": [
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -2355,12 +2395,12 @@
       "name": "page-heading",
       "type": "registry:block",
       "title": "page-heading",
-      "description": "Mic Design System 0.1.3 · page-heading",
+      "description": "Mic Design System 0.1.4 · page-heading",
       "dependencies": [
         "cn@0.5.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -2374,19 +2414,19 @@
       "name": "site-header",
       "type": "registry:block",
       "title": "site-header",
-      "description": "Mic Design System 0.1.3 · site-header",
+      "description": "Mic Design System 0.1.4 · site-header",
       "dependencies": [
         "cn@0.5.0",
         "lucide-react@1.59.0"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json",
-        "http://localhost:3200/r/0.1.3/breadcrumb.json",
-        "http://localhost:3200/r/0.1.3/input-group.json",
-        "http://localhost:3200/r/0.1.3/kbd.json",
-        "http://localhost:3200/r/0.1.3/nav-user.json",
-        "http://localhost:3200/r/0.1.3/separator.json",
-        "http://localhost:3200/r/0.1.3/sidebar.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json",
+        "http://localhost:3200/r/0.1.4/breadcrumb.json",
+        "http://localhost:3200/r/0.1.4/input-group.json",
+        "http://localhost:3200/r/0.1.4/kbd.json",
+        "http://localhost:3200/r/0.1.4/nav-user.json",
+        "http://localhost:3200/r/0.1.4/separator.json",
+        "http://localhost:3200/r/0.1.4/sidebar.json"
       ],
       "files": [
         {
@@ -2400,12 +2440,12 @@
       "name": "theme-provider",
       "type": "registry:component",
       "title": "theme-provider",
-      "description": "Mic Design System 0.1.3 · theme-provider",
+      "description": "Mic Design System 0.1.4 · theme-provider",
       "dependencies": [
         "next-themes@0.4.6"
       ],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {
@@ -2418,10 +2458,10 @@
       "name": "use-mobile",
       "type": "registry:hook",
       "title": "use-mobile",
-      "description": "Mic Design System 0.1.3 · use-mobile",
+      "description": "Mic Design System 0.1.4 · use-mobile",
       "dependencies": [],
       "registryDependencies": [
-        "http://localhost:3200/r/0.1.3/mic-foundations.json"
+        "http://localhost:3200/r/0.1.4/mic-foundations.json"
       ],
       "files": [
         {

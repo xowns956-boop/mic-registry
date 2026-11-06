@@ -62,6 +62,7 @@ import { SidebarBrand } from "@/components/ui/sidebar-brand"
 import { Spinner } from "@/components/ui/spinner"
 import { Stepper, StepperItem, StepperSeparator } from "@/components/ui/stepper"
 import { Toggle } from "@/components/ui/toggle"
+import { FavoriteToggle } from "@/components/ui/favorite-toggle"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { Toolbar, ToolbarSeparator } from "@/components/ui/toolbar"
 import { Tree } from "@/components/ui/tree"
@@ -268,7 +269,7 @@ export function BatchRest() {
         </div>
       </Section>
 
-      <Section id="toggle" title="Progress · Toggle · Spinner · Kbd" figma="- Progress · Toggles · Spinners · Kbd">
+      <Section id="toggle" title="Progress · Toggle · FavoriteToggle · Spinner · Kbd" figma="- Progress · Toggles(FavoriteToggle 4211:83) · Spinners · Kbd">
         <Progress value={50} className="max-w-80" aria-label="진행률" />
         {(["default", "outline", "solid", "pill"] as const).map((v) => (
           <Row key={v} label={`Toggle variant=${v}`}>
@@ -289,6 +290,12 @@ export function BatchRest() {
             <ToggleGroupItem value="w">주</ToggleGroupItem>
             <ToggleGroupItem value="m">월</ToggleGroupItem>
           </ToggleGroup>
+        </Row>
+        <Row label="FavoriteToggle: 빈 별 · 채운 별 · 비활성">
+          <FavoriteToggle aria-label="생산 실적 등록 즐겨찾기 추가" />
+          <FavoriteToggle defaultPressed aria-label="생산 실적 등록 즐겨찾기 해제" />
+          <FavoriteToggle disabled aria-label="즐겨찾기(비활성)" />
+          <FavoriteToggle defaultPressed disabled aria-label="즐겨찾기(비활성)" />
         </Row>
         <Row label="Spinner · Kbd">
           <Spinner />
@@ -317,6 +324,9 @@ export function BatchRest() {
           <PageTab icon={<FactoryIcon />} onClose={() => {}}>설비 목록</PageTab>
           <PageTab icon={<SettingsIcon />}>설정</PageTab>
         </PageTabBar>
+        <Row label="PageTabBar 빈 상태 (탭 0개)">
+          <div className="w-full"><PageTabBar /></div>
+        </Row>
         <Toolbar aria-label="목록 도구">
           <Button size="sm">조회</Button>
           <Button size="sm" variant="outline">초기화</Button>

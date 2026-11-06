@@ -6,14 +6,24 @@ import { XIcon } from "lucide-react"
 
 // Mic · Page Tabs
 // 열린 화면을 브라우저 탭처럼 보여 주는 줄. 각 탭은 아이콘 · 이름 · 닫기(Show Close).
-function PageTabBar({ className, ...props }: React.ComponentProps<"div">) {
+// tabs: default(탭 있음) · empty(탭 0개 → 같은 줄에 emptyText 안내)
+function PageTabBar({
+  className,
+  children,
+  emptyText = "열린 화면이 없어요",
+  ...props
+}: React.ComponentProps<"div"> & { emptyText?: React.ReactNode }) {
+  const empty = React.Children.toArray(children).length === 0
   return (
     <div
-      role="tablist"
+      role={empty ? undefined : "tablist"}
       data-slot="page-tab-bar"
+      data-empty={empty || undefined}
       className={cn("flex h-9 w-full items-stretch overflow-x-auto border-b border-border bg-page-background", className)}
       {...props}
-    />
+    >
+      {empty ? <p className="flex items-center pl-3 text-xs whitespace-nowrap text-muted-foreground">{emptyText}</p> : children}
+    </div>
   )
 }
 
