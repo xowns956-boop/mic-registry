@@ -165,6 +165,7 @@ SidebarProvider
 ```
 
 - 사이드바 구조: `SidebarHeader` 안에 `SidebarBrand`(접혀도 넣는다. 머리 칸 64) → `SidebarContent` → `SidebarGroup`(펼침일 때 `SidebarGroupLabel`) → `SidebarMenu` → `SidebarMenuItem` → `SidebarMenuButton`(`tooltip`에 메뉴명) → `SidebarFooter`(`NavUser`, 필요할 때만).
+- 설정 메뉴는 `SidebarFooter`(맨 아래 고정)에 두지 않고 메뉴 목록(`SidebarMenu`) 맨 끝 항목으로 둔다. 하위 화면(예: 설정 › 즐겨찾기 관리)은 그 항목의 `SidebarMenuSub`로 단다. `SidebarFooter`는 `NavUser`처럼 사용자 정보만 둔다.
 - 사이드바 간격은 부품 기본값을 쓴다(메뉴 사이 8, 하위 메뉴 사이 6, 그룹 사이 8, 버튼 32, 접힘 때 아이콘 가운데). `className`으로 gap·padding·높이를 바꾸지 않는다.
 - 주요 버튼(`variant="default"`)은 화면 영역마다 하나. 나머지는 outline·secondary·ghost.
 - 빈 상태: DataTable `emptyText`, 화면·영역 전체가 비면 `Empty` / 불러오는 중: `Skeleton`·`Spinner` / 오류: `Alert variant="destructive"` 또는 `toast.error`.
