@@ -307,7 +307,7 @@ function ChartLegendContent({
       className={cn(
         "items-center justify-center",
         twoRows ? cn("grid gap-x-4 gap-y-1.5", legendCols[cols]) : "flex gap-x-4",
-        verticalAlign === "top" ? "pb-3" : "pt-3",
+        verticalAlign === "top" ? "pb-4" : "pt-4",
         className
       )}
     >
