@@ -10,7 +10,8 @@
           "FavoriteToggle: 즐겨찾기 별 토글 (빈 별 ↔ 채운 별)",
           "Empty: 빈 화면 안내 (아이콘·제목·설명·버튼) — 예: \"열린 화면이 없어요\"",
           "PageTabBar 빈 상태: 탭이 0개면 같은 줄에 \"열린 화면이 없어요\"",
-          "Card interactive: 카드 전체를 누를 때 hover·누름·focus 표시"
+          "Card interactive: 카드 전체를 누를 때 hover·누름·focus 표시",
+          "ChartPie 범례 위치: 아래(기본)·오른쪽 세로 중 고르기 (pie·donut 둘 다)"
         ]
       }
     ]

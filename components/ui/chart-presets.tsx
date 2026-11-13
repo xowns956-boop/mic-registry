@@ -53,6 +53,7 @@ function ChartLine({ data, config, xKey, className }: { data: Row[]; config: Cha
 }
 
 // type: pie(꽉 찬 원) · donut(가운데 빈 고리, 안쪽 반지름 = 바깥의 75%). donut일 때 가운데 caption(작은 설명)·valueText(큰 값)
+// legend: bottom(아래 가로, 기본) · right(오른쪽 세로, 가운데 맞춤)
 function ChartPie({
   data,
   config,
@@ -61,6 +62,7 @@ function ChartPie({
   type = "pie",
   caption,
   valueText,
+  legend = "bottom",
   className,
 }: {
   data: Row[]
@@ -68,6 +70,7 @@ function ChartPie({
   nameKey?: string
   valueKey?: string
   type?: "pie" | "donut"
+  legend?: "bottom" | "right"
   caption?: React.ReactNode
   valueText?: React.ReactNode
   className?: string
@@ -118,7 +121,11 @@ function ChartPie({
             />
           )}
         </Pie>
-        <ChartLegend content={<ChartLegendContent nameKey={nameKey} />} />
+        {legend === "right" ? (
+          <ChartLegend layout="vertical" align="right" verticalAlign="middle" content={<ChartLegendContent nameKey={nameKey} />} />
+        ) : (
+          <ChartLegend content={<ChartLegendContent nameKey={nameKey} />} />
+        )}
       </PieChart>
     </ChartContainer>
   )

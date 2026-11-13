@@ -285,6 +285,7 @@ function ChartLegendContent({
   hideIcon = false,
   payload,
   verticalAlign = "bottom",
+  layout = "horizontal",
   nameKey,
 }: React.ComponentProps<"div"> & {
   hideIcon?: boolean
@@ -297,17 +298,23 @@ function ChartLegendContent({
   }
 
   // 범례 줄 수: 4개까지 한 줄, 5개부터 두 줄(윗줄에 반 올림만큼, 칸은 글자 길이만큼)
+  // layout=vertical(오른쪽 범례): 개수와 상관없이 세로 한 줄, 항목 사이 12 · 차트와 16
   const items = payload.filter((item) => item.type !== "none")
-  const twoRows = items.length >= 5
+  const vertical = layout === "vertical"
+  const twoRows = !vertical && items.length >= 5
   const cols = Math.min(Math.ceil(items.length / 2), 6)
 
   return (
     <div
-      data-rows={twoRows ? 2 : 1}
+      data-rows={vertical ? items.length : twoRows ? 2 : 1}
       className={cn(
-        "items-center justify-center",
-        twoRows ? cn("grid gap-x-4 gap-y-1.5", legendCols[cols]) : "flex gap-x-4",
-        verticalAlign === "top" ? "pb-4" : "pt-4",
+        vertical
+          ? "flex flex-col items-start gap-y-3 pl-4"
+          : cn(
+              "items-center justify-center",
+              twoRows ? cn("grid gap-x-4 gap-y-1.5", legendCols[cols]) : "flex gap-x-4",
+              verticalAlign === "top" ? "pb-4" : "pt-4"
+            ),
         className
       )}
     >
